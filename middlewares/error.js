@@ -1,8 +1,13 @@
+"use strict";
+
 import httpStatus from 'http-status';
 import Joi from 'joi';
-import config from '~/config/config';
-import logger from '~/config/logger';
-import APIError from '~/utils/apiError';
+
+import logger from '../config/logger.js';
+import APIError from "../utils/apiError.js"
+import env_config from '../config/env_config.js';
+
+
 
 export const converter = (err, req, res, next) => {
 	if (err instanceof Joi.ValidationError) {
@@ -24,7 +29,7 @@ export const converter = (err, req, res, next) => {
 		apiError.message = [{ message: err.message }];
 		return next(apiError);
 	}
-	err.message = [{ message: err.message }];
+	//err.message = [{ message: err.message }];
 	return next(err);
 };
 
@@ -34,7 +39,7 @@ export const notFound = (req, res, next) => {
 
 export const handler = (err, req, res, next) => {
 	let { status, message } = err;
-	if (config.NODE_ENV === 'production' && !err.isOperational) {
+	if (env_config.NODE_ENV === 'production' && !err.isOperational) {
 		status = httpStatus.INTERNAL_SERVER_ERROR;
 		message = httpStatus[httpStatus.INTERNAL_SERVER_ERROR];
 	}
@@ -42,7 +47,7 @@ export const handler = (err, req, res, next) => {
 	return res.status(status).json({
 		status: status,
 		errors: message,
-		...(config.NODE_ENV === 'development' && { stack: err.stack })
+		...(env_config.NODE_ENV === 'development' && { stack: err.stack })
 	});
 };
 

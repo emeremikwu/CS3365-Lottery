@@ -1,3 +1,5 @@
+"use strict";
+
 import mongoose from 'mongoose';
 import config from '~/config/config';
 import app from './app';

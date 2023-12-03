@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texas Lottery Purchase System - Search</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #eee;
+        padding: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      section {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      form {
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .search-results {
+        margin-top: 20px;
+      }
+
+      .login-link {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .login-link a {
+        color: #4caf50;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="TLlogo.svg" alt="TL Logo" />
+    </header>
+
+    <nav>
+      <a href="homescreen.html">Browse Lottery Tickets</a>
+      <a href="winning_numbers.html">Winning Numbers</a>
+      <a href="profile.html">Profile</a>
+      <a href="order_history.html">Order History</a>
+      <a href="search_ticket.html">Search for a Ticket</a>
+    </nav>
+
+    <section>
+      <form id="searchForm">
+        <h2>Search for a Ticket</h2>
+        <label for="ticketNumber">Ticket Number:</label>
+        <input type="text" id="ticketNumber" name="ticketNumber" placeholder="Enter ticket number" required />
+
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="search-results" id="searchResults">
+        <!-- Display search results here -->
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Texas Lottery System. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchForm = document.getElementById("searchForm");
+        const searchResultsContainer = document.getElementById("searchResults");
+
+        searchForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Your search logic here (e.g., fetch data based on the entered ticket number)
+          const ticketNumber = document.getElementById("ticketNumber").value;
+
+          // Simulate displaying search results (you can replace this with actual search functionality)
+          displaySearchResults(ticketNumber);
+        });
+
+        // Function to display search results (replace this with actual search functionality)
+        function displaySearchResults(ticketNumber) {
+          const searchResultsHTML = `<p>Search results for Ticket Number: ${ticketNumber}</p>
+                                      <ul>
+                                        <li>Result 1</li>
+                                        <li>Result 2</li>
+                                        <!-- Add more results as needed -->
+                                      </ul>`;
+
+          searchResultsContainer.innerHTML = searchResultsHTML;
+        }
+      });
+    </script>
+  </body>
+</html>

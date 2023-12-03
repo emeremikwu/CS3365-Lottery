@@ -3,6 +3,9 @@ import env_config from './env_config.js';
 import logger from './logger.js';
 import _ from 'lodash';
 
+import { model as TicketTable, model } from '../models/ticketModel.js';
+import { model as WinningsTable } from '../models/winningTicketModel.js';
+import { model as UserTable } from "../models/userModel.js"
 export class Defaults {
 
     static #session_config = {
@@ -63,10 +66,58 @@ export class Defaults {
         return Defaults.#session_config
     }
 
-
     static get limiter_config() {
         return Defaults.#limiter_config
     }
+
+
+
+}
+
+Defaults.Models = class {
+    static async initializeTables(destructive = false, ...models) {
+
+        if (env_config.isProduction()) {
+            logger.warn("initializeTables is disabled in Production")
+            return;
+        }
+
+        if (destructive) logger.warn("Executing destructive table queries")
+
+        logger.debug("Starting DB sync");
+
+        //logger.info(models)
+        for (const model of models) {
+            await model.sync({ force: destructive });
+        }
+
+        logger.info("DB sync complete");
+    }
+
+    static async initializeDefaultTables(destructive = false) {
+
+        const tables = [UserTable, TicketTable, WinningsTable]
+        if (env_config.isProduction()) {
+            logger.warn("initializeTables is disabled in Production")
+            return;
+        }
+
+        try {
+            await Promise.all(tables.map(async (table) => {
+                await table.sync({ force: destructive });
+            }))
+            logger.info("DB sync complete");
+        } catch (error) {
+            logger.error(error)
+        }
+    }
+
+    static async setAssociations() {        
+        UserTable.hasMany(TicketTable, { foreignKey: "user_id" })
+        WinningsTable.belongsTo(TicketTable, { foreignKey: "winning_ticket_id" })
+        WinningsTable.belongsTo(UserTable, { foreignKey: "user_id" })
+    }
+
 }
 
 export default Defaults;

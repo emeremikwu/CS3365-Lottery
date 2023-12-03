@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Texas Lottery Purchase System - Order History</title>
+  <title>Texas Lottery Purchase System - Profile</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,30 +44,16 @@
       text-align: center;
     }
 
-    .order-history-content {
+    .home-content {
       max-width: 600px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.9);
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: auto; /* Center the content horizontally */
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
+    footer {
       text-align: center;
-    }
-
-    th {
-      background-color: #333;
-      color: #fff;
+      padding: 10px;
     }
   </style>
 </head>
@@ -87,29 +73,27 @@
   </nav>
 
   <section>
-    <div class="order-history-content">
-      <h2>Order History</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Order Number</th>
-            <th>Date</th>
-            <th>Ticket Numbers</th>
-            <th>Amount Paid</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>123456</td>
-            <td>2023-01-15</td>
-            <td>5, 12, 18, 22, 30, 45</td>
-            <td>$10.00</td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
+    <div class="home-content">
+      <h2>User Profile</h2>
+      <form id="profile-form">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" value="John" readonly>
+  
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" value="Doe" readonly>
+  
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="123 Main St" readonly>
+  
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" value="Texas" readonly>
+  
+        <label for="phone-number">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phone-number" value="555-1234" readonly>
+      </form>
     </div>
   </section>
+  
 
   <footer>
     <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>

@@ -1,0 +1,78 @@
+2023-12-03 02:49:26.418 PM: info: Server running on port undefined
+2023-12-03 02:49:27.432 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 02:49:27.435 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 02:49:27.437 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 02:49:27.497 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:27.499 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` TINYINT, `part12` TINYINT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:27.502 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:27.557 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 02:49:40.896 PM: info: Server running on port undefined
+2023-12-03 02:49:41.511 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 02:49:41.515 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 02:49:41.517 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 02:49:41.578 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:41.585 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` TINYINT, `part12` TINYINT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:41.587 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:49:41.637 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 02:49:41.642 PM: error: (conn=4050, no: 1063, SQLState: 42000) Incorrect column specifier for column 'id'
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` ... - parameters:[]
+2023-12-03 02:49:41.648 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 02:50:03.724 PM: info: Server running on port undefined
+2023-12-03 02:50:04.355 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 02:50:04.358 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 02:50:04.360 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 02:50:04.427 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:50:04.430 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` TINYINT, `part12` TINYINT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:50:04.432 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:50:04.486 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 02:50:04.489 PM: error: (conn=4055, no: 1063, SQLState: 42000) Incorrect column specifier for column 'id'
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` ... - parameters:[]
+2023-12-03 02:50:04.491 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 02:59:47.603 PM: info: Server running on port undefined
+2023-12-03 02:59:48.598 PM: error: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1001ms
+2023-12-03 02:59:56.414 PM: info: Server running on port undefined
+2023-12-03 02:59:57.020 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 02:59:57.023 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 02:59:57.027 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 02:59:57.082 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:59:57.087 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY NOT NULL , `part1` TINYINT UNSIGNED, `part2` TINYINT UNSIGNED, `part3` TINYINT UNSIGNED, `part4` TINYINT UNSIGNED, `part5` TINYINT UNSIGNED, `part6` TINYINT UNSIGNED, `part7` TINYINT UNSIGNED, `part8` TINYINT UNSIGNED, `part9` TINYINT UNSIGNED, `part10` TINYINT UNSIGNED, `part11` TINYINT UNSIGNED, `part12` TINYINT UNSIGNED, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:59:57.089 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 02:59:57.146 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 02:59:57.150 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 02:59:57.152 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-03 02:59:57.212 PM: info: DB sync complete
+2023-12-03 03:01:05.679 PM: info: Server running on port undefined
+2023-12-03 03:01:06.745 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 03:01:06.748 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 03:01:06.749 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 03:01:06.807 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 03:01:06.810 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY NOT NULL , `part1` TINYINT UNSIGNED, `part2` TINYINT UNSIGNED, `part3` TINYINT UNSIGNED, `part4` TINYINT UNSIGNED, `part5` TINYINT UNSIGNED, `part6` TINYINT UNSIGNED, `part7` TINYINT UNSIGNED, `part8` TINYINT UNSIGNED, `part9` TINYINT UNSIGNED, `part10` TINYINT UNSIGNED, `part11` TINYINT UNSIGNED, `part12` TINYINT UNSIGNED, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 03:01:06.813 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 03:01:06.870 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 03:01:06.872 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 03:01:06.874 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-03 03:01:06.934 PM: info: DB sync complete
+2023-12-03 03:01:51.367 PM: info: Server running on port undefined
+2023-12-03 03:01:52.355 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 03:01:52.358 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 03:01:52.359 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 03:01:52.420 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY NOT NULL , `part1` TINYINT UNSIGNED, `part2` TINYINT UNSIGNED, `part3` TINYINT UNSIGNED, `part4` TINYINT UNSIGNED, `part5` TINYINT UNSIGNED, `part6` TINYINT UNSIGNED, `part7` TINYINT UNSIGNED, `part8` TINYINT UNSIGNED, `part9` TINYINT UNSIGNED, `part10` TINYINT UNSIGNED, `part11` TINYINT UNSIGNED, `part12` TINYINT UNSIGNED, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-03 03:01:52.423 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 03:01:52.426 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `winning_ticket_id` CHAR(36) BINARY, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`winning_ticket_id`) REFERENCES `tickets` (`id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-03 03:01:52.488 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 03:01:52.490 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 03:01:52.492 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-03 03:01:52.557 PM: info: DB sync complete
+2023-12-03 03:03:16.077 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-03 03:03:16.083 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-03 03:03:16.085 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-03 03:03:16.147 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255) NOT NULL, `address2` VARCHAR(255) NOT NULL, `city` VARCHAR(255) NOT NULL, `state` VARCHAR(255) NOT NULL, `zip` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2023-12-03 03:03:16.150 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY NOT NULL , `part1` TINYINT UNSIGNED, `part2` TINYINT UNSIGNED, `part3` TINYINT UNSIGNED, `part4` TINYINT UNSIGNED, `part5` TINYINT UNSIGNED, `part6` TINYINT UNSIGNED, `part7` TINYINT UNSIGNED, `part8` TINYINT UNSIGNED, `part9` TINYINT UNSIGNED, `part10` TINYINT UNSIGNED, `part11` TINYINT UNSIGNED, `part12` TINYINT UNSIGNED, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-03 03:03:16.153 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`id` INTEGER UNSIGNED auto_increment , `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `winning_ticket_id` CHAR(36) BINARY, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`winning_ticket_id`) REFERENCES `tickets` (`id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-03 03:03:16.207 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-03 03:03:16.209 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-03 03:03:16.215 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-03 03:03:16.272 PM: info: DB sync complete
+2023-12-03 03:03:16.276 PM: info: Server running on port undefined
+2023-12-03 03:34:46.669 PM: info: Server running on port undefined
+2023-12-03 03:34:54.444 PM: info: Server running on port undefined
