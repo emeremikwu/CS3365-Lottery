@@ -1,31 +1,44 @@
+"use strict";
+
 import express from 'express';
-import compression from 'compression';
-import helmet from 'helmet';
+import session from "express-session"
 import cors from 'cors';
-import passport from '~/config/passport';
-import routes from '~/routes/v1';
-import error from '~/middlewares/error';
-import rateLimiter from '~/middlewares/rateLimiter';
-import config from '~/config/config';
-import morgan from '~/config/morgan';
+
+import env_config from './config/env_config.js';
+import logger from './config/logger.js';
+import { passport_config as passport } from './config/passport.js';
+import Defaults from './config/defaults.js';
+import error_handler from "./middlewares/error.js"
 
 const app = express();
 
-if (config.NODE_ENV !== 'test') {
-	app.use(morgan);
-}
-
-app.use(helmet());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(compression());
-app.use(cors());
-app.use(rateLimiter);
+
 app.use(passport.initialize());
 app.use(express.static('public'));
-app.use('/api/v1', routes);
-app.use(error.converter);
-app.use(error.notFound);
-app.use(error.handler);
 
+app.set("views", "./views");
+app.set("view engine", "pug")
+
+
+/* //session and passport configuration
+app.use(session(Defaults.session_config));
+app.use(passport.initialize());
+app.use(Defaults.request_logger());
+
+
+//app.use('/api/v1', routes);
+app.use(Defaults.converter);
+app.use(error.notFound);
+app.use(error.handler); */
+
+/* await Defaults.Models.setAssociations()
+await Defaults.Models.initializeDefaultTables(true) */
+
+
+app.listen(env_config.PORT, () => {
+	logger.info(`Server running on port ${env_config.PORT}`);
+})
 export default app;

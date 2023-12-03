@@ -2,27 +2,22 @@
 
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
-import bcrypt from 'bcrypt';
-import { model as UserAccounts } from '../models/userAccountModel.js';
+import { model as UserAccounts } from '../models/userModel.js';
+
 
 
 // configure session management
 
 // Configure Passport.js to use the local strategy
 
-const local_strategy = new LocalStrategy((username, password, done) => {
+const local_strategy = new LocalStrategy(async (email, password, done) => {
     //verify credentials
-    UserAccounts.findByUsername(username)
+    return UserAccounts.findByEmail(email)
 
         .then((user) => {
             //user not found
 
             if (!user) return done(null, false, { message: "User Not found" });
-
-            //bad password
-            //if there is a hashed password is set and it doesn't compare to the given password
-            if (user.hashedPassword && !bcrypt.compareSync(password, user.hashedPassword))
-                return done(null, false, "Bad Login");
 
             //check if there is a non hashed password and compare
             if (password != user.password) return done(null, false, { message: "Bad Pasword" });
@@ -32,40 +27,16 @@ const local_strategy = new LocalStrategy((username, password, done) => {
         .catch((err) => done(err));
 })
 
-//promise implementation, not sure how it works yet
-/* const local_strategy = new LocalStrategy((username, password) => {
-    return new Promise((resolve, reject) => {
-        // Verify the user's credentials
-        UserAccounts.findByUsername(username)
-            .then(user => {
-                if (!user) {
-                    return reject(new Error('Invalid username or password'));
-                }
-
-                // Compare the provided password with the user's hashed password
-                if (!bcrypt.compareSync(password, user.password)) {
-                    return reject(new Error('Invalid username or password'));
-                }
-
-                // User credentials are valid, resolve with the user object
-                resolve(user);
-            })
-            .catch(err => reject(err));
-    });
-}); */
-
-
 passport.serializeUser((user, cb) => {
     process.nextTick(() => {
         //user_id from userAccountModel
-        cb(null, user.user_id)
+        cb(null, user.id)
     })
 })
 
-passport.deserializeUser((user_id, cb) => {
+passport.deserializeUser(async (user_id, cb) => {
     process.nextTick(() => {
-        UserAccounts.findByUID(user_id)
-
+        UserAccounts.findByPk(user_id)
             .then((user) => {
                 if (!user) return cb(null, false);
                 return cb(null, user);

@@ -23,8 +23,6 @@ export default class mariadb_connector {
                 requestTimeout: 30000,
             }
         },
-        
-
     );
 
     static get sequelize() {

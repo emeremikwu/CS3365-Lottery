@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata for character set and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title for the webpage -->
+  <title>Texas Lottery Purchase System - Winning Numbers</title>
+  <!-- Internal CSS styles for page styling -->
+  <style>
+    /* Resetting default margin and setting a flex container for the body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Styling for the header and footer sections */
+    header,
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Styling for the navigation bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    /* Styling for navigation links */
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Styling for the main content section */
+    section {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    /* Styling for the content inside the winning numbers section */
+    .winning-numbers-content {
+      max-width: 600px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: auto; /* Center the content horizontally */
+      border-radius: 10px; /* Add some border radius for a cleaner look */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+
+    /* Styling for the table displaying winning numbers */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    /* Styling for table headers and data cells */
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    /* Styling for table headers */
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header section with the title of the lottery -->
+  <header>
+    <img src="TLlogo.svg" alt="TL Logo" />
+  </header>
+
+  <!-- Navigation bar with links to different sections of the website -->
+  <nav>
+    <a href="homescreen.html">Browse Lottery Tickets</a>
+    <a href="winning_numbers.html">Winning Numbers</a>
+    <a href="profile.html">Profile</a>
+    <a href="order_history.html">Order History</a>
+    <a href="search_ticket.html">Search for a Ticket</a>
+  </nav>
+
+  <!-- Main content section containing the winning numbers -->
+  <section>
+    <div class="winning-numbers-content">
+      <!-- Heading for the winning numbers section -->
+      <h2>Previous Winning Numbers</h2>
+      <!-- Table to display the winning numbers with headers for Date and Numbers -->
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Numbers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row with a specific date and set of winning numbers -->
+          <tr>
+            <td>2023-01-01</td>
+            <td>5, 12, 18, 22, 30, 45</td>
+          </tr>
+          <!-- Additional rows can be added as needed -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer section with copyright information -->
+  <footer>
+    <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

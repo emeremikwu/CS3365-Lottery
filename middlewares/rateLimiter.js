@@ -1,3 +1,5 @@
+"use strict";
+
 import rateLimit from 'express-rate-limit';
 import httpStatus from 'http-status';
 import APIError from '~/utils/apiError';

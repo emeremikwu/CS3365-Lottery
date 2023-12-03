@@ -1,0 +1,5 @@
+2023-12-03 02:49:41.642 PM: error: (conn=4050, no: 1063, SQLState: 42000) Incorrect column specifier for column 'id'
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` ... - parameters:[]
+2023-12-03 02:50:04.489 PM: error: (conn=4055, no: 1063, SQLState: 42000) Incorrect column specifier for column 'id'
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` ... - parameters:[]
+2023-12-03 02:59:48.598 PM: error: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1001ms

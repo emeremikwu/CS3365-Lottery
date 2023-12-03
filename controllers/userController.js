@@ -1,3 +1,5 @@
+"use strict";
+
 import _ from 'lodash';
 import APIError from '~/utils/apiError';
 import User from '~/models/userModel';

@@ -1,3 +1,5 @@
+"use strict";
+
 import passport from 'passport';
 import httpStatus from 'http-status';
 import APIError from '~/utils/apiError';
