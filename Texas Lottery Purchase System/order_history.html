@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <title>Order History</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="TLlogo.svg" alt="TL Logo" />
+    </header>
+
+    <nav>
+      <a href="browse_tickets.html">Browse Lottery Tickets</a>
+      <a href="winning_numbers.html">Winning Numbers</a>
+      <a href="profile.html">Profile</a>
+      <a href="order_history.html">Order History</a>
+      <a href="search_ticket.html">Search for a Ticket</a>
+    </nav>
+
+    <h2>Order History</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Date</th>
+          <th>Items</th>
+          <th>Total Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2023-01-01</td>
+          <td>Power Ball, Mega Millions</td>
+          <td>$4</td>
+        </tr>
+        <!-- Add more rows for additional orders -->
+      </tbody>
+    </table>
+
+    <footer>
+      <p>&copy; 2023 Your Basic Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

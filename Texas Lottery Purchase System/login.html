@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favcon.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <title>Your Basic Website</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="homescreen.html">
+        <img src="TLlogo.svg" alt="TL Logo" />
+      </a>
+    </header>
+
+    <div class="gray-bar">
+      <nav>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="profile.html">Profile</a>
+        <a href="order_history.html">Order History</a>
+
+        <div class="user-actions">
+          <a href="login.html" class="bold">Login</a>
+          <span>/</span>
+          <a href="registration.html" class="bold">Register</a>
+        </div>
+        <a href="shopping-cart.png" title="Smart Cart Icons" target="_blank">
+          <img class = 'Shopping' src=shopping-cart.png alt="Shopping Cart" />
+        </a>
+      </nav>
+    </div> 
+
+
+    <section>
+      <login-form>
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input class="login-input" type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input class="login-input" type="password" id="password" name="password" required />
+
+        <button class="login-button" class="login-button" type="submit">Login</button>
+
+        <div class="register-link">
+          <p>
+            Don't have an account? <a href="registration.html">Register here</a>
+          </p>
+        </div>
+      </login-form>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2023 Texas Lottery Purchase System Mock-Up. All Rights Reserved.
+      </p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.querySelector("form");
+
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const emailInput = document.getElementById("email");
+          const passwordInput = document.getElementById("password");
+
+          // Retrieve user data from local storage
+          const storedUserData = JSON.parse(localStorage.getItem("userData"));
+
+          // Check if user data exists and credentials match
+          if (
+            storedUserData &&
+            emailInput.value === storedUserData.email &&
+            passwordInput.value === storedUserData.password
+          ) {
+            // Redirect to the home screen or perform other actions
+            window.location.href = "homescreen.html";
+          } else {
+            // Display an error message or perform other actions for invalid login
+            console.error("Invalid login credentials. Please try again.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
