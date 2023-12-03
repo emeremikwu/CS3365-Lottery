@@ -2,5 +2,7 @@
 
 import { Router } from "express";
 
-const router = Router();
+const router = router();
 
+
+router = router.get

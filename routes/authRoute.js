@@ -1,11 +1,11 @@
 "use strict";
 
 import { Router } from 'express';
-import catchAsync from "../../utils/catchAsync.js";
-import validate from "../../middlewares/validate.js";
-import authenticate from "../../middlewares/authenticate.js";
-import authValidation from "../../validationSchemas/authSchema.js";
-import authController from '../../controllers/authController.js';
+import catchAsync from "../utils/catchAsync.js";
+import validate from "../middlewares/validate.js";
+import authenticate from "../middlewares/authenticate.js";
+import authValidation from "../validationSchemas/authSchema.js";
+import authController from '../controllers/authController.js';
 
 const router = Router();
 
