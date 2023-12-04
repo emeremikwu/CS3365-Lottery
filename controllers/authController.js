@@ -10,14 +10,7 @@ import logger from "../config/logger.js";
 // so we have to assign it ourselves
 
 export class AuthController {
-
-	/* static verifyCallback = (req, res, next, resolve, reject) => async (err, user, info) => {
-		if (err || info || !user) {
-			reject(new APIError(httpStatus[httpStatus.UNAUTHORIZED], httpStatus.UNAUTHORIZED));
-		}
-		req.user = user;
-	} */
-
+	
 	static signup = async (req, res) => {
 		const user = UserAccounts.create(req.body)
 		logger.info(`Created user ${user.id} | ${user.first_name}`)
