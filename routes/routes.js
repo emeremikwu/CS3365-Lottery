@@ -1,8 +1,12 @@
 "use strict";
 
 import { Router } from "express";
-import { router as AuthRoute } from "./authRoute";
 
-const router = Router();
+const routes = Router();
 
-router.use("/auth", AuthRoute);
+import authRoute from "./authRoute.js"
+
+
+routes.use("/auth", authRoute);
+
+export { routes };

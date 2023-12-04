@@ -25,7 +25,7 @@ const envSchema = Joi.object()
         DB_PASS: Joi.string().required(),
 
         SESSION_SECRET: Joi.string().alphanum().min(10).required(),
-        SESSION_COOKIE_MAX_AGE: Joi.number().integer().min(3600).max(86400).default(3600),
+        SESSION_COOKIE_MAX_AGE: Joi.number().integer().default(999999999),
 
     })
     .unknown();//ignores other env variables

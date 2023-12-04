@@ -11,12 +11,12 @@ import logger from "../config/logger.js";
 
 export class AuthController {
 
-	static verifyCallback = (req) => async (err, user, info) => {
+	/* static verifyCallback = (req, res, next, resolve, reject) => async (err, user, info) => {
 		if (err || info || !user) {
-			throw new APIError(httpStatus[httpStatus.UNAUTHORIZED], httpStatus.UNAUTHORIZED);
+			reject(new APIError(httpStatus[httpStatus.UNAUTHORIZED], httpStatus.UNAUTHORIZED));
 		}
 		req.user = user;
-	}
+	} */
 
 	static signup = async (req, res) => {
 		const user = UserAccounts.create(req.body)
@@ -27,11 +27,31 @@ export class AuthController {
 		});
 	};
 
-	static signin = async (req, res) => {
-		await passport.authenticate("local", { failureRedirect: "/login" }, verifyCallback(req))(req, res)
-		logger.info(`Successful login attempt\t User: ${req.user.first_name} ID: ${req.user.id} `)
-		res.redirect("/profile")
-	}
+
+	static verifyCallback = (req, resolve, reject) => async (err, user, info) => {
+		if (err || info || !user) {
+			return reject(new APIError(httpStatus[httpStatus.UNAUTHORIZED], httpStatus.UNAUTHORIZED));
+		}
+
+		req.login(user, err => reject(err));
+		//req.user = user; //not needed since were calling login, jwt would need this
+
+		//logger.info(`User logged in:  ${user.id}-${user.first_name}`)
+		return resolve();
+	};
+
+	static signin = async (req, res, next) => {
+		return new Promise((resolve, reject) => {
+			passport.authenticate(
+				"local",
+				{ failureRedirect: "/index.html" },
+				AuthController.verifyCallback(req, resolve, reject, next)
+			)(req, res, next);
+		}).then(() => {
+			logger.info(`User logged in: ${req.user.id}-${req.user.first_name}`)
+			res.redirect("/profile.html")
+		});
+	};
 
 	//returns partial information about the user
 	static current = async (req, res) => {

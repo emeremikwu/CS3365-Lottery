@@ -34,7 +34,7 @@ export const converter = (err, req, res, next) => {
 };
 
 export const notFound = (req, res, next) => {
-	return next(new APIError(httpStatus[httpStatus.NOT_FOUND], httpStatus.NOT_FOUND));
+	return next(new APIError(`${httpStatus[httpStatus.NOT_FOUND]} ${req.method}:'${req.path}'`, httpStatus.NOT_FOUND));
 };
 
 export const handler = (err, req, res, next) => {

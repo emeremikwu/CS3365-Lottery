@@ -3,3 +3,1146 @@ sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment ,
 2023-12-03 02:50:04.489 PM: error: (conn=4055, no: 1063, SQLState: 42000) Incorrect column specifier for column 'id'
 sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment , `part1` TINYINT, `part2` TINYINT, `part3` TINYINT, `part4` TINYINT, `part5` TINYINT, `part6` TINYINT, `part7` TINYINT, `part8` TINYINT, `part9` TINYINT, `part10` TINYINT, `part11` ... - parameters:[]
 2023-12-03 02:59:48.598 PM: error: (conn=-1, no: 45012, SQLState: 08S01) Connection timeout: failed to create socket after 1001ms
+2023-12-04 01:49:02.427 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:51:29.683 AM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 01:52:17.823 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:52:18.469 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:52:20.452 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:52:22.726 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:52:24.609 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:00:45.314 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:05.759 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:05.766 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:05.771 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:14.614 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:16.705 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:18.455 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:20.376 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:07:58.766 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:08:25.778 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:09:28.100 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:09:28.242 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:10:52.274 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:11:10.278 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:12:33.116 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:12:33.188 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:12:33.304 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:13:08.908 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:13:08.992 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:13:24.737 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:13:35.206 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:14:17.880 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:14:17.888 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:14:58.091 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:15:54.708 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:19:54.775 AM: error: ValidationError: "body.email" must be a valid email
+2023-12-04 02:20:38.532 AM: error: ReferenceError: verifyCallback is not defined
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:18)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at file:///home/admin/dev/CS3365-Lottery/middlewares/validate.js:33:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-04 02:25:03.242 AM: error: ReferenceError: next is not defined
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:111)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at file:///home/admin/dev/CS3365-Lottery/middlewares/validate.js:33:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-04 02:25:26.240 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:16:9
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:117)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+2023-12-04 02:25:26.364 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:39:05.752 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:16:9
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:117)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+2023-12-04 02:39:05.877 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:39:47.293 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:40:15.261 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:16:9
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:117)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+2023-12-04 02:48:14.517 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:16:11
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:32:135
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:10)
+2023-12-04 02:49:38.195 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:16:11
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:32:135
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:31:10)
+2023-12-04 02:57:03.894 AM: error: ReferenceError: requiredRights is not defined
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:55:57
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at file:///home/admin/dev/CS3365-Lottery/middlewares/validate.js:33:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-04 02:57:17.384 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 02:57:35.678 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 02:58:55.734 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 03:00:49.861 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 03:02:34.044 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 03:02:39.383 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.444 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.473 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.480 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.486 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.492 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.499 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:02:39.512 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:26:52.476 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 03:28:25.155 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 03:28:49.116 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:56:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:52:10)
+2023-12-04 03:30:31.127 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:46:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:57:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:53:10)
+2023-12-04 03:52:30.349 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:34:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:41:10)
+2023-12-04 03:54:20.236 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:34:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:41:10)
+2023-12-04 03:54:44.401 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:34:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at Strategy.authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:75:17)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:378:16)
+    at authenticate (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:379:7)
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:45:5
+    at new Promise (<anonymous>)
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:41:10)
+2023-12-04 04:20:06.966 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:25:22.991 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:26:01.886 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:26:14.234 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:29:07.471 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:29:23.512 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:30:17.750 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:31:03.119 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 04:45:46.551 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 05:03:31.792 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 05:03:42.948 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 06:05:42.888 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 06:57:38.851 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:03:51.291 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:09:15.146 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:09:50.576 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:25:22.997 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:25:48.032 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:27:12.647 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 10:29:57.657 AM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:34:18
+    at strategy.error (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:370:18)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:81:28)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:25:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:14:9)
+2023-12-04 10:55:37.986 AM: error: ReferenceError: resolve is not defined
+    at signin (file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:47:39)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at file:///home/admin/dev/CS3365-Lottery/middlewares/validate.js:33:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-04 11:06:44.074 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 11:09:29.623 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 11:09:52.179 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 11:11:00.830 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 11:11:26.989 AM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 11:29:50.425 AM: error: undefined
+2023-12-04 11:33:24.356 AM: error: undefined
+2023-12-04 01:03:56.923 PM: error: undefined
+2023-12-04 01:04:24.638 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:05:37.724 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:05:54.985 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:19:31.032 PM: error: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 1
+    at new NodeError (node:internal/errors:405:5)
+    at ServerResponse.writeHead (node:_http_server:352:11)
+    at ServerResponse.writeHead (/home/admin/dev/CS3365-Lottery/node_modules/on-headers/index.js:44:26)
+    at ServerResponse._implicitHeader (node:_http_server:338:8)
+    at writetop (/home/admin/dev/CS3365-Lottery/node_modules/express-session/index.js:276:15)
+    at ServerResponse.end (/home/admin/dev/CS3365-Lottery/node_modules/express-session/index.js:343:16)
+    at ServerResponse.send (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/response.js:232:10)
+    at file:///home/admin/dev/CS3365-Lottery/app.js:36:6
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+2023-12-04 01:27:21.248 PM: error: undefined
+2023-12-04 01:27:46.544 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:37:21.729 PM: error: undefined
+2023-12-04 01:38:36.802 PM: error: undefined
+2023-12-04 01:38:59.187 PM: error: Error: test
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:33:10
+    at strategy.success (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:222:18)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:83:10)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:22:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:14:9)
+2023-12-04 01:39:28.111 PM: error: Error: test
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:33:17
+    at strategy.success (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:222:18)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:83:10)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:22:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:14:9)
+2023-12-04 01:42:55.001 PM: error: TypeError: req.redirect is not a function
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:50:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-04 01:43:27.745 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:43:54.881 PM: error: APIError: Not Found
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:45:59.323 PM: error: APIError: Not Found '/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:46:34.993 PM: error: APIError: Not Found POST:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 01:49:07.973 PM: error: APIError: Not Found POST:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:23:20.438 PM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 02:24:09.046 PM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 02:29:31.671 PM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 02:30:30.649 PM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 02:30:51.329 PM: error: ValidationError: "body.email" is required. "body.password" is required
+2023-12-04 02:31:38.286 PM: error: SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parse (/home/admin/dev/CS3365-Lottery/node_modules/body-parser/lib/types/json.js:89:19)
+    at /home/admin/dev/CS3365-Lottery/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/home/admin/dev/CS3365-Lottery/node_modules/raw-body/index.js:231:16)
+    at done (/home/admin/dev/CS3365-Lottery/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/home/admin/dev/CS3365-Lottery/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:514:28)
+    at endReadableNT (node:internal/streams/readable:1376:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2023-12-04 02:32:54.223 PM: error: APIError: Not Found POST:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:34:08.268 PM: error: APIError: Not Found POST:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-04 02:40:23.307 PM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:33:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:82:30)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:18:35
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:14:9)
+2023-12-04 03:19:33.030 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)

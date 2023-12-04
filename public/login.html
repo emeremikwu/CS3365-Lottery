@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="images/favcon.jpg" type="image/jpeg" />
+  <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="styles/styles.css" />
   <script src="scripts/script.js"></script>
   <title>Your Basic Website</title>
@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <a href="homescreen.html">
+    <a href="index.html">
       <img src="images/TLlogo.svg" alt="TL Logo" />
     </a>
   </header>
@@ -37,8 +37,8 @@
 
 
   <section>
-    <form id="myForm">
-      <h2>Login</h2>
+    <form action="/api/auth/signin" method="POST" id="myForm">
+      <h2 id="login_header">Login</h2>
       <label for="email">Email:</label>
       <input class="login-input" type="email" id="email" name="email" required />
 
@@ -61,29 +61,7 @@
     </p>
   </footer>
 
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevents the default form submission behavior
-
-      // Get form data
-      const formData = new FormData(event.target);
-
-      // Make a POST request using Fetch API
-      fetch('/api/signin', {
-        method: 'POST',
-        body: formData,
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          // Handle the response as needed
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          // Handle errors
-        });
-    });
-  </script>
+  <script src="scripts/login_script.js"></script>
 </body>
 
 </html>

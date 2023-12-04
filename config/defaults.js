@@ -11,9 +11,9 @@ export class Defaults {
     static #session_config = {
         secret: env_config.SESSION_SECRET,
         resave: false,
-        saveUninitialized: false,
+        saveUninitialized: true,
         cookie: {
-            secure: true,
+            secure: env_config.isProduction(),
             maxAge: env_config.SESSION_COOKIE_MAX_AGE,
             httpOnly: true,
             sameSite: 'strict'
@@ -41,6 +41,7 @@ export class Defaults {
             "session",
             "user",
             "isAuthenticated",
+            "cookiee"
         ])
 
         logger.http(`New Request: ${req.method} ${req.originalUrl} ${req.ip}`)

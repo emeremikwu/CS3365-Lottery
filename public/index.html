@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="icon" href="images/favcon.jpg" type="image/jpeg" />
+  <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
   <title>Your Basic Website - Home</title>
 </head>
 
 <body>
   <header>
-      <img src="images/TLlogo.svg" href="homescreen.html" alt="TL Logo" />
+      <img src="images/TLlogo.svg" href="index.html" alt="TL Logo" />
     
       
   </header>
@@ -72,25 +72,9 @@
     <p>&copy; 2023 Texas Lottery. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts/slide_show.js"></script>
   <script>
-    let slideIndex = 0;
-
-    function showSlides() {
-      let i;
-      const slides = document.getElementsByClassName("mySlides");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000);
-    }
-
-    showSlides();
+    
   </script>
 </body>
 </html>
