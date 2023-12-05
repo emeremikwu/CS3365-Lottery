@@ -1,8 +1,9 @@
 "use strict";
 
 import { Model, DataTypes } from "sequelize";
-import { mariadb_connector } from "../../config/maria_db.js";
 import logger from "../../config/logger.js";
+import mariadb_connector from "../../config/maria_db.js";
+
 
 // TODO: implement geneate ticket number
 

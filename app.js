@@ -33,15 +33,12 @@ app.use(passport.session());
 app.use(Defaults.request_logger());
 
 app.use('/api', routes);
-app.use(cookie_tester); //debug
+app.use(cookie_tester); //url: /cookie
 app.use(error_handler.converter);
 app.use(error_handler.notFound);
 app.use(error_handler.handler);
 
-/* await Defaults.Models.setAssociations()
-await Defaults.Models.initializeDefaultTables(true) */
-
-mariadb_connector.initializeTables(Object.keys(ModelAssociations), true)
+//await Defaults.Models.initializeDefaultTables(true)
 
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);

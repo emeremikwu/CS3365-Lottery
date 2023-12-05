@@ -2462,3 +2462,392 @@ sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment ,
     at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
     at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
 2023-12-04 03:33:33.259 PM: info: Server running on port 4000
+2023-12-05 07:10:17.943 PM: info: Server running on port 4000
+2023-12-05 07:23:22.763 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-05 07:23:22.767 PM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-05 07:23:22.769 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-05 07:23:22.770 PM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-05 07:23:22.772 PM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-05 07:23:22.774 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-05 07:23:22.777 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-05 07:23:22.787 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:23:22.792 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TypeID` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:23:22.795 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserID` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:23:22.798 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:23:22.801 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 07:23:22.802 PM: error: (conn=6836, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`order_items` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY... - parameters:[]
+2023-12-05 07:23:22.806 PM: info: Server running on port 4000
+2023-12-05 07:23:22.809 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-05 07:23:22.811 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 07:23:22.816 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 07:38:45.904 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-05 07:42:10.566 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-05 07:42:10.571 PM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-05 07:42:10.573 PM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-05 07:42:10.574 PM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-05 07:42:10.577 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-05 07:42:10.581 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-05 07:42:10.584 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-05 07:42:10.586 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-05 07:42:10.589 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserID` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:42:10.591 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:42:10.594 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TypeID` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:42:10.596 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:42:10.598 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 07:42:10.601 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 07:42:10.602 PM: error: (conn=6930, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`order_items` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY... - parameters:[]
+2023-12-05 07:42:10.606 PM: info: Server running on port 4000
+2023-12-05 07:42:10.613 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 07:42:10.621 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 07:42:10.628 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 07:43:40.877 PM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-05 07:43:40.883 PM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-05 07:43:40.886 PM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-05 07:43:40.888 PM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-05 07:43:40.891 PM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-05 07:43:40.894 PM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-05 07:43:40.897 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-05 07:43:40.899 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserID` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:43:40.902 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-05 07:43:40.904 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TypeID` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:43:40.906 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:43:40.908 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 07:43:40.911 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 07:43:40.914 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 07:43:40.916 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 07:43:40.918 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 07:43:40.922 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 07:43:40.923 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 07:43:40.928 PM: info: DB sync complete
+2023-12-05 07:43:40.931 PM: info: Server running on port 4000
+2023-12-05 07:48:00.196 PM: info: Server running on port 4000
+2023-12-05 07:48:08.421 PM: http: New Request: GET /favcon.jpg ::ffff:129.118.254.192
+2023-12-05 07:48:08.423 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:03:08.419Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:48:08.424 PM: http: 	Request Authenitcated: false
+2023-12-05 07:48:08.426 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:48:18.161 PM: http: New Request: GET /favicon.ico ::ffff:129.118.254.192
+2023-12-05 07:48:18.165 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:03:08.431Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:48:18.167 PM: http: 	Request Authenitcated: false
+2023-12-05 07:48:18.169 PM: error: APIError: Not Found GET:'/favicon.ico'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.600 PM: http: New Request: GET /favicon.ico ::ffff:192.58.125.28
+2023-12-05 07:54:13.603 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:09:13.598Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:54:13.604 PM: http: 	Request Authenitcated: false
+2023-12-05 07:54:13.605 PM: error: APIError: Not Found GET:'/favicon.ico'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.611 PM: http: New Request: GET /apple-touch-icon-precomposed.png ::ffff:192.58.125.28
+2023-12-05 07:54:13.612 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:09:13.611Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:54:13.613 PM: http: 	Request Authenitcated: false
+2023-12-05 07:54:13.614 PM: error: APIError: Not Found GET:'/apple-touch-icon-precomposed.png'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.617 PM: http: New Request: GET /apple-touch-icon.png ::ffff:192.58.125.28
+2023-12-05 07:54:13.618 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:09:13.617Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:54:13.619 PM: http: 	Request Authenitcated: false
+2023-12-05 07:54:13.619 PM: error: APIError: Not Found GET:'/apple-touch-icon.png'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:14.562 PM: http: New Request: GET /favcon.jpg ::ffff:192.58.125.28
+2023-12-05 07:54:14.565 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:09:13.622Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:54:14.566 PM: http: 	Request Authenitcated: false
+2023-12-05 07:54:14.567 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:53.789 PM: http: New Request: GET /favcon.jpg 2607:fb90:8a0b:82dc:ed3d:5358:2493:b2a5
+2023-12-05 07:54:53.791 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:09:53.789Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:54:53.792 PM: http: 	Request Authenitcated: false
+2023-12-05 07:54:53.793 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:55:33.131 PM: http: New Request: GET /cookie_tester ::ffff:129.118.254.192
+2023-12-05 07:55:33.133 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:03:18.174Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:55:33.133 PM: http: 	Request Authenitcated: false
+2023-12-05 07:55:33.134 PM: error: APIError: Not Found GET:'/cookie_tester'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:56:01.330 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:01.331 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:10:33.136Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 07:56:01.332 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:04.400 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:04.403 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:01.333Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":1}
+2023-12-05 07:56:04.403 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:05.175 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:05.176 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:04.404Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":2}
+2023-12-05 07:56:05.176 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:05.824 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:05.825 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:05.177Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":3}
+2023-12-05 07:56:05.826 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.278 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.279 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:05.826Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":4}
+2023-12-05 07:56:06.279 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.399 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.401 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.280Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":5}
+2023-12-05 07:56:06.401 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.543 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.546 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.402Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":6}
+2023-12-05 07:56:06.547 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.668 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.669 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.549Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":7}
+2023-12-05 07:56:06.670 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.782 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.783 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.671Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":8}
+2023-12-05 07:56:06.784 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:06.901 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:06.902 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.785Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":9}
+2023-12-05 07:56:06.902 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.086 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.087 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:06.903Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":10}
+2023-12-05 07:56:07.088 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.211 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.212 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.088Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":11}
+2023-12-05 07:56:07.212 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.333 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.335 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.213Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":12}
+2023-12-05 07:56:07.336 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.453 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.454 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.338Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":13}
+2023-12-05 07:56:07.455 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.676 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.678 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.456Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":14}
+2023-12-05 07:56:07.678 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:07.863 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:07.864 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.679Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":15}
+2023-12-05 07:56:07.864 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.110 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.136 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:07.865Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":16}
+2023-12-05 07:56:08.136 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.350 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.352 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.137Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":17}
+2023-12-05 07:56:08.353 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.477 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.480 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.355Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":18}
+2023-12-05 07:56:08.482 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.591 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.593 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.484Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":19}
+2023-12-05 07:56:08.594 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.726 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.728 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.595Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":20}
+2023-12-05 07:56:08.729 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.853 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.855 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.731Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":21}
+2023-12-05 07:56:08.856 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:08.963 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:08.964 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.858Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":22}
+2023-12-05 07:56:08.965 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.093 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.094 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:08.965Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":23}
+2023-12-05 07:56:09.095 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.221 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.222 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.095Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":24}
+2023-12-05 07:56:09.223 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.342 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.344 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.223Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":25}
+2023-12-05 07:56:09.345 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.459 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.462 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.347Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":26}
+2023-12-05 07:56:09.462 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.605 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.617 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.464Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":27}
+2023-12-05 07:56:09.618 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:09.845 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:09.848 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.619Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":28}
+2023-12-05 07:56:09.850 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.077 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.079 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:09.852Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":29}
+2023-12-05 07:56:10.079 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.198 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.200 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.080Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":30}
+2023-12-05 07:56:10.200 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.315 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.316 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.201Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":31}
+2023-12-05 07:56:10.317 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.454 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.455 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.318Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":32}
+2023-12-05 07:56:10.456 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.564 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.567 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.457Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":33}
+2023-12-05 07:56:10.569 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:10.809 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:10.811 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.571Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":34}
+2023-12-05 07:56:10.812 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.044 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.046 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:10.813Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":35}
+2023-12-05 07:56:11.048 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.276 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.277 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.049Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":36}
+2023-12-05 07:56:11.278 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.446 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.447 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.278Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":37}
+2023-12-05 07:56:11.448 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.564 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.565 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.448Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":38}
+2023-12-05 07:56:11.566 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.702 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.705 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.567Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":39}
+2023-12-05 07:56:11.706 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.821 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.824 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.707Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":40}
+2023-12-05 07:56:11.826 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:11.940 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:11.942 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.828Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":41}
+2023-12-05 07:56:11.944 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:12.087 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:12.088 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:11.945Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":42}
+2023-12-05 07:56:12.089 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:12.307 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:12.310 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:12.089Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":43}
+2023-12-05 07:56:12.311 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:12.542 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:12.543 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:12.311Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":44}
+2023-12-05 07:56:12.543 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:12.750 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:12.751 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:12.544Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":45}
+2023-12-05 07:56:12.752 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:12.875 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:12.876 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:12.753Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":46}
+2023-12-05 07:56:12.877 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.087 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.088 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:12.877Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":47}
+2023-12-05 07:56:13.089 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.188 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.189 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.089Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":48}
+2023-12-05 07:56:13.190 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.318 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.319 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.190Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":49}
+2023-12-05 07:56:13.328 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.535 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.537 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.330Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":50}
+2023-12-05 07:56:13.539 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.662 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.663 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.540Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":51}
+2023-12-05 07:56:13.664 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.781 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.782 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.665Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":52}
+2023-12-05 07:56:13.783 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:13.902 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:13.904 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.784Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":53}
+2023-12-05 07:56:13.904 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.005 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.007 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:13.905Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":54}
+2023-12-05 07:56:14.007 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.141 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.142 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.008Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":55}
+2023-12-05 07:56:14.142 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.399 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.400 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.143Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":56}
+2023-12-05 07:56:14.401 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.509 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.510 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.402Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":57}
+2023-12-05 07:56:14.511 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.676 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.677 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.511Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":58}
+2023-12-05 07:56:14.677 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.797 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.798 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.678Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":59}
+2023-12-05 07:56:14.799 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:14.916 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:14.917 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.799Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":60}
+2023-12-05 07:56:14.918 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:15.044 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:15.046 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:14.918Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":61}
+2023-12-05 07:56:15.046 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:15.147 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:15.149 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:15.047Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":62}
+2023-12-05 07:56:15.149 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:15.260 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:15.262 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:15.150Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":63}
+2023-12-05 07:56:15.262 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:15.380 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:15.382 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:15.263Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":64}
+2023-12-05 07:56:15.384 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:15.629 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:15.631 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:15.385Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":65}
+2023-12-05 07:56:15.632 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:18.452 PM: http: New Request: GET /cookie ::ffff:129.118.254.192
+2023-12-05 07:56:18.454 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:15.634Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":66}
+2023-12-05 07:56:18.457 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:37.834 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 07:56:37.835 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 07:56:37.837 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T20:11:18.459Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"view":67}
+2023-12-05 07:56:37.837 PM: http: 	Request Authenitcated: false
+2023-12-05 07:56:37.927 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 07:56:37.934 PM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:27:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:82:30)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:19:35
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
+2023-12-05 08:08:00.274 PM: info: Server running on port 4000

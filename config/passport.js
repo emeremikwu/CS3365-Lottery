@@ -2,8 +2,9 @@
 
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
-import { model as UserAccounts } from '../models/userModel.js';
-import associations from '../models/associations.js';
+import { TicketType, User } from '../models/associations.js';
+import logger from './logger.js';
+
 // Configure Passport.js to use the local strategy
 
 const local_strategy = new LocalStrategy(
@@ -11,7 +12,7 @@ const local_strategy = new LocalStrategy(
     async (email, password, done) => {
         //verify credentials
 
-        await Users.findOne({ where: { email: email } })
+        await User.findOne({ where: { email: email } })
 
             .then((user) => {
                 //user not found
@@ -28,14 +29,15 @@ const local_strategy = new LocalStrategy(
 passport.serializeUser((user, cb) => {
     process.nextTick(() => {
         //user_id from userAccountModel
-        cb(null, user.id)
+        logger.info(`Serializing User ${user_id}`)
+        cb(null, user.user_id)
     })
 })
 
 passport.deserializeUser(async (user_id, cb) => {
     process.nextTick(() => {
-        console.log("deserializeUser")
-        UserAccounts.findByPk(user_id)
+        logger.info(`Deserializing User ${user_id}`)
+        User.findByPk(user_id)
             .then((user) => {
                 if (!user) return cb(null, false);
                 return cb(null, user);

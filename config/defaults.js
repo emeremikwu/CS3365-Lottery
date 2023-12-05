@@ -1,11 +1,12 @@
 "use strict";
+import { User, OrderItems, Ticket, Orders, TicketType, WinningTicket } from '../models/associations.js';
 import env_config from './env_config.js';
 import logger from './logger.js';
 import _ from 'lodash';
 
-import { model as TicketTable, model } from '../models/ticketModel.js';
+/* import { model as TicketTable, model } from '../models/ticketModel.js';
 import { model as WinningsTable } from '../models/winningTicketModel.js';
-import { model as UserTable } from "../models/userModel.js"
+import { model as UserTable } from "../models/userModel.js" */
 export class Defaults {
 
     static #session_config = {
@@ -97,14 +98,26 @@ Defaults.Models = class {
 
     static async initializeDefaultTables(destructive = false) {
 
-        const tables = [UserTable, TicketTable, WinningsTable]
+        //needs to be in this order
+        const table_order = [
+            User, 
+            Orders, 
+            TicketType,
+            Ticket, 
+            OrderItems, 
+            WinningTicket
+        ]
+
         if (env_config.isProduction()) {
             logger.warn("initializeTables is disabled in Production")
             return;
         }
 
+        if (destructive) logger.warn("Executing destructive table queries")
+        else logger.warn("Executing non-destructive table queries")
+
         try {
-            await Promise.all(tables.map(async (table) => {
+            await Promise.all(table_order.map(async (table) => {
                 await table.sync({ force: destructive });
             }))
             logger.info("DB sync complete");
@@ -113,11 +126,11 @@ Defaults.Models = class {
         }
     }
 
-    static async setAssociations() {        
+/*     static async setAssociations() {        
         UserTable.hasMany(TicketTable, { foreignKey: "user_id" })
         WinningsTable.belongsTo(TicketTable, { foreignKey: "winning_ticket_id" })
         WinningsTable.belongsTo(UserTable, { foreignKey: "user_id" })
-    }
+    } */
 
 }
 

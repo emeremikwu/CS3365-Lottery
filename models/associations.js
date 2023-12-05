@@ -21,7 +21,19 @@ OrderItems.belongsTo(Ticket, { foreignKey: 'TicketID' });
 Ticket.hasMany(OrderItems, { foreignKey: 'TicketID' });
 
 Ticket.hasOne(WinningTicket, { foreignKey: 'TicketID' });
-WinningTicket.belongsTo(Ticket, { foreignKey: 'TicketID' }); 
+WinningTicket.belongsTo(Ticket, { foreignKey: 'TicketID' });
+
+/* 
+    initialization order is important
+    ---------------------------------
+    User, 
+    Orders, 
+    TicketType,
+    Ticket, 
+    OrderItems, 
+    WinningTicket
+        
+ */
 
 
 export {
@@ -32,6 +44,16 @@ export {
     Orders,
     OrderItems
 }
+
+export default {
+    TicketType,
+    Ticket,
+    WinningTicket,
+    User,
+    Orders,
+    OrderItems
+}
+
 
 
 

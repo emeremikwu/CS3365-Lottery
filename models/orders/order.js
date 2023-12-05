@@ -1,10 +1,8 @@
 "use strict";
 
 import { DataTypes, Model } from "sequelize";
-import { model as OrderItems } from "./orderItems";
+import mariadb_connector from "../../config/maria_db.js";
 
-//basically a cart system 
-OrderItems
 export default class OrderModel extends Model {
 
 }
@@ -32,6 +30,11 @@ OrderModel.init({
 
     // Foreign key: user_id (UserModel | user.js)
 
+}, {
+    modelName: "orders",
+    freezeTableName: true,
+    timestamps: true,
+    sequelize: mariadb_connector.sequelize
 })
 
 

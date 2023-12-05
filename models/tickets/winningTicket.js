@@ -1,9 +1,7 @@
 "use strict";
 
 import { Model, DataTypes } from "sequelize";
-import mariadb_connector from "../config/maria_db.js";
-
-
+import mariadb_connector from "../../config/maria_db.js";
 class WinningTicketModel extends Model {
 
 }

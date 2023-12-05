@@ -3,8 +3,9 @@
 import APIError from "../utils/apiError.js";
 import httpStatus from "http-status"
 import { passport_config as passport } from "../config/passport.js";
-import { model as UserAccounts } from "../models/userModel.js";
+
 import logger from "../config/logger.js";
+import { User as Users } from "../models/associations.js";
 
 // since we're pasing verifyCallback to authenticate, the UserAccountModel object isn't automatically added to the request as user(req.user)
 // so we have to assign it ourselves
@@ -12,7 +13,7 @@ import logger from "../config/logger.js";
 export class AuthController {
 	
 	static signup = async (req, res) => {
-		const user = UserAccounts.create(req.body)
+		const user = Users.create(req.body)
 		logger.info(`Created user ${user.id} | ${user.first_name}`)
 		return res.status(httpStatus.CREATED).json({
 			success: true,
@@ -30,6 +31,7 @@ export class AuthController {
 		//req.user = user; //not needed since were calling login, jwt would need this
 
 		//logger.info(`User logged in:  ${user.id}-${user.first_name}`)
+		return document()
 		return resolve();
 	};
 
@@ -43,12 +45,12 @@ export class AuthController {
 		}).then(() => {
 			logger.info(`User logged in: ${req.user.id}-${req.user.first_name}`)
 			res.redirect("/profile.html")
-		});
+		}).catch;
 	};
 
 	//returns partial information about the user
 	static current = async (req, res) => {
-		const user = await UserAccounts.findByPk(req.user.id);
+		const user = await Users.findByPk(req.user.id);
 		if (!user) {
 			throw new APIError('User not found', httpStatus.NOT_FOUND);
 		}
@@ -64,7 +66,7 @@ export class AuthController {
 	};
 
 	static getMe = async (req, res) => {
-		const user = await UserAccounts.findByPk(req.user.id);
+		const user = await Users.findByPk(req.user.id);
 		if (!user) {
 			throw new APIError('User not found', httpStatus.NOT_FOUND);
 		}
@@ -75,7 +77,7 @@ export class AuthController {
 	};
 
 	static updateMe = async (req, res) => {
-		const user = await UserAccounts.findByPk(req.user.id);
+		const user = await Users.findByPk(req.user.id);
 		if (!user) {
 			throw new APIError('User not found', httpStatus.NOT_FOUND);
 		}

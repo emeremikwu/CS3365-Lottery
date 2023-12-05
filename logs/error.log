@@ -1146,3 +1146,106 @@ sql: CREATE TABLE IF NOT EXISTS `tickets` (`id` CHAR(36) BINARY auto_increment ,
     at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
     at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
     at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:23:22.802 PM: error: (conn=6836, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`order_items` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY... - parameters:[]
+2023-12-05 07:38:45.919 PM: error: (conn=6840, no: 1451, SQLState: 23000) Cannot delete or update a parent row: a foreign key constraint fails
+sql: DROP TABLE IF EXISTS `users`; - parameters:[]
+2023-12-05 07:42:10.602 PM: error: (conn=6930, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`order_items` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY... - parameters:[]
+2023-12-05 07:48:08.426 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:48:18.169 PM: error: APIError: Not Found GET:'/favicon.ico'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.605 PM: error: APIError: Not Found GET:'/favicon.ico'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.614 PM: error: APIError: Not Found GET:'/apple-touch-icon-precomposed.png'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:13.619 PM: error: APIError: Not Found GET:'/apple-touch-icon.png'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:14.567 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:54:53.793 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:55:33.134 PM: error: APIError: Not Found GET:'/cookie_tester'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 07:56:37.934 PM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:27:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:82:30)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:19:35
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
