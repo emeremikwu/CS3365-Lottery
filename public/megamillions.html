@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/ticket_option_styles.css">
+  <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .user-actions a {
+      margin: 0 5px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .digit-container {
+      display: flex;
+    }
+    .select-text {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .select-text h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .digit-container div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 100px;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+    }
+
+    .graphic {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .graphic img {
+      width: 100%; /* Adjust the width as needed */
+      max-width: 1000px; /* Set a maximum width if necessary */
+      display: block;
+      margin: 0 auto; /* Center the image */
+    }
+
+    button {
+      margin-top: 100px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <title>Browse Lottery Tickets</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/TLlogo.svg" alt="TL Logo" />
+    </a>
+  </header>
+
+  <div class="gray-bar">
+    <nav>
+      <a href="browse_tickets.html">Browse Lottery Tickets</a>
+      <a href="winning_numbers.html">Winning Numbers</a>
+      <a href="profile.html">Profile</a>
+      <a href="order_history.html">Order History</a>
+
+      <div class="user-actions">
+        <a href="login.html" class="bold">Login</a>
+        <span>/</span>
+        <a href="registration.html" class="bold">Register</a>
+      </div>
+      <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
+        <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
+      </a>
+    </nav>
+  </div>
+  <div class="graphic">
+    <!-- Add your image source here -->
+    <img src="images/Mega_Millions_Lottery_logo.svg.png" alt="Your Graphic" />
+  </div>
+  <div class="select-text">
+    <h1>Pick your Mega Millions Numbers Below!</h1>
+  </div>
+  <section>
+    <div class="digit-container">
+      <div>
+        <label for="digit1">Number 1:</label>
+        <input type="text" id="digit1" maxlength="2" />
+      </div>
+      <div>
+        <label for="digit2">Number 2:</label>
+        <input type="text" id="digit2" maxlength="2" />
+      </div>
+      <div>
+        <label for="digit3">Number 3:</label>
+        <input type="text" id="digit3" maxlength="2" />
+      </div>
+      <div>
+        <label for="digit4">Number 4:</label>
+        <input type="text" id="digit4" maxlength="2" />
+      </div>
+      <div>
+        <label for="digit5">Number 5:</label>
+        <input type="text" id="digit5" maxlength="2" />
+      </div>
+      <div>
+        <label for="digit6">Number 6:</label>
+        <input type="text" id="digit6" maxlength="2" />
+      </div>
+    </div>
+
+    <button onclick="combineDigits()">Select Your Numbers!</button>
+
+    <div id="result"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Your Basic Website. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script>
+    function combineDigits() {
+      const digit1 = document.getElementById('digit1').value;
+      const digit2 = document.getElementById('digit2').value;
+      const digit3 = document.getElementById('digit3').value;
+      const digit4 = document.getElementById('digit4').value;
+      const digit5 = document.getElementById('digit5').value;
+      const digit6 = document.getElementById('digit6').value;
+  
+      const combinedDigits = `${digit1} ${digit2} ${digit3} ${digit4} ${digit5} ${digit6}`;
+      document.getElementById('result').innerText = `Your Numbers: ${combinedDigits}`;
+    }
+  </script>
+</body>
+
+</html>
