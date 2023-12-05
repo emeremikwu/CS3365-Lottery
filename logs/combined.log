@@ -2851,3 +2851,327 @@ sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
 2023-12-05 08:08:00.274 PM: info: Server running on port 4000
+2023-12-05 08:13:07.092 PM: info: Server running on port 4000
+2023-12-05 08:15:09.450 PM: info: Server running on port 4000
+2023-12-05 08:17:57.865 PM: info: Server running on port 4000
+2023-12-05 08:47:02.858 PM: info: Server running on port 4000
+2023-12-05 08:47:13.225 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:47:13.226 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 08:47:13.227 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:02:13.223Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:47:13.228 PM: http: 	Request Authenitcated: false
+2023-12-05 08:47:13.293 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:47:16.256 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:47:16.258 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 08:47:16.259 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:02:16.255Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:47:16.260 PM: http: 	Request Authenitcated: false
+2023-12-05 08:47:16.269 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:47:29.911 PM: info: Server running on port 4000
+2023-12-05 08:47:40.726 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:47:40.727 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdfsafd"}
+2023-12-05 08:47:40.728 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:02:40.724Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:47:40.729 PM: http: 	Request Authenitcated: false
+2023-12-05 08:47:40.767 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:48:00.974 PM: info: Server running on port 4000
+2023-12-05 08:48:01.186 PM: http: New Request: GET /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:48:01.188 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:03:01.184Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:48:01.188 PM: http: 	Request Authenitcated: false
+2023-12-05 08:48:01.190 PM: error: APIError: Not Found GET:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 08:48:09.855 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:48:09.857 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 08:48:09.858 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:03:01.193Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:48:09.859 PM: http: 	Request Authenitcated: false
+2023-12-05 08:48:09.913 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:50:24.556 PM: info: Server running on port 4000
+2023-12-05 08:50:27.230 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:50:27.231 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 08:50:27.232 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:05:27.229Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:50:27.233 PM: http: 	Request Authenitcated: false
+2023-12-05 08:50:27.269 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:51:25.064 PM: info: Server running on port 4000
+2023-12-05 08:51:31.211 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:51:31.212 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdf"}
+2023-12-05 08:51:31.213 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:06:31.210Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:51:31.214 PM: http: 	Request Authenitcated: false
+2023-12-05 08:51:31.248 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:52:22.010 PM: info: Server running on port 4000
+2023-12-05 08:52:32.873 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:52:32.877 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"sfsafasasf"}
+2023-12-05 08:52:32.879 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:07:32.871Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:52:32.881 PM: http: 	Request Authenitcated: false
+2023-12-05 08:52:32.978 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:52:32.984 PM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:27:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:82:30)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:19:35
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
+2023-12-05 08:54:09.630 PM: info: Server running on port 4000
+2023-12-05 08:54:17.354 PM: http: New Request: GET /] ::ffff:129.118.254.192
+2023-12-05 08:54:17.355 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:09:17.353Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:54:17.358 PM: http: 	Request Authenitcated: false
+2023-12-05 08:54:17.359 PM: error: APIError: Not Found GET:'/]'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 08:54:30.621 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:54:30.622 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asfd"}
+2023-12-05 08:54:30.623 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:09:17.362Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:54:30.624 PM: http: 	Request Authenitcated: false
+2023-12-05 08:54:30.667 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:54:43.546 PM: info: Server running on port 4000
+2023-12-05 08:54:53.807 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:54:53.809 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asdfs"}
+2023-12-05 08:54:53.809 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:09:53.806Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:54:53.810 PM: http: 	Request Authenitcated: false
+2023-12-05 08:54:53.848 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:54:57.733 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:54:57.734 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"sdfasfsa"}
+2023-12-05 08:54:57.735 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:09:53.855Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:54:57.736 PM: http: 	Request Authenitcated: false
+2023-12-05 08:54:57.739 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:55:22.353 PM: info: Server running on port 4000
+2023-12-05 08:55:32.835 PM: http: New Request: POST /api/auth/signin ::ffff:129.118.254.192
+2023-12-05 08:55:32.836 PM: http: 	Request body: {"email":"asdf@gmail.com","password":"asfsdfasd"}
+2023-12-05 08:55:32.837 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:10:32.833Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 08:55:32.838 PM: http: 	Request Authenitcated: false
+2023-12-05 08:55:32.938 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'asdf@gmail.com' LIMIT 1;
+2023-12-05 08:55:32.947 PM: error: Error logging in: Unauthorized
+2023-12-05 09:02:00.482 PM: info: Server running on port 4000
+2023-12-05 09:22:17.483 PM: warn: Executing non-destructive table queries
+2023-12-05 09:22:17.569 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.571 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.572 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.574 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.578 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.581 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:22:17.583 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 09:22:17.585 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 09:22:17.587 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 09:22:17.590 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 09:22:17.592 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 09:22:17.594 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 09:22:17.599 PM: info: DB sync complete
+2023-12-05 09:22:17.602 PM: info: Server running on port 4000
+2023-12-05 09:24:08.036 PM: warn: Executing non-destructive table queries
+2023-12-05 09:24:08.092 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.095 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.097 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.099 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.104 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.108 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:24:08.110 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 09:24:08.112 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.116 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 09:24:08.119 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.124 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 09:24:08.126 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.128 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 09:24:08.131 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.133 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 09:24:08.136 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.138 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 09:24:08.141 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:24:08.143 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.145 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 09:24:08.148 PM: debug: Executing (default): ALTER TABLE `ticket_types` ADD `description` VARCHAR(255);
+2023-12-05 09:24:08.151 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 09:24:08.154 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.156 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 09:24:08.158 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.160 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 09:24:08.162 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 09:24:08.165 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.167 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 09:24:08.169 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 09:24:08.171 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.173 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.175 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.177 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.180 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.182 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.184 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 09:24:08.186 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.188 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:24:08.190 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.197 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.200 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 09:24:08.202 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 09:24:08.205 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:24:08.206 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_1`;
+2023-12-05 09:24:08.208 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:24:08.211 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:24:08.213 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 09:24:08.216 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 09:24:08.218 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 09:24:08.221 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:24:08.222 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 09:24:08.224 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 09:24:08.225 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 09:24:08.227 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 09:24:08.229 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:24:08.231 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:24:08.232 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:24:08.234 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 09:24:08.235 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 09:24:08.237 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_2' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:24:08.239 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 09:24:08.240 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 09:24:08.242 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 09:24:08.244 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.248 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_2`;
+2023-12-05 09:24:08.250 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 09:24:08.252 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.254 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:24:08.257 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.259 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 09:24:08.263 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 09:24:08.266 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:24:08.269 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 09:24:08.271 PM: info: DB sync complete
+2023-12-05 09:24:08.278 PM: info: Server running on port 4000
+2023-12-05 09:32:09.301 PM: warn: Executing non-destructive table queries
+2023-12-05 09:32:09.381 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.384 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.386 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.388 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.390 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.395 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 09:32:09.398 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 09:32:09.400 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.403 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 09:32:09.405 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.408 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 09:32:09.413 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.415 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 09:32:09.418 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.422 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 09:32:09.424 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.427 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 09:32:09.430 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 09:32:09.432 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.435 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 09:32:09.437 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.440 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 09:32:09.442 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 09:32:09.444 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 09:32:09.447 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.449 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 09:32:09.451 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 09:32:09.453 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 09:32:09.455 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.458 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 09:32:09.460 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.462 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.464 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.466 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.468 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.471 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.473 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 09:32:09.475 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 09:32:09.477 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.479 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.482 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_3' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:32:09.490 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.494 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 09:32:09.496 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 09:32:09.498 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:32:09.502 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:32:09.504 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_3`;
+2023-12-05 09:32:09.506 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:32:09.508 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 09:32:09.511 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 09:32:09.515 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 09:32:09.517 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 09:32:09.519 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:32:09.521 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 09:32:09.523 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 09:32:09.525 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.527 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:32:09.530 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:32:09.532 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 09:32:09.534 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.536 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:32:09.538 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_4' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 09:32:09.541 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 09:32:09.542 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 09:32:09.544 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 09:32:09.547 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 09:32:09.550 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_4`;
+2023-12-05 09:32:09.552 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.554 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 09:32:09.556 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 09:32:09.559 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 09:32:09.561 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 09:32:09.562 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 09:32:09.565 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 09:32:09.568 PM: info: DB sync complete
+2023-12-05 09:32:09.573 PM: info: Server running on port 4000
+2023-12-05 09:32:36.162 PM: http: New Request: GET /api/info/getcatalog ::ffff:129.118.254.192
+2023-12-05 09:32:36.164 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:47:36.161Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:32:36.164 PM: http: 	Request Authenitcated: false
+2023-12-05 09:32:36.192 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:33:19.183 PM: info: Server running on port 4000
+2023-12-05 09:33:19.465 PM: http: New Request: GET /api/info/getcatalog ::ffff:129.118.254.192
+2023-12-05 09:33:19.466 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:48:19.464Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:33:19.467 PM: http: 	Request Authenitcated: false
+2023-12-05 09:33:19.513 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:34:21.146 PM: info: Server running on port 4000
+2023-12-05 09:34:29.922 PM: http: New Request: GET /api/info/getcatalog ::ffff:129.118.254.192
+2023-12-05 09:34:29.924 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:49:29.921Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:34:29.925 PM: http: 	Request Authenitcated: false
+2023-12-05 09:34:29.982 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:34:52.218 PM: info: Server running on port 4000
+2023-12-05 09:34:55.110 PM: http: New Request: GET /api/info/getcatalog ::ffff:129.118.254.192
+2023-12-05 09:34:55.112 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:49:55.109Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:34:55.112 PM: http: 	Request Authenitcated: false
+2023-12-05 09:34:55.151 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:35:55.591 PM: info: Server running on port 4000
+2023-12-05 09:36:00.797 PM: http: New Request: GET /api/info/getcatalog ::ffff:129.118.254.192
+2023-12-05 09:36:00.798 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:51:00.795Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:36:00.799 PM: http: 	Request Authenitcated: false
+2023-12-05 09:36:00.830 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:36:24.902 PM: info: Server running on port 4000
+2023-12-05 09:36:52.239 PM: http: New Request: GET /powerball-color.jpg ::ffff:129.118.254.192
+2023-12-05 09:36:52.242 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T21:51:52.236Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:36:52.244 PM: http: 	Request Authenitcated: false
+2023-12-05 09:36:52.247 PM: error: APIError: Not Found GET:'/powerball-color.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 09:42:42.485 PM: info: Server running on port 4000
+2023-12-05 09:45:22.816 PM: info: Server running on port 4000
+2023-12-05 09:54:44.894 PM: http: New Request: GET /api/info/catalog ::ffff:129.118.254.192
+2023-12-05 09:54:44.898 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:09:44.891Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:54:44.899 PM: http: 	Request Authenitcated: false
+2023-12-05 09:54:44.986 PM: debug: Executing (default): SELECT `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled` FROM `ticket_types` AS `ticket_types`;
+2023-12-05 09:54:48.678 PM: http: New Request: GET /api/info/winnings ::ffff:129.118.254.192
+2023-12-05 09:54:48.679 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:09:45.002Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 09:54:48.680 PM: http: 	Request Authenitcated: false
+2023-12-05 09:54:48.683 PM: debug: Executing (default): SELECT `winningTicket_id`, `reward_amount`, `selected_numbers`, `createdAt` FROM `winning_tickets` AS `winning_tickets`;

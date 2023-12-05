@@ -10,7 +10,7 @@ import logger from './config/logger.js';
 import { passport_config as passport } from './config/passport.js';
 import Defaults from './config/defaults.js';
 import error_handler from "./middlewares/error.js"
-import { routes } from './routes/routes.js';
+import routes  from './routes/routes.js';
 import cookie_tester from './utils/cookie_tester.js';
 import ModelAssociations from './models/associations.js';
 import mariadb_connector from './config/maria_db.js';
@@ -38,7 +38,7 @@ app.use(error_handler.converter);
 app.use(error_handler.notFound);
 app.use(error_handler.handler);
 
-//await Defaults.Models.initializeDefaultTables(true)
+//await Defaults.Models.initializeDefaultTables(false, true)
 
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);

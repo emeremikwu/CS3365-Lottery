@@ -96,7 +96,7 @@ Defaults.Models = class {
         logger.info("DB sync complete");
     }
 
-    static async initializeDefaultTables(destructive = false) {
+    static async initializeDefaultTables(destructive = false, alter = false) {
 
         //needs to be in this order
         const table_order = [
@@ -118,7 +118,7 @@ Defaults.Models = class {
 
         try {
             await Promise.all(table_order.map(async (table) => {
-                await table.sync({ force: destructive });
+                await table.sync({ force: destructive, alter: alter });
             }))
             logger.info("DB sync complete");
         } catch (error) {

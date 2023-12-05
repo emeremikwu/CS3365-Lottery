@@ -45,6 +45,12 @@ TicketTypeModel.init({
         allowNull: false,
     },
 
+    description: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    
+
     //running total of tickets sold maximum of 1 quadrillion
     running_total: {
         type: DataTypes.DECIMAL(18, 2),

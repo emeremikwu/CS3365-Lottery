@@ -31,7 +31,6 @@ export class AuthController {
 		//req.user = user; //not needed since were calling login, jwt would need this
 
 		//logger.info(`User logged in:  ${user.id}-${user.first_name}`)
-		return document()
 		return resolve();
 	};
 
@@ -45,7 +44,10 @@ export class AuthController {
 		}).then(() => {
 			logger.info(`User logged in: ${req.user.id}-${req.user.first_name}`)
 			res.redirect("/profile.html")
-		}).catch;
+		}).catch(err => {
+			logger.error(`Error logging in: ${err.message}`)
+			res.redirect("/login.html")
+		});
 	};
 
 	//returns partial information about the user

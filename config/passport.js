@@ -47,6 +47,7 @@ passport.deserializeUser(async (user_id, cb) => {
     })
 })
 
+
 passport.use(local_strategy)
 
 export default passport;

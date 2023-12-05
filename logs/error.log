@@ -1249,3 +1249,46 @@ sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED 
     at file:///home/admin/dev/CS3365-Lottery/config/passport.js:19:35
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
+2023-12-05 08:48:01.190 PM: error: APIError: Not Found GET:'/api/auth/signin'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 08:52:32.984 PM: error: APIError: Unauthorized
+    at file:///home/admin/dev/CS3365-Lottery/controllers/authController.js:27:18
+    at allFailed (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:110:18)
+    at attempt (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:183:28)
+    at strategy.fail (/home/admin/dev/CS3365-Lottery/node_modules/passport/lib/middleware/authenticate.js:314:9)
+    at verified (/home/admin/dev/CS3365-Lottery/node_modules/passport-local/lib/strategy.js:82:30)
+    at file:///home/admin/dev/CS3365-Lottery/config/passport.js:19:35
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Strategy._verify (file:///home/admin/dev/CS3365-Lottery/config/passport.js:15:9)
+2023-12-05 08:54:17.359 PM: error: APIError: Not Found GET:'/]'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 08:55:32.947 PM: error: Error logging in: Unauthorized
+2023-12-05 09:36:52.247 PM: error: APIError: Not Found GET:'/powerball-color.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)

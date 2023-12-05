@@ -5,13 +5,12 @@ const authenticate = (req, res, next) => {
         return next();
     }   
     
-    /* res.status(401).json({
+    res.status(401).json({
         status: "error",
         message: "You are not logged in!"
-    }); */
+    })
 
-    res.redirect('/foo/bar')
 
 }
 
-export {authenticate/*  */}
+export {authenticate}
