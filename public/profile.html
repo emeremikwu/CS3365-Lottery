@@ -5,16 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Texas Lottery Purchase System - Profile</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.home-content {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the content horizontally */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+  </style>
 </head>
 
 <body>
 
   <header>
-    <img src="images/TLlogo.svg" alt="TL Logo" />
+    <img src="TLlogo.svg" alt="TL Logo" />
   </header>
 
   <nav>
-    <a href="index.html">Browse Lottery Tickets</a>
+    <a href="homescreen.html">Browse Lottery Tickets</a>
     <a href="winning_numbers.html">Winning Numbers</a>
     <a href="profile.html">Profile</a>
     <a href="order_history.html">Order History</a>
@@ -38,7 +111,7 @@
         <input type="text" id="state" name="state" value="Texas" readonly>
   
         <label for="phone-number">Phone Number:</label>
-        <input type="tel" id="phone-number" name="phone-number" value="555-1234" readonly>
+        <input type="tel" id="phone-number" name="phone-number" value="(806) 555-1234" readonly>
       </form>
     </div>
   </section>
