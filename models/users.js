@@ -11,7 +11,7 @@ class UserModel extends Model {
 }
 
 UserModel.init({
-    id: {
+    user_id: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
@@ -39,27 +39,27 @@ UserModel.init({
 
     address: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     address2: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     city: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     state: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     zip: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
 }, {

@@ -11,7 +11,9 @@ import { passport_config as passport } from './config/passport.js';
 import Defaults from './config/defaults.js';
 import error_handler from "./middlewares/error.js"
 import { routes } from './routes/routes.js';
-
+import cookie_tester from './utils/cookie_tester.js';
+import ModelAssociations from './models/associations.js';
+import mariadb_connector from './config/maria_db.js';
 
 const app = express();
 
@@ -30,20 +32,16 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(Defaults.request_logger());
 
-app.get("/count", (req, res) => {
-	if (req.session.view) req.session.view++;
-	else req.session.view = 1;
-
-	res.send(`You have visited this page ${req.session.view} times`);
-})
-
 app.use('/api', routes);
+app.use(cookie_tester); //debug
 app.use(error_handler.converter);
 app.use(error_handler.notFound);
 app.use(error_handler.handler);
 
 /* await Defaults.Models.setAssociations()
 await Defaults.Models.initializeDefaultTables(true) */
+
+mariadb_connector.initializeTables(Object.keys(ModelAssociations), true)
 
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);
