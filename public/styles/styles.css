@@ -6,70 +6,25 @@ body {
   min-height: 100vh;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  display: flex;
-  text-align: center;
-  padding: 15px 0;
-}
+header,
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 nav {
+  display: flex;
+  justify-content: center;
   background-color: #eee;
   padding: 10px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.search-bar {
-  display: flex;
-  margin-left: auto; /* Move the search bar to the right by pushing it to the end of the flex container */
 }
 
-.search-bar input {
-  margin-right: 5px; /* Add some space between the input and button */
-}
-
-.top-search-bar {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.top-search-bar input {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.top-search-bar button {
-  padding: 10px 20px;
-  font-size: 16px;
-}
-
-.home-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 nav a {
   margin: 0 10px;
   text-decoration: none;
   color: #333;
-  font-weight: normal; /* Set the default font weight */
-  transition: color 0.3s, font-weight 0.3s; /* Add smooth transitions for color and font-weight */
-}
-
-nav a:hover {
-  color: #4caf50; /* Change color on hover */
-  font-weight: bold; /* Make the text bold on hover */
 }
 
 section {
@@ -81,155 +36,41 @@ section {
   text-align: center;
 }
 
-
-.user-actions {
-  display: flex;
-  align-items: center;
+.home-content {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto; /* Center the content horizontally */
+  border-radius: 10px; /* Add some border radius for a cleaner look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
-.user-actions a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: normal;
-  transition: color 0.3s, font-weight 0.3s;
+form {
+  display: grid;
+  gap: 15px;
 }
 
-.user-actions a:hover {
-  color: #4caf50;
-  font-weight: bold;
-}
-.slideshow-container {
-  width: 100%; /* Set the width to 100% */
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-}
-
-.mySlides {
-  display: none;
-  width: 100%;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.Shopping {
-  width: 35px; /* Adjust the width as needed */
-  height: 35px; /* Adjust the height as needed */
-}
-
-
-.bottom-search-bar {
-  text-align: center;
-  
-}
-
-.bottom-search-bar input {
-  width: 600px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.bottom-search-bar button {
-  padding: 10px 20px;
-  font-size: 16px;
-}
-
-.image-boxes {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.image-box {
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
-  flex: 0 0 auto; /* Prevent the boxes from growing */
-  margin-right: 10px; /* Add some space between the boxes */
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Additional styling for the image boxes */
-.image-boxes a {
+label {
   display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-}
-
-.image-boxes a:hover {
-  color: #4caf50;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.powerballbanner {
-  text-align: center;
-   /* Add some padding to the banner */
-}
-
-login-form {
-  max-width: 400px;
+input {
   width: 100%;
-  padding: 20px;
+  padding: 8px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
 }
 
-.login-input {
-  width: 100%;
+input[readonly] {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
   padding: 10px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-.login-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-}
-
-.registrationForm {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* White background with some transparency */
-}
-
-.login-link {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.login-link a {
-  color: #4caf50;
-}
-.registration-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
 }

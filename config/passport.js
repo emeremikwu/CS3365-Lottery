@@ -3,7 +3,7 @@
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { model as UserAccounts } from '../models/userModel.js';
-
+import associations from '../models/associations.js';
 // Configure Passport.js to use the local strategy
 
 const local_strategy = new LocalStrategy(
@@ -11,7 +11,7 @@ const local_strategy = new LocalStrategy(
     async (email, password, done) => {
         //verify credentials
 
-        await UserAccounts.findOne({ where: { email: email } })
+        await Users.findOne({ where: { email: email } })
 
             .then((user) => {
                 //user not found
