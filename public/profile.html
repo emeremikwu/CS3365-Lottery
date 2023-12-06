@@ -117,12 +117,20 @@
       // Fetch user_info.json (assuming it's in the same directory)
       fetch('user_info.json')
         .then(response => response.json())
-        .then(data => {
-          document.getElementById('first-name').value = data.first_name || '';
-          document.getElementById('last-name').value = data.last_name || '';
-          document.getElementById('address').value = data.address || '';
-          document.getElementById('state').value = data.state || '';
-          document.getElementById('phone-number').value = data.phone || '';
+        .then(users => {
+          // Find the user with the specified email
+          var user = users.find(user => user.email === 'canatal@ttu.edu');
+    
+          if (user) {
+            // Display user information in the corresponding HTML elements
+            document.getElementById('first-name').value = user.first_name || '';
+            document.getElementById('last-name').value = user.last_name || '';
+            document.getElementById('address').value = user.address || '';
+            document.getElementById('state').value = user.state || '';
+            document.getElementById('phone-number').value = user.phone || '';
+          } else {
+            console.error('User not found with email canatal@ttu.edu');
+          }
         })
         .catch(error => console.error('Error fetching user_info.json:', error));
     </script>
