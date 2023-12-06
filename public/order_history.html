@@ -1,121 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Texas Lottery Purchase System - Order History</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css" />
-  <title>Texas Lottery Purchase System - Order History</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
 
-    header,
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
+      section {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        text-align: center;
+      }
 
-    
+      .order-history-content {
+        max-width: 600px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-    section {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px 0;
-      text-align: center;
-    }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
 
-    .order-history-content {
-      max-width: 600px;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+      th {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: center;
-    }
-
-    th {
-      background-color: #333;
-      color: #fff;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <a href="index.html">
-      <img src="images/TLlogo.svg" alt="TL Logo" />
-    </a>
-  </header>
-
-  <div class="gray-bar">
-    <nav>
-      <a href="browse_tickets.html">Browse Lottery Tickets</a>
-      <a href="winning_numbers.html">Winning Numbers</a>
-      <a href="profile.html">Profile</a>
-      <a href="order_history.html">Order History</a>
-
-      <div class="user-actions">
-        <a href="login.html" class="bold">Login</a>
-        <span>/</span>
-        <a href="registration.html" class="bold">Register</a>
-      </div>
-      <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
-        <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
+  <body>
+    <header>
+      <a href="loginedindex.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
       </a>
-    </nav>
+    </header>
+
+    <div class="gray-bar">
+      <nav>
+          <a href="browse_tickets.html">Browse Lottery Tickets</a>
+          <a href="winning_numbers.html">Winning Numbers</a>
+          <a href="order_history.html">Order History</a>
+  
+          
+          <a href="shoppingcart.html" title="Smart Cart Icons">
+              <img class="Shopping" src="images/shopping-cart.png" alt="Shopping Cart"/>
+          </a>
+          <a href="profile.html">
+              <img class="Shopping" src="images\account.png" alt="Profile" />
+          
+            </a>
+          <a href="index.html">Logout</a>
+          
+      </nav>
   </div>
-  <section>
-    <div class="order-history-content">
-      <h2>Order History</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Order Number</th>
-            <th>Date</th>
-            <th>Ticket Numbers</th>
-            <th>Amount Paid</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>123456</td>
-            <td>2023-01-15</td>
-            <td>5, 12, 18, 22, 30, 45</td>
-            <td>$10.00</td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
     </div>
-  </section>
+    <section>
+      <div class="order-history-content">
+        <h2>Order History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order Number</th>
+              <th>Date</th>
+              <th>Ticket Numbers</th>
+              <th>Amount Paid</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>123456</td>
+              <td>2023-01-15</td>
+              <td>5, 12, 18, 22, 30, 45</td>
+              <td>$10.00</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
-  </footer>
-
-</body>
-
+    <footer>
+      <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

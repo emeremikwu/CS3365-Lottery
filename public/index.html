@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
-  <title>Your Basic Website - Home</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="icon" href="/favicon.jpg" type="image/jpeg"/>
+    <title>Your Basic Website - Home</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          // Get the input and button elements
+          var searchInput = document.querySelector('.bottom-search-bar input');
+          var searchButton = document.querySelector('.bottom-search-bar button');
+  
+          // Add an event listener to the button
+          searchButton.addEventListener('click', function () {
+              // Get the value entered by the user
+              var searchValue = searchInput.value.toLowerCase();
+  
+              // Check if the search value matches a specific keyword
+              if (searchValue === 'powerball') {
+                  window.location.href = 'powerball.html';
+              } else if (searchValue === 'texas lotto') {
+                  window.location.href = 'texaslotto.html';
+              } else if (searchValue === 'texas twostep') {
+                  window.location.href = 'texastwostep.html';
+              } else if (searchValue === 'megamillions') {
+                  window.location.href = 'megamillions.html';
+              } else {
+                  // Handle other cases or show an error message
+                  alert('No matching results found.');
+              }
+          });
+      });
+  </script>
+  
 </head>
 
 <body>
-  <header>
-      <img src="images/TLlogo.svg" href="index.html" alt="TL Logo" />
-    
-      
-  </header>
+<header>
+    <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo"/>
+    </a>
+</header>
 
-  <div class="gray-bar">
+<div class="gray-bar">
     <nav>
-      <a href="browse_tickets.html">Browse Lottery Tickets</a>
-      <a href="winning_numbers.html">Winning Numbers</a>
-      <a href="profile.html">Profile</a>
-      <a href="order_history.html">Order History</a>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="order_history.html">Order History</a>
 
-      <div class="user-actions">
-        <a href="login.html" class="bold">Login</a>
-        <span>/</span>
-        <a href="registration.html" class="bold">Register</a>
-      </div>
-      <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
-        <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
-      </a>
+        <div class="user-actions">
+            <a href="login.html" class="bold">Login</a>
+            <span>/</span>
+            <a href="registration.html" class="bold">Register</a>
+        </div>
+        <a href="shoppingcart.html" title="Smart Cart Icons">
+            <img class="Shopping" src="images/shopping-cart.png" alt="Shopping Cart"/>
+        </a>
     </nav>
-  </div>
+</div>
 
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
+<!-- Slideshow container -->
+<div class="slideshow-container">
     <!-- Slides -->
     <div class="mySlides">
-      <img src="images/mm_branding.png" alt="M&M Branding" />
+        <img src="images/mm_branding.png" alt="M&M Branding"/>
     </div>
     <div class="mySlides">
-      <img src="images/holiday-perfect-gift.jpg" alt="Holiday Perfect Gift" />
+        <img src="images/holiday-perfect-gift.jpg" alt="Holiday Perfect Gift"/>
     </div>
-  </div>
+</div>
 
-  <section class="home-content">
+<section class="home-content">
     <h1>Search for Ticket</h1>
-  
+
     <!-- Search bar moved closer to the bottom -->
     <div class="bottom-search-bar">
-      <input type="text" placeholder="Search for Tickets!" />
-      <button type="button">Search</button>
+        <input type="text" placeholder="Search for Tickets!"/>
+        <button type="button">Search</button>
     </div>
 
     <!-- Two boxes of clickable images -->
     <div class="image-boxes">
-      <div class="image-box">
-        <a href="winning_numbers.html">
-          <img src="images/checknumbers.jpg" alt="Box 1" />
-        </a>
-      </div>
-      <div class="image-box">
-        <a href="browse_tickets.html">
-          <img src="images/Texas-Lottery-logo.webp" alt="Box 2" />
-        </a>
-      </div>
+        <div class="image-box">
+            <a href="winning_numbers.html">
+                <img src="images/checknumbers.jpg" alt="Box 1"/>
+            </a>
+        </div>
+        <div class="image-box">
+            <a href="browse_tickets.html">
+                <img src="images/Texas-Lottery-logo.webp" alt="Box 2"/>
+            </a>
+        </div>
     </div>
-  </section>
+</section>
 
-  <footer>
+<footer>
     <p>&copy; 2023 Texas Lottery. All rights reserved.</p>
-  </footer>
+</footer>
 
-  <script src="scripts/slide_show.js"></script>
-  <script>
-    
-  </script>
+<script src="scripts/slide_show.js"></script>
 </body>
 </html>

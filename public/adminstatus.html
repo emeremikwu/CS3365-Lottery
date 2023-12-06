@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/ticket_option_styles.css" />
+    <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
+    <title>Browse Lottery Tickets</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+      }
+
+      header img {
+        max-width: 100%;
+      }
+
+      .user-actions {
+        display: flex;
+        align-items: center;
+      }
+
+      .user-actions a {
+        margin: 0 5px;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto; /* Center the section horizontally and add space around it */
+        max-width: 600px; /* Optional: Set a maximum width for the section */
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 50px 0; /* 20px space at the top and bottom */
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+
+      caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .add-ticket-button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 40%;
+      }
+
+      .add-ticket-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
+      </a>
+    </header>
+
+    <div class="gray-bar">
+      <nav>
+        
+      
+    </div>
+    
+    <section>
+      <h1>Admin Status Page</h1>
+      <a class="add-ticket-button" href="addadminticket.html"> Add Ticket </a>
+      <!-- Table for Sold Tickets -->
+      <table>
+        <caption>
+          Sold Tickets
+        </caption>
+        <tr>
+          <th>Ticket Name</th>
+          <th>Ticket Number</th>
+          <th>Ticket Sold</th>
+          <th>Price</th>
+          <!-- Add more columns as needed -->
+        </tr>
+        <!-- Add rows for sold tickets -->
+      </table>
+
+      <!-- Table for Winning Numbers -->
+      <table>
+        <caption>
+          Winning Numbers
+        </caption>
+        <tr>
+          <th>Ticket Name</th>
+          <th>Draw Date</th>
+          <th>Winning Number</th>
+          <!-- Add more columns as needed -->
+        </tr>
+        <tr>
+          <td>Texas Lottery</td>
+          <td>12-05-2023</td>
+          <td>1 32 41 14 32 92</td>
+        </tr>
+        <tr>
+          <td>Texas Two Step</td>
+          <td>12-05-2023</td>
+          <td>19 59 36 64 8 76</td>
+        </tr>
+        <tr>
+          <td>Powerball</td>
+          <td>12-05-2023</td>
+          <td>70 24 28 31 21 1</td>
+        </tr>
+        <tr>
+          <td>Mega Millions</td>
+          <td>12-05-2023</td>
+          <td>3 11 94 5 25 45</td>
+        </tr>
+        <!-- Add rows for winning numbers -->
+      </table>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Texas Lottery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,127 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Texas Lottery Purchase System - Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css" />
-  <title>Texas Lottery Purchase System - Profile</title>
-  <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
 
+      section {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        text-align: center;
+      }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
+      .home-content {
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: auto; /* Center the content horizontally */
+      }
 
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-section {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  text-align: center;
-}
+      label {
+        margin-bottom: 8px;
+      }
 
-.home-content {
-  max-width: 600px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: auto; /* Center the content horizontally */
-}
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      footer {
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
 
-label {
-  margin-bottom: 8px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-}
-
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <a href="index.html">
-      <img src="images/TLlogo.svg" alt="TL Logo" />
-    </a>
-  </header>
-
-  <div class="gray-bar">
-    <nav>
-      <a href="browse_tickets.html">Browse Lottery Tickets</a>
-      <a href="winning_numbers.html">Winning Numbers</a>
-      <a href="profile.html">Profile</a>
-      <a href="order_history.html">Order History</a>
-
-      <div class="user-actions">
-        <a href="login.html" class="bold">Login</a>
-        <span>/</span>
-        <a href="registration.html" class="bold">Register</a>
-      </div>
-      <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
-        <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
       </a>
-    </nav>
-  </div>
+    </header>
 
-  <section>
-    <div class="home-content">
-      <h2>User Profile</h2>
-      <form id="profile-form">
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" value="John" readonly>
-  
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" value="Doe" readonly>
-  
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" value="123 Main St" readonly>
-  
-        <label for="state">State:</label>
-        <input type="text" id="state" name="state" value="Texas" readonly>
-  
-        <label for="phone-number">Phone Number:</label>
-        <input type="tel" id="phone-number" name="phone-number" value="555-1234" readonly>
-      </form>
+    <div class="gray-bar">
+      <nav>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="order_history.html">Order History</a>
+        <a href="shoppingcart.html" title="Smart Cart Icons">
+          <img class="Shopping" src="images/shopping-cart.png" alt="Shopping Cart" />
+        </a>
+        <a href="profile.html">
+          <img class="Shopping" src="images\account.png" alt="Profile" />
+        </a>
+        <a href="index.html">Logout</a>
+      </nav>
     </div>
-  </section>
-  
 
-  <footer>
-    <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
-  </footer>
+    <section>
+      <div class="home-content">
+        <h2>User Profile</h2>
+        <form id="profile-form">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" readonly />
 
-</body>
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" readonly />
 
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" readonly />
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" readonly />
+
+          <label for="phone-number">Phone Number:</label>
+          <input type="tel" id="phone-number" name="phone-number" readonly />
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Fetch user_info.json (assuming it's in the same directory)
+      fetch('user_info.json')
+        .then(response => response.json())
+        .then(users => {
+          // Find the user with the specified email
+          var user = users.find(user => user.email === 'canatal@ttu.edu');
+    
+          if (user) {
+            // Display user information in the corresponding HTML elements
+            document.getElementById('first-name').value = user.first_name || '';
+            document.getElementById('last-name').value = user.last_name || '';
+            document.getElementById('address').value = user.address || '';
+            document.getElementById('state').value = user.state || '';
+            document.getElementById('phone-number').value = user.phone || '';
+          } else {
+            console.error('User not found with email canatal@ttu.edu');
+          }
+        })
+        .catch(error => console.error('Error fetching user_info.json:', error));
+    </script>
+  </body>
 </html>
