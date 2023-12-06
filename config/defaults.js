@@ -1,5 +1,14 @@
 "use strict";
-import { User, OrderItems, Ticket, Orders, TicketType, WinningTicket } from '../models/associations.js';
+import { 
+    User, 
+    OrderItems, 
+    Ticket, Orders, 
+    TicketType, 
+    WinningTicket, 
+    Cart,
+    CartItem
+ } from '../models/associations.js';
+import { model as UserCart } from '../models/cart/cart.js';
 import env_config from './env_config.js';
 import logger from './logger.js';
 import _ from 'lodash';
@@ -101,12 +110,26 @@ Defaults.Models = class {
         //needs to be in this order
         const table_order = [
             User, 
-            Orders, 
             TicketType,
             Ticket, 
+            WinningTicket,
+            Orders, 
             OrderItems, 
-            WinningTicket
-        ]
+            UserCart,
+            Cart,
+            CartItem,
+        ] 
+
+        /* const table_order = [
+            User, 
+            TicketType,
+            Ticket, 
+            Cart,
+            CartItem,
+            Orders, 
+            OrderItems, 
+            WinningTicket,
+        ] */
 
         if (env_config.isProduction()) {
             logger.warn("initializeTables is disabled in Production")

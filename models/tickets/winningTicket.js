@@ -5,7 +5,7 @@ import mariadb_connector from "../../config/maria_db.js";
 class WinningTicketModel extends Model {
 
 }
-
+{}
 //just contains the id, foreign keys will be set Defaults.ModelAssociations in config file in config folder
 WinningTicketModel.init({
     winningTicket_id: {

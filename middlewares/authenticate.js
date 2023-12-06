@@ -9,8 +9,6 @@ const authenticate = (req, res, next) => {
         status: "error",
         message: "You are not logged in!"
     })
-
-
 }
 
 export {authenticate}
