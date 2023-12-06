@@ -3175,3 +3175,585 @@ sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED 
 2023-12-05 09:54:48.679 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:09:45.002Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
 2023-12-05 09:54:48.680 PM: http: 	Request Authenitcated: false
 2023-12-05 09:54:48.683 PM: debug: Executing (default): SELECT `winningTicket_id`, `reward_amount`, `selected_numbers`, `createdAt` FROM `winning_tickets` AS `winning_tickets`;
+2023-12-05 10:17:43.550 PM: http: New Request: GET /winnings ::ffff:129.118.254.192
+2023-12-05 10:17:43.555 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:32:43.549Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 10:17:43.556 PM: http: 	Request Authenitcated: false
+2023-12-05 10:17:43.560 PM: error: APIError: Not Found GET:'/winnings'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 10:17:56.092 PM: http: New Request: GET /winnings ::ffff:129.118.254.192
+2023-12-05 10:17:56.093 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:32:43.564Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 10:17:56.094 PM: http: 	Request Authenitcated: false
+2023-12-05 10:17:56.094 PM: error: APIError: Not Found GET:'/winnings'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 10:18:11.923 PM: http: New Request: GET /api/info/winnings ::ffff:129.118.254.192
+2023-12-05 10:18:11.925 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:32:56.096Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 10:18:11.926 PM: http: 	Request Authenitcated: false
+2023-12-05 10:18:11.959 PM: debug: Executing (default): SELECT `winningTicket_id`, `reward_amount`, `selected_numbers`, `createdAt` FROM `winning_tickets` AS `winning_tickets`;
+2023-12-05 10:18:30.353 PM: http: New Request: GET /api/info/winnings ::ffff:129.118.254.192
+2023-12-05 10:18:30.354 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:33:11.964Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 10:18:30.354 PM: http: 	Request Authenitcated: false
+2023-12-05 10:18:30.416 PM: debug: Executing (default): SELECT `winningTicket_id`, `reward_amount`, `selected_numbers`, `createdAt` FROM `winning_tickets` AS `winning_tickets`;
+2023-12-05 10:20:32.564 PM: http: New Request: GET /api/info/winnings ::ffff:129.118.254.192
+2023-12-05 10:20:32.565 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-05T22:33:30.418Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-05 10:20:32.566 PM: http: 	Request Authenitcated: false
+2023-12-05 10:20:32.573 PM: debug: Executing (default): SELECT `winningTicket_id`, `reward_amount`, `selected_numbers`, `createdAt` FROM `winning_tickets` AS `winning_tickets`;
+2023-12-05 11:17:15.694 PM: warn: Executing non-destructive table queries
+2023-12-05 11:17:15.758 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.760 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.762 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.763 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.767 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.770 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.772 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:17:15.775 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 11:17:15.777 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.779 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 11:17:15.781 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.783 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 11:17:15.787 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.789 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 11:17:15.792 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.793 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 11:17:15.796 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.797 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 11:17:15.799 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:17:15.800 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`type_id`) REFERENCES `ticket_types` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:17:15.802 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.804 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 11:17:15.806 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 11:17:15.809 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.809 PM: error: (conn=7859, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`user_cart` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` ... - parameters:[]
+2023-12-05 11:17:15.813 PM: info: Server running on port 4000
+2023-12-05 11:17:15.814 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:17:15.816 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.818 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:17:15.819 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 11:17:15.821 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:17:15.822 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.825 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.826 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.828 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:17:15.829 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:17:15.831 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.832 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.834 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.835 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 11:17:15.837 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.839 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.840 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.842 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 11:17:15.843 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 11:17:15.844 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.846 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:17:15.848 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_5' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:17:15.849 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:17:15.851 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 11:17:15.853 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:17:15.855 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:17:15.857 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 11:17:15.858 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_5`;
+2023-12-05 11:17:15.859 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 11:17:15.861 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 11:17:15.862 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 11:17:15.864 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:17:15.866 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:17:15.867 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:17:15.869 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 11:17:15.870 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 11:17:15.871 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.873 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 11:17:15.875 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_6' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:17:15.876 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:17:15.878 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.879 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 11:17:15.881 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:17:15.882 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_6`;
+2023-12-05 11:17:15.884 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 11:17:15.885 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 11:17:15.887 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.889 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:17:15.896 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:17:15.899 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:17:15.900 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:17:15.904 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:18:47.868 PM: warn: Executing non-destructive table queries
+2023-12-05 11:18:47.917 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.919 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.921 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.922 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.924 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.928 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.931 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:18:47.933 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 11:18:47.936 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.939 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`type_id`) REFERENCES `ticket_types` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:18:47.941 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 11:18:47.943 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.946 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 11:18:47.948 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.951 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 11:18:47.952 PM: error: (conn=7897, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`user_cart` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` ... - parameters:[]
+2023-12-05 11:18:47.956 PM: info: Server running on port 4000
+2023-12-05 11:18:47.958 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.959 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 11:18:47.962 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.963 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 11:18:47.965 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:18:47.967 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.968 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 11:18:47.970 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 11:18:47.972 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.973 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:18:47.975 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 11:18:47.977 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.979 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:18:47.980 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:18:47.982 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:18:47.984 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:47.985 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:18:47.987 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.988 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:47.990 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.992 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:47.993 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:47.995 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:18:47.996 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:47.998 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.000 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 11:18:48.002 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_7' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:18:48.004 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.005 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 11:18:48.007 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:18:48.008 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.010 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:18:48.012 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_7`;
+2023-12-05 11:18:48.014 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:18:48.015 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 11:18:48.017 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:18:48.018 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 11:18:48.020 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 11:18:48.021 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 11:18:48.023 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:18:48.024 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 11:18:48.026 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:18:48.028 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 11:18:48.029 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:18:48.031 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.033 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_8' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:18:48.034 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 11:18:48.036 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:18:48.038 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:18:48.044 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.047 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_8`;
+2023-12-05 11:18:48.049 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 11:18:48.052 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 11:18:48.054 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 11:18:48.056 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:18:48.057 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.059 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 11:18:48.061 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:18:48.063 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:18:48.065 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:18:48.068 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:52:44.534 PM: warn: Executing non-destructive table queries
+2023-12-05 11:52:44.591 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.593 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.595 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.598 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.603 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.607 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.610 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.612 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:52:44.615 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 11:52:44.617 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.620 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 11:52:44.623 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.626 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 11:52:44.629 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.633 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `UserID` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:52:44.635 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`id` INTEGER NOT NULL auto_increment , `Quantity` INTEGER UNSIGNED DEFAULT 1, `CartID` INTEGER UNSIGNED, PRIMARY KEY (`id`), FOREIGN KEY (`CartID`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:52:44.638 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 11:52:44.641 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.644 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 11:52:44.646 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.649 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 11:52:44.651 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:52:44.654 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 11:52:44.656 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.658 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.661 PM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-05 11:52:44.663 PM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-05 11:52:44.666 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 11:52:44.668 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:52:44.671 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 11:52:44.673 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.675 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:52:44.677 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:52:44.679 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:52:44.681 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.684 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:52:44.686 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.688 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.691 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.693 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.695 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.697 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.699 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:52:44.701 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.703 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 11:52:44.705 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.708 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_9' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:52:44.710 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.712 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 11:52:44.714 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:52:44.725 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:52:44.727 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:52:44.729 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_9`;
+2023-12-05 11:52:44.730 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:52:44.732 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 11:52:44.734 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 11:52:44.736 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 11:52:44.739 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:52:44.741 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 11:52:44.742 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 11:52:44.744 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.746 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:52:44.749 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 11:52:44.751 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:52:44.753 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.754 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_10' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:52:44.756 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:52:44.758 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 11:52:44.759 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:52:44.761 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 11:52:44.763 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 11:52:44.765 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 11:52:44.767 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 11:52:44.769 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_10`;
+2023-12-05 11:52:44.772 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.773 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:52:44.775 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:52:44.777 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:52:44.778 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:52:44.781 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:52:44.797 PM: info: DB sync complete
+2023-12-05 11:52:44.803 PM: info: Server running on port 4000
+2023-12-05 11:56:08.577 PM: warn: Executing non-destructive table queries
+2023-12-05 11:56:08.652 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.654 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.656 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.661 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.664 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.666 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.669 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.671 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:56:08.673 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 11:56:08.676 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.678 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 11:56:08.681 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.684 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 11:56:08.686 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.689 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `cart`;
+2023-12-05 11:56:08.691 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'cart' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.693 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `cart_items`;
+2023-12-05 11:56:08.695 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'cart_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.696 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 11:56:08.698 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.699 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 11:56:08.702 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.703 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 11:56:08.715 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:56:08.717 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.720 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 11:56:08.723 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `ticket_number_ref` `ticket_number_ref` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.724 PM: debug: Executing (default): ALTER TABLE `cart_items` ADD `CartItemID` INTEGER UNSIGNED auto_increment PRIMARY KEY;
+2023-12-05 11:56:08.726 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 11:56:08.728 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='cart' AND constraint_name = 'cart_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.730 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 11:56:08.733 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.734 PM: error: (conn=7985, no: 1075, SQLState: 42000) Incorrect table definition; there can be only one auto column and it must be defined as a key
+sql: ALTER TABLE `cart_items` ADD `CartItemID` INTEGER UNSIGNED auto_increment PRIMARY KEY; - parameters:[]
+2023-12-05 11:56:08.739 PM: info: Server running on port 4000
+2023-12-05 11:56:08.740 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:56:08.742 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:56:08.744 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:56:08.745 PM: debug: Executing (default): ALTER TABLE `cart` DROP FOREIGN KEY `cart_ibfk_1`;
+2023-12-05 11:56:08.747 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:56:08.749 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:56:08.751 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.752 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.754 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.756 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.757 PM: debug: Executing (default): ALTER TABLE `cart` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.759 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.760 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.762 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:56:08.763 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.765 PM: debug: Executing (default): ALTER TABLE `tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.767 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.768 PM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-05 11:56:08.770 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 11:56:08.772 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.773 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 11:56:08.775 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_11' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.778 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='tickets' AND constraint_name = 'tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.779 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.780 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:56:08.782 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.784 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 11:56:08.786 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_11`;
+2023-12-05 11:56:08.787 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 11:56:08.789 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 11:56:08.791 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 11:56:08.794 PM: debug: Executing (default): ALTER TABLE `tickets` DROP FOREIGN KEY `tickets_ibfk_1`;
+2023-12-05 11:56:08.798 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.801 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.803 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.805 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.807 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 11:56:08.810 PM: debug: Executing (default): ALTER TABLE `tickets` ADD FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.812 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_12' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:56:08.813 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:56:08.816 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.817 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 11:56:08.820 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 11:56:08.821 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_12`;
+2023-12-05 11:56:08.823 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 11:56:08.825 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 11:56:08.827 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 11:56:08.829 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:56:08.831 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:56:08.833 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.850 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:56:08.852 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:56:08.853 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:58:14.543 PM: warn: Executing non-destructive table queries
+2023-12-05 11:58:14.608 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.610 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.612 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.614 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.618 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.622 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.624 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.626 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:58:14.628 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-05 11:58:14.631 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `description` VARCHAR(255), `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-05 11:58:14.633 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TypeID` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`TypeID`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.635 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `UserID` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.638 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`CartItemID` INTEGER UNSIGNED auto_increment , `Quantity` INTEGER UNSIGNED DEFAULT 1, `CartID` INTEGER UNSIGNED, PRIMARY KEY (`CartItemID`), FOREIGN KEY (`CartID`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.641 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `UserID` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.643 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.645 PM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-05 11:58:14.647 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:58:14.649 PM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-05 11:58:14.651 PM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-05 11:58:14.652 PM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-05 11:58:14.654 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:58:14.657 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:58:14.659 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:58:14.661 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-05 11:58:14.665 PM: info: DB sync complete
+2023-12-05 11:58:14.669 PM: info: Server running on port 4000
+2023-12-05 11:59:58.915 PM: warn: Executing non-destructive table queries
+2023-12-05 11:59:58.968 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.971 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'ticket_types' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.973 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.976 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.981 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'cart_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.986 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.988 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'order_items' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.990 PM: debug: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'winning_tickets' AND TABLE_SCHEMA = 'ticketDB'
+2023-12-05 11:59:58.993 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `users`;
+2023-12-05 11:59:58.995 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.009 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `ticket_types`;
+2023-12-05 11:59:59.012 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'ticket_types' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.014 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `tickets`;
+2023-12-05 11:59:59.018 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.021 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `cart`;
+2023-12-05 11:59:59.024 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'cart' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.036 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `cart_items`;
+2023-12-05 11:59:59.041 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'cart_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.043 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `orders`;
+2023-12-05 11:59:59.045 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.046 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `order_items`;
+2023-12-05 11:59:59.049 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'order_items' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.051 PM: debug: Executing (default): SHOW FULL COLUMNS FROM `winning_tickets`;
+2023-12-05 11:59:59.053 PM: debug: Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'winning_tickets' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='ticketDB' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2023-12-05 11:59:59.054 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `name` `name` VARCHAR(255) NOT NULL UNIQUE;
+2023-12-05 11:59:59.057 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(255) NOT NULL;
+2023-12-05 11:59:59.060 PM: debug: Executing (default): ALTER TABLE `tickets` ADD `TicketID` INTEGER UNSIGNED, ADD CONSTRAINT `tickets_TicketID_foreign_idx` FOREIGN KEY (`TicketID`) REFERENCES `cart_items` (`cart_item_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.063 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='cart' AND constraint_name = 'cart_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:59:59.065 PM: debug: Executing (default): ALTER TABLE `cart_items` ADD `cart_item_id` INTEGER UNSIGNED auto_increment PRIMARY KEY;
+2023-12-05 11:59:59.067 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `date` `date` DATETIME NOT NULL;
+2023-12-05 11:59:59.070 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `quantity` `quantity` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:59:59.074 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_count` `number_count` INTEGER UNSIGNED NOT NULL;
+2023-12-05 11:59:59.078 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+2023-12-05 11:59:59.080 PM: error: (conn=8109, no: 1075, SQLState: 42000) Incorrect table definition; there can be only one auto column and it must be defined as a key
+sql: ALTER TABLE `cart_items` ADD `cart_item_id` INTEGER UNSIGNED auto_increment PRIMARY KEY; - parameters:[]
+2023-12-05 11:59:59.086 PM: info: Server running on port 4000
+2023-12-05 11:59:59.088 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `reward_amount` `reward_amount` DECIMAL(18,2) NOT NULL;
+2023-12-05 11:59:59.090 PM: debug: Executing (default): ALTER TABLE `cart` DROP FOREIGN KEY `cart_ibfk_1`;
+2023-12-05 11:59:59.092 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `subtotal` `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:59:59.094 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.097 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `number_maxes` `number_maxes` VARCHAR(255) NOT NULL;
+2023-12-05 11:59:59.099 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `first_name` `first_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:59:59.101 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `selected_numbers` `selected_numbers` VARCHAR(255);
+2023-12-05 11:59:59.103 PM: debug: Executing (default): ALTER TABLE `cart` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.105 PM: debug: Executing (default): ALTER TABLE `order_items` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.107 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `price` `price` DECIMAL(6,2) NOT NULL;
+2023-12-05 11:59:59.108 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `last_name` `last_name` VARCHAR(255) NOT NULL;
+2023-12-05 11:59:59.110 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.113 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.114 PM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-05 11:59:59.116 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:59:59.118 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `description` `description` VARCHAR(255);
+2023-12-05 11:59:59.120 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+2023-12-05 11:59:59.123 PM: debug: Executing (default): ALTER TABLE `orders` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.125 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_1`;
+2023-12-05 11:59:59.128 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `running_total` `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0;
+2023-12-05 11:59:59.130 PM: debug: Executing (default): ALTER TABLE `winning_tickets` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.132 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `address2` `address2` VARCHAR(255);
+2023-12-05 11:59:59.134 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:59:59.136 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.138 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `disabled` `disabled` TINYINT(1) NOT NULL DEFAULT false;
+2023-12-05 11:59:59.140 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `city` `city` VARCHAR(255);
+2023-12-05 11:59:59.141 PM: debug: Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_1`;
+2023-12-05 11:59:59.143 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='winning_tickets' AND constraint_name = 'winning_tickets_ibfk_1' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:59:59.145 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `state` `state` VARCHAR(255);
+2023-12-05 11:59:59.146 PM: debug: Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`UserID`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.148 PM: debug: Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='order_items' AND constraint_name = 'order_items_ibfk_2' AND TABLE_SCHEMA = 'ticketDB';
+2023-12-05 11:59:59.150 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.152 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `zip` `zip` VARCHAR(255);
+2023-12-05 11:59:59.153 PM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-05 11:59:59.155 PM: debug: Executing (default): ALTER TABLE `order_items` DROP FOREIGN KEY `order_items_ibfk_2`;
+2023-12-05 11:59:59.157 PM: debug: Executing (default): ALTER TABLE `winning_tickets` DROP FOREIGN KEY `winning_tickets_ibfk_1`;
+2023-12-05 11:59:59.158 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.161 PM: debug: Executing (default): ALTER TABLE `order_items` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.163 PM: debug: Executing (default): ALTER TABLE `ticket_types` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.166 PM: debug: Executing (default): ALTER TABLE `users` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+2023-12-05 11:59:59.168 PM: debug: Executing (default): ALTER TABLE `winning_tickets` ADD FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2023-12-05 11:59:59.170 PM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-05 11:59:59.172 PM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-05 11:59:59.174 PM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-05 11:59:59.186 PM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-06 12:00:22.041 AM: warn: Executing destructive table queries
+2023-12-06 12:00:22.100 AM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-06 12:00:22.102 AM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-06 12:00:22.105 AM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-06 12:00:22.107 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:00:22.113 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart_items`;
+2023-12-06 12:00:22.115 AM: error: (conn=8114, no: 1451, SQLState: 23000) Cannot delete or update a parent row: a foreign key constraint fails
+sql: DROP TABLE IF EXISTS `users`; - parameters:[]
+2023-12-06 12:00:22.121 AM: info: Server running on port 4000
+2023-12-06 12:00:22.124 AM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-06 12:00:22.126 AM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-06 12:00:22.129 AM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-06 12:00:22.136 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`cart_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED DEFAULT 1, `CartID` INTEGER UNSIGNED, PRIMARY KEY (`cart_item_id`), FOREIGN KEY (`CartID`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:00:22.140 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `OrderID` INTEGER UNSIGNED, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`OrderID`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:00:22.144 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `TicketID` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`TicketID`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:00:22.146 AM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-06 12:00:22.148 AM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-06 12:00:22.153 AM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-06 12:02:59.116 AM: warn: Executing destructive table queries
+2023-12-06 12:02:59.163 AM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-06 12:02:59.167 AM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-06 12:02:59.173 AM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-06 12:02:59.181 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:02:59.183 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart_items`;
+2023-12-06 12:02:59.187 AM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-06 12:02:59.189 AM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-06 12:02:59.192 AM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-06 12:02:59.195 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-06 12:02:59.197 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `description` VARCHAR(255), `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-06 12:02:59.199 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`ticket_id`) REFERENCES `cart_items` (`cart_item_id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`type_id`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.200 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `user_id` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.202 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`cart_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED DEFAULT 1, `cart_id` INTEGER UNSIGNED, PRIMARY KEY (`cart_item_id`), FOREIGN KEY (`cart_id`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.204 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.206 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `order_id` INTEGER UNSIGNED, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.209 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:02:59.210 AM: error: (conn=8157, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`tickets` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
+2023-12-06 12:02:59.213 AM: info: Server running on port 4000
+2023-12-06 12:02:59.215 AM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-06 12:02:59.217 AM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-06 12:02:59.218 AM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-06 12:02:59.220 AM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-06 12:02:59.222 AM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-06 12:05:27.981 AM: warn: Executing destructive table queries
+2023-12-06 12:05:28.052 AM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-06 12:05:28.054 AM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-06 12:05:28.056 AM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-06 12:05:28.058 AM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-06 12:05:28.060 AM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-06 12:05:28.063 AM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-06 12:05:28.066 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:05:28.068 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:05:28.071 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart_items`;
+2023-12-06 12:05:28.073 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-06 12:05:28.076 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.078 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `description` VARCHAR(255), `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-06 12:05:28.080 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`ticket_id`) REFERENCES `cart_items` (`cart_item_id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`type_id`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.083 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `order_id` INTEGER UNSIGNED, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.085 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.092 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `user_id` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.098 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `user_id` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.102 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`cart_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED DEFAULT 1, `cart_id` INTEGER UNSIGNED, PRIMARY KEY (`cart_item_id`), FOREIGN KEY (`cart_id`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:05:28.103 AM: error: (conn=8174, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`tickets` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
+2023-12-06 12:05:28.109 AM: info: Server running on port 4000
+2023-12-06 12:05:28.110 AM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-06 12:05:28.112 AM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-06 12:05:28.114 AM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-06 12:05:28.116 AM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-06 12:05:28.117 AM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-06 12:05:28.122 AM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-06 12:18:47.487 AM: warn: Executing destructive table queries
+2023-12-06 12:18:47.552 AM: debug: Executing (default): DROP TABLE IF EXISTS `users`;
+2023-12-06 12:18:47.554 AM: debug: Executing (default): DROP TABLE IF EXISTS `ticket_types`;
+2023-12-06 12:18:47.556 AM: debug: Executing (default): DROP TABLE IF EXISTS `tickets`;
+2023-12-06 12:18:47.558 AM: debug: Executing (default): DROP TABLE IF EXISTS `winning_tickets`;
+2023-12-06 12:18:47.562 AM: debug: Executing (default): DROP TABLE IF EXISTS `orders`;
+2023-12-06 12:18:47.567 AM: debug: Executing (default): DROP TABLE IF EXISTS `order_items`;
+2023-12-06 12:18:47.569 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:18:47.571 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart`;
+2023-12-06 12:18:47.573 AM: debug: Executing (default): DROP TABLE IF EXISTS `cart_items`;
+2023-12-06 12:18:47.576 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `users` (`user_id` INTEGER UNSIGNED auto_increment , `email` VARCHAR(255) NOT NULL, `password` VARCHAR(255) NOT NULL, `first_name` VARCHAR(255) NOT NULL, `last_name` VARCHAR(255) NOT NULL, `address` VARCHAR(255), `address2` VARCHAR(255), `city` VARCHAR(255), `state` VARCHAR(255), `zip` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`user_id`)) ENGINE=InnoDB;
+2023-12-06 12:18:47.579 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `ticket_types` (`type_id` INTEGER UNSIGNED auto_increment , `name` VARCHAR(255) NOT NULL UNIQUE, `number_count` INTEGER UNSIGNED NOT NULL, `number_maxes` VARCHAR(255) NOT NULL, `price` DECIMAL(6,2) NOT NULL, `description` VARCHAR(255), `running_total` DECIMAL(18,2) NOT NULL DEFAULT 0, `disabled` TINYINT(1) NOT NULL DEFAULT false, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`type_id`)) ENGINE=InnoDB;
+2023-12-06 12:18:47.582 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_id`), FOREIGN KEY (`type_id`) REFERENCES `ticket_types` (`type_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.584 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `orders` (`order_id` INTEGER UNSIGNED auto_increment , `date` DATETIME NOT NULL, `subtotal` DECIMAL(18,2) NOT NULL DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `user_id` INTEGER UNSIGNED, PRIMARY KEY (`order_id`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.587 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `order_id` INTEGER UNSIGNED, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`order_item_id`), FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.589 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `user_id` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.592 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart` (`CartID` INTEGER UNSIGNED auto_increment , `user_id` INTEGER UNSIGNED, PRIMARY KEY (`CartID`), FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.594 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `cart_items` (`cart_item_id` INTEGER UNSIGNED auto_increment , `quantity` INTEGER UNSIGNED DEFAULT 1, `cart_id` INTEGER UNSIGNED, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`cart_item_id`), FOREIGN KEY (`cart_id`) REFERENCES `cart` (`CartID`) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.596 AM: debug: Executing (default): SHOW INDEX FROM `users`
+2023-12-06 12:18:47.598 AM: debug: Executing (default): SHOW INDEX FROM `ticket_types`
+2023-12-06 12:18:47.600 AM: debug: Executing (default): CREATE TABLE IF NOT EXISTS `winning_tickets` (`winningTicket_id` INTEGER UNSIGNED auto_increment , `reward_amount` DECIMAL(18,2) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `ticket_id` INTEGER UNSIGNED, PRIMARY KEY (`winningTicket_id`), FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`ticket_id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2023-12-06 12:18:47.603 AM: debug: Executing (default): SHOW INDEX FROM `orders`
+2023-12-06 12:18:47.605 AM: debug: Executing (default): SHOW INDEX FROM `order_items`
+2023-12-06 12:18:47.610 AM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-06 12:18:47.618 AM: debug: Executing (default): SHOW INDEX FROM `cart`
+2023-12-06 12:18:47.621 AM: debug: Executing (default): SHOW INDEX FROM `tickets`
+2023-12-06 12:18:47.625 AM: debug: Executing (default): SHOW INDEX FROM `cart_items`
+2023-12-06 12:18:47.628 AM: debug: Executing (default): SHOW INDEX FROM `winning_tickets`
+2023-12-06 12:18:47.634 AM: info: DB sync complete
+2023-12-06 12:18:47.641 AM: info: Server running on port 4000

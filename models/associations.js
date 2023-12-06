@@ -3,25 +3,35 @@
 import { model as TicketType } from "./tickets/ticketType.js";
 import { model as Ticket } from "./tickets/ticket.js";
 import { model as WinningTicket } from "./tickets/winningTicket.js";
-import { model as User } from "./users.js";
+import { model as User } from "./user/users.js";
 import { model as Orders } from "./orders/order.js";
 import { model as OrderItems } from "./orders/orderItems.js";
+import { model as Cart } from "./cart/cart.js";
+import { model as CartItem } from "./cart/cartItems.js";
 
+User.hasMany(Orders, { foreignKey: 'user_id' });
+Orders.belongsTo(User, { foreignKey: 'user_id' });
 
-User.hasMany(Orders, { foreignKey: 'UserID' });
-Orders.belongsTo(User, { foreignKey: 'UserID' });
+Orders.hasMany(OrderItems, { foreignKey: 'order_id' });
+OrderItems.belongsTo(Orders, { foreignKey: 'order_id' });
 
-Orders.hasMany(OrderItems, { foreignKey: 'OrderID' });
-OrderItems.belongsTo(Orders, { foreignKey: 'OrderID' });
+TicketType.hasMany(Ticket, { foreignKey: 'type_id' });
+Ticket.belongsTo(TicketType, { foreignKey: 'type_id' });
 
-TicketType.hasMany(Ticket, { foreignKey: 'TypeID' });
-Ticket.belongsTo(TicketType, { foreignKey: 'TypeID' });
+OrderItems.belongsTo(Ticket, { foreignKey: 'ticket_id' });
+Ticket.hasMany(OrderItems, { foreignKey: 'ticket_id' });
 
-OrderItems.belongsTo(Ticket, { foreignKey: 'TicketID' });
-Ticket.hasMany(OrderItems, { foreignKey: 'TicketID' });
+Ticket.hasOne(WinningTicket, { foreignKey: 'ticket_id' });
+WinningTicket.belongsTo(Ticket, { foreignKey: 'ticket_id' });
 
-Ticket.hasOne(WinningTicket, { foreignKey: 'TicketID' });
-WinningTicket.belongsTo(Ticket, { foreignKey: 'TicketID' });
+User.hasOne(Cart, { foreignKey: 'user_id' });
+Cart.belongsTo(User, { foreignKey: 'user_id' });
+
+Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
+CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });
+
+CartItem.belongsTo(Ticket, { foreignKey: 'ticket_id' });
+Ticket.hasMany(CartItem, { foreignKey: 'ticket_id' });
 
 /* 
     initialization order is important
@@ -32,6 +42,17 @@ WinningTicket.belongsTo(Ticket, { foreignKey: 'TicketID' });
     Ticket, 
     OrderItems, 
     WinningTicket
+
+
+    New Order:
+    Users
+    TicketType
+    Ticket
+    Cart
+    CartItem
+    Order
+    OrderItems
+    WinningTickets
         
  */
 
@@ -42,7 +63,9 @@ export {
     WinningTicket,
     User,
     Orders,
-    OrderItems
+    OrderItems,
+    Cart,
+    CartItem
 }
 
 export default {
@@ -51,7 +74,9 @@ export default {
     WinningTicket,
     User,
     Orders,
-    OrderItems
+    OrderItems,
+    Cart,
+    CartItem
 }
 
 

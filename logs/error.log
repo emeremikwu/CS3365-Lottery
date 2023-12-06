@@ -1292,3 +1292,39 @@ sql: CREATE TABLE IF NOT EXISTS `order_items` (`order_item_id` INTEGER UNSIGNED 
     at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
     at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
     at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 10:17:43.560 PM: error: APIError: Not Found GET:'/winnings'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 10:17:56.094 PM: error: APIError: Not Found GET:'/winnings'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-05 11:17:15.809 PM: error: (conn=7859, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`user_cart` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` ... - parameters:[]
+2023-12-05 11:18:47.952 PM: error: (conn=7897, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`user_cart` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `user_cart` (`cart_id` INTEGER UNSIGNED NOT NULL auto_increment , `user_id` INTEGER NOT NULL, `type_id` INTEGER NOT NULL, `quantity` INTEGER NOT NULL DEFAULT 1, PRIMARY KEY (`cart_id`), FOREIGN KEY (`user_id`) REFERENCES `users` ... - parameters:[]
+2023-12-05 11:56:08.734 PM: error: (conn=7985, no: 1075, SQLState: 42000) Incorrect table definition; there can be only one auto column and it must be defined as a key
+sql: ALTER TABLE `cart_items` ADD `CartItemID` INTEGER UNSIGNED auto_increment PRIMARY KEY; - parameters:[]
+2023-12-05 11:59:59.080 PM: error: (conn=8109, no: 1075, SQLState: 42000) Incorrect table definition; there can be only one auto column and it must be defined as a key
+sql: ALTER TABLE `cart_items` ADD `cart_item_id` INTEGER UNSIGNED auto_increment PRIMARY KEY; - parameters:[]
+2023-12-06 12:00:22.115 AM: error: (conn=8114, no: 1451, SQLState: 23000) Cannot delete or update a parent row: a foreign key constraint fails
+sql: DROP TABLE IF EXISTS `users`; - parameters:[]
+2023-12-06 12:02:59.210 AM: error: (conn=8157, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`tickets` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
+2023-12-06 12:05:28.103 AM: error: (conn=8174, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`tickets` (errno: 150 "Foreign key constraint is incorrectly formed")
+sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
