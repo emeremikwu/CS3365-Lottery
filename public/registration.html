@@ -81,7 +81,7 @@
     <section>
       <registration-form id="registrationForm" method="POST">
         <h2>Registration</h2>
-        <form action="register.php">
+        <form id="registrationForm">
           <label for="first_name">First Name:</label>
           <input type="text" id="first_name" name="first_name" required />
 
@@ -106,7 +106,7 @@
           <label for="password">Create Password:</label>
           <input type="password" id="password" name="password" required />
 
-          <button class="registration-button" type="submit" href="afterregistration.html">Register</button>
+          <button class="registration-button" type="button" onclick="register()">Register</button>
 
           <div class="login-link">
             <p>Already have an account? <a href="login.html">Login here</a></p>
@@ -116,6 +116,44 @@
         <div id="error-message" class="error-message"></div>
       </registration-form>
     </section>
+
+   
+
+    <script>
+      function register() {
+        var formData = {
+          first_name: document.getElementById("first_name").value,
+          last_name: document.getElementById("last_name").value,
+          email: document.getElementById("email").value,
+          address: document.getElementById("address").value,
+          city: document.getElementById("city").value,
+          state: document.getElementById("state").value,
+          phone: document.getElementById("phone").value,
+          password: document.getElementById("password").value,
+        };
+
+        // Convert the form data to a JSON string
+        var jsonData = JSON.stringify(formData);
+
+        // Create a Blob with the JSON data
+        var blob = new Blob([jsonData], { type: "application/json" });
+
+        // Create a link to the Blob
+        var link = document.createElement("a");
+        link.href = window.URL.createObjectURL(blob);
+        link.download = "user_info.json";
+
+        // Append the link to the body and click it programmatically
+        document.body.appendChild(link);
+        link.click();
+
+        // Remove the link from the body
+        document.body.removeChild(link);
+
+        // Redirect to the after registration page
+        window.location.href = "afterregistration.html";
+      }
+    </script>
     
 
     <footer>

@@ -1,0 +1,22 @@
+[
+    {
+        "first_name": "Cavan",
+        "last_name": "Natal",
+        "email": "canatal@ttu.edu",
+        "address": "111 Grove",
+        "city": "Lubbock",
+        "state": "Texas",
+        "phone": "111111111",
+        "password": "password"
+    },
+    {
+        "first_name": "Admin",
+        "last_name": "",
+        "email": "Admin@lottery.com",
+        "address": "",
+        "city": "",
+        "state": "",
+        "phone": "",
+        "password": "password"
+    }
+]
