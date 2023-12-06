@@ -226,7 +226,7 @@ footer {
       </div>
     
       <button onclick="generateRandomNumbers()">Generate Random Numbers!</button>
-      <button onclick="combineDigits()">Choose Your Own Numbers!</button>
+      <button onclick="combineDigits()">Choose Selected Numbers!</button>
 
 <!-- New div to display selected numbers -->
         <div id="cart" style="display: none;">
@@ -294,20 +294,17 @@ footer {
         // Show the cart and add the selected numbers
         const cart = document.getElementById("cart");
         const selectedNumbersList = document.getElementById("selectedNumbers");
-    
+
         // Clear previous selections
         selectedNumbersList.innerHTML = "";
-    
-        // Split combinedDigits into an array
-        const numbersArray = combinedDigits.split("");
-    
+
         // Display each selected number in the cart
-        numbersArray.forEach(number => {
+        combinedDigits.forEach(number => {
           const listItem = document.createElement("li");
           listItem.textContent = number;
           selectedNumbersList.appendChild(listItem);
         });
-    
+
         // Show the cart
         cart.style.display = "block";
       }

@@ -226,11 +226,11 @@ footer {
       </div>
     
       <button onclick="generateRandomNumbers()">Generate Random Numbers!</button>
-      <button onclick="combineDigits()">Choose My Own Numbers!</button>
+      <button onclick="combineDigits()">Choose Selected Numbers!</button>
 
 <!-- New div to display selected numbers -->
         <div id="cart" style="display: none;">
-         <h2>Your Powerball Numbers:</h2>
+         <h2>Your Mega Millions Numbers:</h2>
          <ul id="selectedNumbers"></ul>
 
          <!-- Button to go to shopping cart page -->
@@ -248,71 +248,67 @@ footer {
 
     <script src="scripts/script.js"></script>
     <script>
-      var selectedNumbers = []; // Global variable to store selected numbers
-
-function combineDigits() {
-  const digit1 = document.getElementById("digit1").value;
-  const digit2 = document.getElementById("digit2").value;
-  const digit3 = document.getElementById("digit3").value;
-  const digit4 = document.getElementById("digit4").value;
-  const digit5 = document.getElementById("digit5").value;
-  const digit6 = document.getElementById("digit6").value;
-
-  const combinedDigits = `${digit1} ${digit2} ${digit3} ${digit4} ${digit5} ${digit6}`;
-
- // Store selected numbers in the global variable
-  selectedNumbers = combinedDigits.split(" ");
-
-  // Display selected numbers in the cart
-  displaySelectedNumbers(combinedDigits);
-}
     
-      function generateRandomNumbers() {
-        const digit1 = getRandomNumber();
-        const digit2 = getRandomNumber();
-        const digit3 = getRandomNumber();
-        const digit4 = getRandomNumber();
-        const digit5 = getRandomNumber();
-        const digit6 = getRandomNumber();
-    
-        document.getElementById("digit1").value = digit1;
-        document.getElementById("digit2").value = digit2;
-        document.getElementById("digit3").value = digit3;
-        document.getElementById("digit4").value = digit4;
-        document.getElementById("digit5").value = digit5;
-        document.getElementById("digit6").value = digit6;
-    
-        const combinedDigits = `${digit1} ${digit2} ${digit3} ${digit4} ${digit5} ${digit6}`;
-        // Display selected numbers in the cart
-        displaySelectedNumbers(combinedDigits);
-      }
-    
-      function getRandomNumber() {
-        return Math.floor(Math.random() * 50) + 1;
-      }
-    
-      function displaySelectedNumbers(combinedDigits) {
-        // Show the cart and add the selected numbers
-        const cart = document.getElementById("cart");
-        const selectedNumbersList = document.getElementById("selectedNumbers");
-    
-        // Clear previous selections
-        selectedNumbersList.innerHTML = "";
-    
-        // Split combinedDigits into an array
-        const numbersArray = combinedDigits.split("");
-    
-        // Display each selected number in the cart
-        numbersArray.forEach(number => {
-          const listItem = document.createElement("li");
-          listItem.textContent = number;
-          selectedNumbersList.appendChild(listItem);
-        });
-    
-        // Show the cart
-        cart.style.display = "block";
-      }
-    </script>
+      function combineDigits() {
+      const digit1 = document.getElementById("digit1").value;
+      const digit2 = document.getElementById("digit2").value;
+      const digit3 = document.getElementById("digit3").value;
+      const digit4 = document.getElementById("digit4").value;
+      const digit5 = document.getElementById("digit5").value;
+      const digit6 = document.getElementById("digit6").value;
+  
+      const combinedDigits = [digit1, digit2, digit3, digit4, digit5, digit6];
+  
+      // Store selected numbers in local storage
+      localStorage.setItem("selectedNumbers", JSON.stringify(combinedDigits));
+  
+      // Display selected numbers in the cart
+      displaySelectedNumbers(combinedDigits);
+    }
+      
+        function generateRandomNumbers() {
+          const digit1 = getRandomNumber();
+          const digit2 = getRandomNumber();
+          const digit3 = getRandomNumber();
+          const digit4 = getRandomNumber();
+          const digit5 = getRandomNumber();
+          const digit6 = getRandomNumber();
+      
+          document.getElementById("digit1").value = digit1;
+          document.getElementById("digit2").value = digit2;
+          document.getElementById("digit3").value = digit3;
+          document.getElementById("digit4").value = digit4;
+          document.getElementById("digit5").value = digit5;
+          document.getElementById("digit6").value = digit6;
+      
+          const combinedDigits = `${digit1} ${digit2} ${digit3} ${digit4} ${digit5} ${digit6}`;
+          // Display selected numbers in the cart
+          displaySelectedNumbers(combinedDigits);
+        }
+      
+        function getRandomNumber() {
+          return Math.floor(Math.random() * 50) + 1;
+        }
+      
+        function displaySelectedNumbers(combinedDigits) {
+          // Show the cart and add the selected numbers
+          const cart = document.getElementById("cart");
+          const selectedNumbersList = document.getElementById("selectedNumbers");
+  
+          // Clear previous selections
+          selectedNumbersList.innerHTML = "";
+  
+          // Display each selected number in the cart
+          combinedDigits.forEach(number => {
+            const listItem = document.createElement("li");
+            listItem.textContent = number;
+            selectedNumbersList.appendChild(listItem);
+          });
+  
+          // Show the cart
+          cart.style.display = "block";
+        }
+      </script>
     
     
   </body>
