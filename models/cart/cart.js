@@ -10,7 +10,7 @@ class Cart extends Model {
 
 Cart.init({
 
-  CartID: {
+  cart_id: {
     type: DataTypes.INTEGER.UNSIGNED,
     autoIncrement: true,
     primaryKey: true,

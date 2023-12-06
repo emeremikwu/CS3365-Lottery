@@ -30,8 +30,8 @@ Cart.belongsTo(User, { foreignKey: 'user_id' });
 Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
 CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });
 
-CartItem.belongsTo(Ticket, { foreignKey: 'ticket_id' });
-Ticket.hasMany(CartItem, { foreignKey: 'ticket_id' });
+CartItem.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
+TicketType.hasMany(CartItem, { foreignKey: 'ticket_type_id' });
 
 /* 
     initialization order is important

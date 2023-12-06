@@ -1328,3 +1328,14 @@ sql: DROP TABLE IF EXISTS `users`; - parameters:[]
 sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
 2023-12-06 12:05:28.103 AM: error: (conn=8174, no: 1005, SQLState: HY000) Can't create table `ticketDB`.`tickets` (errno: 150 "Foreign key constraint is incorrectly formed")
 sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticket_number_ref` VARCHAR(255) NOT NULL, `selected_numbers` VARCHAR(255), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, `type_id` INTEGER UNSIGNED, PRIMARY KEY (`ticket_... - parameters:[]
+2023-12-06 06:08:09.873 PM: error: APIError: Not Found GET:'/favcon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)

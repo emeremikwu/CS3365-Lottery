@@ -38,9 +38,10 @@ app.use(error_handler.converter);
 app.use(error_handler.notFound);
 app.use(error_handler.handler);
 
-await Defaults.Models.initializeDefaultTables(true, true)
+//await Defaults.Models.initializeDefaultTables(true, true)
 
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);
 })
+
 export default app;
