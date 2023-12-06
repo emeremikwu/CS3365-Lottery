@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/ticket_option_styles.css" />
+    <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
+    <title>Browse Lottery Tickets</title>
+
+    <style>
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the form content horizontally */
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        margin-top: 15px; /* Add margin to the top to separate it from the inputs */
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 40%;
+        align-self: center; /* Center the button within the form */
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
+      </a>
+    </header>
+
+    <div class="gray-bar">
+      <nav>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="profile.html">Profile</a>
+        <a href="order_history.html">Order History</a>
+
+        <div class="user-actions">
+          <a href="login.html" class="bold">Login</a>
+          <span>/</span>
+          <a href="registration.html" class="bold">Register</a>
+        </div>
+        <a href="shoppingcart.html">
+          <img
+            class="Shopping"
+            src="images/shopping-cart.png"
+            alt="Shopping Cart"
+          />
+        </a>
+      </nav>
+    </div>
+
+    <section>
+      <h2>Create a New Ticket</h2>
+      <form id="ticketForm">
+        <label for="ticketName">Ticket Name:</label>
+        <input type="text" id="ticketName" name="ticketName" required />
+
+        <label for="ticketPrice">Ticket Price:</label>
+        <input type="number" id="ticketPrice" name="ticketPrice" required />
+
+        <label for="amountOfNumbers">Amount of Numbers:</label>
+        <input
+          type="number"
+          id="amountOfNumbers"
+          name="amountOfNumbers"
+          required
+        />
+
+        <button type="submit" class="add-ticket-button">Add Ticket</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; 2023 Your Basic Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

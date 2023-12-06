@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Texas Lottery Purchase System - Order History</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      section {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .order-history-content {
+        max-width: 600px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      th {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .quantity-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+      }
+
+      .quantity-btn {
+        cursor: pointer;
+        padding: 5px;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #totalSum {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
+      </a>
+    </header>
+
+    <div class="gray-bar">
+      <nav>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="profile.html">Profile</a>
+        <a href="order_history.html">Order History</a>
+
+        <div class="user-actions">
+          <a href="login.html" class="bold">Login</a>
+          <span>/</span>
+          <a href="registration.html" class="bold">Register</a>
+        </div>
+        <a href="shoppingcart.html">
+          <img
+            class="Shopping"
+            src="images/shopping-cart.png"
+            alt="Shopping Cart"
+          />
+        </a>
+      </nav>
+    </div>
+
+    <section>
+      <div class="order-history-content">
+        <h2>Tickets in Cart</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ticket Name</th>
+              <th>Ticket Numbers</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example row; you can add more rows as needed -->
+            <tr>
+              <td>123456</td>
+              <td>5, 12, 18, 22, 30, 45</td>
+              <td data-unit-price="10.00">$10.00</td>
+              <td>
+                <div class="quantity-buttons">
+                  <button
+                    class="quantity-btn"
+                    onclick="updateQuantity(this, -1)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">1</span>
+                  <button
+                    class="quantity-btn"
+                    onclick="updateQuantity(this, 1)"
+                  >
+                    +
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Add this span for displaying total sum -->
+        <span id="totalSum">Total: $0.00</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Texas Lottery System. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the quantity
+        var quantity = 1;
+
+        // Calculate the total sum and update the span content
+        updateTotalSum();
+
+        function updateTotalSum() {
+          // Get all the price cells in the table
+          var priceCells = document.querySelectorAll(
+            ".order-history-content table tbody td:nth-child(3)"
+          );
+
+          // Initialize total sum
+          var totalSum = 0;
+
+          // Loop through each price cell and add the values to the total sum
+          priceCells.forEach(function (cell) {
+            var unitPrice = parseFloat(cell.getAttribute("data-unit-price"));
+            totalSum += quantity * unitPrice;
+          });
+
+          // Update the total sum span content
+          var totalSumSpan = document.getElementById("totalSum");
+          totalSumSpan.textContent = "Total: $" + totalSum.toFixed(2);
+
+          // Update the quantity element
+          var quantityElement = document.querySelector(".quantity");
+          quantityElement.textContent = quantity;
+        }
+
+        // Function to update the quantity and recalculate total sum
+        window.updateQuantity = function (btn, increment) {
+          // Update the quantity value
+          quantity += increment;
+          if (quantity < 1) {
+            quantity = 1; // Ensure quantity doesn't go below 1
+          }
+
+          // Update the quantity element
+          var quantityElement = btn.parentElement.querySelector(".quantity");
+          quantityElement.textContent = quantity;
+
+          // Update the price based on the new quantity
+          var priceCell = btn.closest("tr").querySelector("td:nth-child(3)");
+          var unitPrice = parseFloat(priceCell.getAttribute("data-unit-price"));
+          var totalPrice = quantity * unitPrice;
+          priceCell.textContent = "$" + totalPrice.toFixed(2);
+
+          // Recalculate total sum
+          updateTotalSum();
+        };
+      });
+    </script>
+  </body>
+</html>

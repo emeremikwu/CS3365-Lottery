@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/script.js"></script>
+    <title>Your Basic Website</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <script src="scripts/script.js"></script>
-  <title>Your Basic Website</title>
-</head>
-
-<body>
-  <header>
-    <a href="index.html">
-      <img src="images/TLlogo.svg" alt="TL Logo" />
-    </a>
-  </header>
-
-  <div class="gray-bar">
-    <nav>
-      <a href="browse_tickets.html">Browse Lottery Tickets</a>
-      <a href="winning_numbers.html">Winning Numbers</a>
-      <a href="profile.html">Profile</a>
-      <a href="order_history.html">Order History</a>
-
-      <div class="user-actions">
-        <a href="login.html" class="bold">Login</a>
-        <span>/</span>
-        <a href="registration.html" class="bold">Register</a>
-      </div>
-      <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
-        <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/TLlogo.svg" alt="TL Logo" />
       </a>
-    </nav>
-  </div>
+    </header>
 
+    <div class="gray-bar">
+      <nav>
+        <a href="browse_tickets.html">Browse Lottery Tickets</a>
+        <a href="winning_numbers.html">Winning Numbers</a>
+        <a href="profile.html">Profile</a>
+        <a href="order_history.html">Order History</a>
 
-  <section>
-    <form action="/api/auth/signin" method="POST" id="myForm">
-      <h2 id="login_header">Login</h2>
-      <label for="email">Email:</label>
-      <input class="login-input" type="email" id="email" name="email" required />
+        <div class="user-actions">
+          <a href="login.html" class="bold">Login</a>
+          <span>/</span>
+          <a href="registration.html" class="bold">Register</a>
+        </div>
+        <a href="shoppingcart.html">
+          <img
+            class="Shopping"
+            src="images/shopping-cart.png"
+            alt="Shopping Cart"
+          />
+        </a>
+      </nav>
+    </div>
 
-      <label for="password">Password:</label>
-      <input class="login-input" type="password" id="password" name="password" required />
+    <section>
+      <form action="/api/auth/signin" method="POST" id="myForm">
+        <h2 id="login_header">Login</h2>
+        <label for="email">Email:</label>
+        <input
+          class="login-input"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
 
-      <button class="login-button" class="login-button" type="submit">Login</button>
+        <label for="password">Password:</label>
+        <input
+          class="login-input"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
 
-      <div class="register-link">
-        <p>
-          Don't have an account? <a href="registration.html">Register here</a>
-        </p>
-      </div>
-    </form>
-  </section>
+        <button class="login-button" class="login-button" type="submit">
+          Login
+        </button>
 
-  <footer>
-    <p>
-      &copy; 2023 Texas Lottery Purchase System Mock-Up. All Rights Reserved.
-    </p>
-  </footer>
+        <div class="register-link">
+          <p>
+            Don't have an account? <a href="registration.html">Register here</a>
+          </p>
+        </div>
+      </form>
+    </section>
 
-  <script src="scripts/login_script.js"></script>
-</body>
+    <footer>
+      <p>
+        &copy; 2023 Texas Lottery Purchase System Mock-Up. All Rights Reserved.
+      </p>
+    </footer>
 
+    <script src="scripts/login_script.js"></script>
+  </body>
 </html>

@@ -6,33 +6,36 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" href="/favcon.jpg" type="image/jpeg" />
     <style>
+      .box-link-container {
+        margin-top: 20px;
+      }
 
-.box-link-container {
-  margin-top: 20px;
-}
+      .box-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-.box-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.box-link:hover {
-  background-color: darkblue;
-  color: white;
-}
+      .box-link:hover {
+        background-color: darkblue;
+        color: white;
+      }
     </style>
     <title>Your Basic Website - Registration</title>
   </head>
 
   <body>
     <header>
-      <a href="index.html">
-        <img src="images/TLlogo.svg" alt="TL Logo" />
+      <a href="shoppingcart.html">
+        <img
+          class="Shopping"
+          src="images/shopping-cart.png"
+          alt="Shopping Cart"
+        />
       </a>
     </header>
 
@@ -42,30 +45,34 @@
         <a href="winning_numbers.html">Winning Numbers</a>
         <a href="profile.html">Profile</a>
         <a href="order_history.html">Order History</a>
-  
+
         <div class="user-actions">
           <a href="login.html" class="bold">Login</a>
           <span>/</span>
           <a href="registration.html" class="bold">Register</a>
         </div>
-        <a href="images/shopping-cart.png" title="Smart Cart Icons" target="_blank">
-          <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart" />
+        <a
+          href="images/shopping-cart.png"
+          title="Smart Cart Icons"
+          href="shoppingcart.html"
+        >
+          <img class='Shopping' src=images/shopping-cart.png alt="Shopping Cart"
+          />
         </a>
       </nav>
     </div>
 
     <section class="home-content">
-        <h2>Registration Successful!</h2>
-        <div class="box-link-container">
-          <p>
-            <a href="login.html" class="box-link">Click here to Login!</a>
+      <h2>Registration Successful!</h2>
+      <div class="box-link-container">
+        <p>
+          <a href="login.html" class="box-link">Click here to Login!</a>
         </p>
-        </div>
-      </section>
+      </div>
+    </section>
 
     <footer>
       <p>&copy; 2023 Texas Lottery. All rights reserved.</p>
     </footer>
-    
   </body>
 </html>
