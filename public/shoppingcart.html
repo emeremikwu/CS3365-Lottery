@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Texas Lottery Purchase System - Order History</title>
     <style>
+        .checkout-btn {
+    background-color: #4caf50; 
+    color: white; 
+    padding: 15px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+
+  .checkout-btn:hover {
+    background-color: #45a049; 
+  }
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -120,33 +133,14 @@
           </thead>
           <tbody>
             <!-- Example row; you can add more rows as needed -->
-            <tr>
-              <td>123456</td>
-              <td></td>
-              <td data-unit-price="10.00">$10.00</td>
-              <td>
-                <div class="quantity-buttons">
-                  <button
-                    class="quantity-btn"
-                    onclick="updateQuantity(this, -1)"
-                  >
-                    -
-                  </button>
-                  <span class="quantity">1</span>
-                  <button
-                    class="quantity-btn"
-                    onclick="updateQuantity(this, 1)"
-                  >
-                    +
-                  </button>
-                </div>
-              </td>
-            </tr>
           </tbody>
         </table>
 
-        <!-- Add this span for displaying total sum -->
-        <span id="totalSum">Total: $0.00</span>
+            <!-- Add this span for displaying total sum -->
+    <span id="totalSum">Total: $0.00</span>
+
+    <!-- Add the Checkout button -->
+    <button onclick="checkout()" class="checkout-btn">Checkout</button>
       </div>
     </section>
 
@@ -155,56 +149,62 @@
     </footer>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Retrieve selected numbers from local storage
-    var selectedNumbersString = localStorage.getItem("selectedNumbers");
-
-    // Check if there are selected numbers
-    if (selectedNumbersString) {
-      // Parse the JSON string into an array of numbers
-      var selectedNumbers = JSON.parse(selectedNumbersString);
-
-      // Display selected numbers in the "Ticket Numbers" column
-      displaySelectedNumbers(selectedNumbers);
-    }
-  });
-
-  function displaySelectedNumbers(selectedNumbers) {
-    // Find the "Ticket Numbers" cell in the table
-    var ticketNumbersCell = document.querySelector(".order-history-content table tbody td:nth-child(2)");
-
-    // Create a new row for the selected numbers
-    var newRow = document.createElement("tr");
-
-    // Create cells for the row
-    var ticketNameCell = document.createElement("td");
-    var ticketNumbersCell = document.createElement("td");
-    var priceCell = document.createElement("td");
-    var quantityCell = document.createElement("td");
-
-    // Populate the cells with the selected numbers
-    ticketNameCell.textContent = "Powerball Ticket"; // You can change this as needed
-    ticketNumbersCell.textContent = selectedNumbers.join(", ");
-    priceCell.textContent = "$10.00"; // You may adjust the price as needed
-    quantityCell.innerHTML = '<div class="quantity-buttons">' +
-      '<button class="quantity-btn" onclick="updateQuantity(this, -1)">-</button>' +
-      '<span class="quantity">1</span>' +
-      '<button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>' +
-      '</div>';
-
-    // Append cells to the new row
-    newRow.appendChild(ticketNameCell);
-    newRow.appendChild(ticketNumbersCell);
-    newRow.appendChild(priceCell);
-    newRow.appendChild(quantityCell);
-
-    // Append the new row to the table
-    var tableBody = document.querySelector(".order-history-content table tbody");
-    tableBody.appendChild(newRow);
-
-    // Calculate the total sum and update the span content
-    updateTotalSum();
+        function checkout() {
+    // Implement your checkout logic here
+    alert("Checkout button clicked!");
   }
+document.addEventListener("DOMContentLoaded", function () {
+  // Retrieve selected numbers from local storage
+  var selectedNumbersString = localStorage.getItem("selectedNumbers");
+
+  // Check if there are selected numbers
+  if (selectedNumbersString) {
+    // Parse the JSON string into an array of numbers
+    var selectedNumbers = JSON.parse(selectedNumbersString);
+
+    // Assuming you have a variable with the desired ticket name
+    var ticketName = "Power Ball Ticket";
+
+    // Call the function with the variable
+    displaySelectedNumbers(ticketName, selectedNumbers, 2.00);
+  }
+});
+
+function displaySelectedNumbers(ticketName, selectedNumbers, unitPrice) {
+  // Create a new row for the selected numbers
+  var newRow = document.createElement("tr");
+
+  // Create cells for the row
+  var ticketNameCell = document.createElement("td");
+  var ticketNumbersCell = document.createElement("td");
+  var priceCell = document.createElement("td");
+  var quantityCell = document.createElement("td");
+
+  // Populate the cells with the selected numbers
+  ticketNameCell.textContent = ticketName;
+  ticketNumbersCell.textContent = selectedNumbers.join(", ");
+  priceCell.textContent = "$" + unitPrice.toFixed(2);
+  quantityCell.innerHTML =
+    '<div class="quantity-buttons">' +
+    '<button class="quantity-btn" onclick="updateQuantity(this, -1)">-</button>' +
+    '<span class="quantity">1</span>' +
+    '<button class="quantity-btn" onclick="updateQuantity(this, 1)">+</button>' +
+    '</div>';
+
+  // Append cells to the new row
+  newRow.appendChild(ticketNameCell);
+  newRow.appendChild(ticketNumbersCell);
+  newRow.appendChild(priceCell);
+  newRow.appendChild(quantityCell);
+
+  // Append the new row to the table
+  var tableBody = document.querySelector(".order-history-content table tbody");
+  tableBody.appendChild(newRow);
+
+  // Calculate the total sum and update the span content
+  updateTotalSum();
+}
+
       document.addEventListener("DOMContentLoaded", function () {
         // Initialize the quantity
         var quantity = 1;
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Loop through each price cell and add the values to the total sum
           priceCells.forEach(function (cell) {
-            var unitPrice = parseFloat(cell.getAttribute("data-unit-price"));
+            var unitPrice = parseFloat(cell.textContent.replace("$", ""));
             totalSum += quantity * unitPrice;
           });
 
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Update the price based on the new quantity
           var priceCell = btn.closest("tr").querySelector("td:nth-child(3)");
-          var unitPrice = parseFloat(priceCell.getAttribute("data-unit-price"));
+          var unitPrice = parseFloat(priceCell.textContent.replace("$", ""));
           var totalPrice = quantity * unitPrice;
           priceCell.textContent = "$" + totalPrice.toFixed(2);
 
