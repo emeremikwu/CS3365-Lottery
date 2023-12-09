@@ -43,6 +43,7 @@ export const handler = (err, req, res, next) => {
 		status = httpStatus.INTERNAL_SERVER_ERROR;
 		message = httpStatus[httpStatus.INTERNAL_SERVER_ERROR];
 	}
+	logger.error(JSON.stringify(err.message))
 	logger.error(err.stack);
 	return res.status(status).json({
 		status: status,

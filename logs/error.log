@@ -1339,3 +1339,130 @@ sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticke
     at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
     at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
     at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-08 10:21:46.053 PM: error: APIError: Not Found POST:'/api/shop/cart'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-08 10:34:29.959 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 10:34:56.343 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 10:56:57.626 PM: error: ReferenceError: Cart is not defined
+    at cartInitializer (file:///home/admin/dev/CS3365-Lottery/middlewares/commerceMiddleware.js:9:31)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at authenticate (file:///home/admin/dev/CS3365-Lottery/middlewares/authenticate.js:11:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-08 10:57:46.432 PM: error: ReferenceError: cart_id is not defined
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:54:26)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at cartInitializer (file:///home/admin/dev/CS3365-Lottery/middlewares/commerceMiddleware.js:18:9)
+2023-12-08 11:00:14.350 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 11:10:19.602 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 11:23:03.836 PM: error: ReferenceError: user_cart is not defined
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:67:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-08 11:24:24.616 PM: error: TypeError: res.statusStatus is not a function
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:67:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-09 05:59:47.679 AM: error: APIError: Not Found GET:'/favicon.jpg'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-09 08:28:09.883 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:30:09.458 PM: error: [object Object]
+2023-12-09 08:30:09.462 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:30:54.841 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:31:51.513 PM: error: [{"message":"(conn=13097, no: 1054, SQLState: 42S22) Unknown column 'cart_items.user_id' in 'where clause'\nsql: SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1; - parameters:[]"}]
+2023-12-09 08:31:51.515 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)

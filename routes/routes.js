@@ -10,6 +10,6 @@ const routes = Router();
 
 routes.use("/auth", authRoute);
 routes.use("/info", infoRoute);
-routes.use(commerceRoutes)
+routes.use("/shop", commerceRoutes)
 
 export default routes

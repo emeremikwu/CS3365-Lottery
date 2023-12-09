@@ -7,7 +7,7 @@ import { model as User } from "./user/users.js";
 import { model as Orders } from "./orders/order.js";
 import { model as OrderItems } from "./orders/orderItems.js";
 import { model as Cart } from "./cart/cart.js";
-import { model as CartItem } from "./cart/cartItems.js";
+import { model as CartItems } from "./cart/cartItems.js";
 
 User.hasMany(Orders, { foreignKey: 'user_id' });
 Orders.belongsTo(User, { foreignKey: 'user_id' });
@@ -27,11 +27,11 @@ WinningTicket.belongsTo(Ticket, { foreignKey: 'ticket_id' });
 User.hasOne(Cart, { foreignKey: 'user_id' });
 Cart.belongsTo(User, { foreignKey: 'user_id' });
 
-Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
-CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });
+Cart.hasMany(CartItems, { foreignKey: 'cart_id' });
+CartItems.belongsTo(Cart, { foreignKey: 'cart_id' });
 
-CartItem.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
-TicketType.hasMany(CartItem, { foreignKey: 'ticket_type_id' });
+CartItems.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
+TicketType.hasMany(CartItems, { foreignKey: 'ticket_type_id' });
 
 /* 
     initialization order is important
@@ -65,7 +65,7 @@ export {
     Orders,
     OrderItems,
     Cart,
-    CartItem
+    CartItems as CartItem
 }
 
 export default {
@@ -76,34 +76,5 @@ export default {
     Orders,
     OrderItems,
     Cart,
-    CartItem
+    CartItem: CartItems
 }
-
-
-
-
-/* // ticket tables associations
-Ticket.hasOne(TicketType, { as: "ticket_type" }, { onDelete: "RESTRICT" });
-
-WinningTicket.hasOne(Ticket)
-
-
-//users and orders associations
-Order.belongsTo(User, { as: "user" }, { onDelete: "RESTRICT" });
-Order.hasMany(OrderItem, { as: "order_id" }, { onDelete: "RESTRICT" });
-
-OrderItem.hasMany(Ticket, { as: "ticket" }, { onDelete: "RESTRICT" });
-Order.belongsTo(User, { as: "user" }, { onDelete: "SET NULL" });
- */
-
-/* 
-    Sync orders :
-
-    - ticket relations
-    ticket_type
-    ticket
-    WinningTicket
-
-
-
-*/

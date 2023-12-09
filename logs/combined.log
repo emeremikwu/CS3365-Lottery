@@ -4343,3 +4343,705 @@ sql: CREATE TABLE IF NOT EXISTS `tickets` (`ticket_id` INTEGER UNSIGNED , `ticke
 2023-12-06 06:11:06.000 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-06T18:23:09.878Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
 2023-12-06 06:11:06.001 PM: http: 	Request Authenitcated: false
 2023-12-06 06:11:06.123 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:08:54.567 AM: info: Server running on port 4000
+2023-12-08 06:24:18.660 AM: info: Server running on port 4000
+2023-12-08 06:24:39.281 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:24:39.282 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:39:39.279Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:24:39.283 AM: http: 	Request Authenitcated: false
+2023-12-08 06:24:39.340 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:24:39.357 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:31:08.094 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:31:08.098 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:39:39.352Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:31:08.099 AM: http: 	Request Authenitcated: false
+2023-12-08 06:31:08.140 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:31:08.151 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:31:15.514 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:31:15.515 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:46:08.146Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:31:15.516 AM: http: 	Request Authenitcated: false
+2023-12-08 06:31:15.518 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:31:15.525 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:32:59.723 AM: info: Server running on port 4000
+2023-12-08 06:33:06.149 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:33:06.150 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:48:06.148Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:33:06.151 AM: http: 	Request Authenitcated: false
+2023-12-08 06:33:06.191 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:33:06.202 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:34:01.338 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:34:01.339 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:48:06.199Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:34:01.340 AM: http: 	Request Authenitcated: false
+2023-12-08 06:34:01.349 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:40:29.390 AM: info: Server running on port 4000
+2023-12-08 06:40:35.684 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:40:35.686 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:55:35.683Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:40:35.687 AM: http: 	Request Authenitcated: false
+2023-12-08 06:40:35.738 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:40:41.303 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:42:02.500 AM: info: Server running on port 4000
+2023-12-08 06:42:07.255 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:42:07.256 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:57:07.254Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:42:07.257 AM: http: 	Request Authenitcated: false
+2023-12-08 06:42:07.302 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:42:20.836 AM: info: Server running on port 4000
+2023-12-08 06:42:24.025 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:42:24.027 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:57:24.024Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:42:24.028 AM: http: 	Request Authenitcated: false
+2023-12-08 06:42:24.084 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:42:51.698 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:43:09.083 AM: info: Server running on port 4000
+2023-12-08 06:43:12.769 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:43:12.771 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T06:58:12.768Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:43:12.772 AM: http: 	Request Authenitcated: false
+2023-12-08 06:43:12.808 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:47:03.009 AM: info: Server running on port 4000
+2023-12-08 06:47:06.784 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:47:06.785 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:02:06.783Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:47:06.786 AM: http: 	Request Authenitcated: false
+2023-12-08 06:47:06.859 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:47:10.233 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:48:02.095 AM: info: Server running on port 4000
+2023-12-08 06:48:05.823 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:48:05.825 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:03:05.822Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:48:05.825 AM: http: 	Request Authenitcated: false
+2023-12-08 06:48:05.913 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:48:08.941 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:48:08.951 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 06:48:21.920 AM: info: Server running on port 4000
+2023-12-08 06:48:24.285 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:48:24.286 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:03:24.283Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:48:24.287 AM: http: 	Request Authenitcated: false
+2023-12-08 06:48:24.334 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:48:24.344 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:48:24.348 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 06:49:08.804 AM: info: Server running on port 4000
+2023-12-08 06:49:16.227 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:49:16.228 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:04:16.226Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:49:16.229 AM: http: 	Request Authenitcated: false
+2023-12-08 06:49:16.310 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:49:16.317 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:49:16.320 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 06:49:57.220 AM: info: Server running on port 4000
+2023-12-08 06:50:01.745 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 06:50:01.746 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:05:01.743Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 06:50:01.747 AM: http: 	Request Authenitcated: false
+2023-12-08 06:50:01.799 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 06:50:01.816 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 06:50:01.820 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:22:13.581 AM: info: Server running on port 4000
+2023-12-08 07:22:25.724 AM: info: Server running on port 4000
+2023-12-08 07:22:42.076 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:22:42.078 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:37:42.075Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:22:42.079 AM: http: 	Request Authenitcated: false
+2023-12-08 07:22:42.138 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:22:42.146 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:22:42.149 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:22:48.627 AM: info: Server running on port 4000
+2023-12-08 07:22:53.064 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:22:53.065 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:37:53.062Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:22:53.066 AM: http: 	Request Authenitcated: false
+2023-12-08 07:22:53.127 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:22:53.136 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:22:53.141 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:25:12.664 AM: info: Server running on port 4000
+2023-12-08 07:25:15.636 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:25:15.638 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:40:15.634Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:25:15.639 AM: http: 	Request Authenitcated: false
+2023-12-08 07:25:15.688 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:25:15.695 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:25:15.699 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:25:30.319 AM: info: Server running on port 4000
+2023-12-08 07:25:31.856 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:25:31.858 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:40:31.855Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:25:31.858 AM: http: 	Request Authenitcated: false
+2023-12-08 07:25:31.891 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:25:31.899 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:25:31.903 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:25:31.905 AM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 07:26:34.732 AM: info: Server running on port 4000
+2023-12-08 07:26:38.000 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:26:38.001 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:41:37.999Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:26:38.002 AM: http: 	Request Authenitcated: false
+2023-12-08 07:26:38.048 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:26:38.055 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:26:38.058 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:26:38.064 AM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 07:26:49.039 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:26:49.040 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:41:38.070Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:26:49.041 AM: http: 	Request Authenitcated: false
+2023-12-08 07:26:49.044 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:26:49.047 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:26:49.050 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:26:49.052 AM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 07:33:04.422 AM: info: Server running on port 4000
+2023-12-08 07:33:07.298 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:33:07.299 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:48:07.297Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:33:07.300 AM: http: 	Request Authenitcated: false
+2023-12-08 07:33:07.346 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:33:07.357 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:33:07.363 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:33:26.882 AM: info: Server running on port 4000
+2023-12-08 07:33:29.974 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:33:29.975 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:48:29.973Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:33:29.977 AM: http: 	Request Authenitcated: false
+2023-12-08 07:33:30.018 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:33:30.027 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:33:30.031 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:33:30.033 AM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 07:38:49.920 AM: info: Server running on port 4000
+2023-12-08 07:38:55.959 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-08 07:38:55.960 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T07:53:55.958Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 07:38:55.961 AM: http: 	Request Authenitcated: false
+2023-12-08 07:38:56.005 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 07:38:56.012 AM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 07:38:56.016 AM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 07:38:56.020 AM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 08:36:46.642 PM: info: Server running on port 4000
+2023-12-08 08:36:52.654 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:36:52.656 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T20:51:52.653Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:36:52.656 PM: http: 	Request Authenitcated: false
+2023-12-08 08:36:52.778 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:36:52.788 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:36:52.793 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:37:53.271 PM: info: Server running on port 4000
+2023-12-08 08:38:21.523 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:38:21.524 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T20:53:21.521Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:38:21.525 PM: http: 	Request Authenitcated: false
+2023-12-08 08:38:21.562 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:38:21.569 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:38:21.573 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:42:19.218 PM: info: Server running on port 4000
+2023-12-08 08:42:23.906 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:42:23.907 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T20:57:23.904Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:42:23.908 PM: http: 	Request Authenitcated: false
+2023-12-08 08:42:23.992 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:42:24.009 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:42:24.015 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:42:41.239 PM: info: Server running on port 4000
+2023-12-08 08:42:42.594 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:42:42.595 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T20:57:42.592Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:42:42.596 PM: http: 	Request Authenitcated: false
+2023-12-08 08:42:42.632 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:42:42.640 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:42:42.644 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:42:42.646 PM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 08:42:49.832 PM: debug: Executing (default): SELECT `type_id`, `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled`, `createdAt`, `updatedAt` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 1;
+2023-12-08 08:42:49.842 PM: debug: Executing (default): SELECT `type_id`, `name`, `number_count`, `number_maxes`, `price`, `description`, `running_total`, `disabled`, `createdAt`, `updatedAt` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 2;
+2023-12-08 08:45:15.709 PM: info: Server running on port 4000
+2023-12-08 08:45:30.865 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:45:30.867 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:00:30.864Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:45:30.867 PM: http: 	Request Authenitcated: false
+2023-12-08 08:45:30.901 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:45:30.909 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:45:30.912 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:45:30.921 PM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 08:45:48.092 PM: debug: Executing (default): SELECT `name`, `price`, `description` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 1;
+2023-12-08 08:45:48.096 PM: debug: Executing (default): SELECT `name`, `price`, `description` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 2;
+2023-12-08 08:46:26.739 PM: info: Server running on port 4000
+2023-12-08 08:46:30.639 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 08:46:30.640 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:01:30.637Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 08:46:30.641 PM: http: 	Request Authenitcated: false
+2023-12-08 08:46:30.676 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 08:46:30.684 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 08:46:30.688 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1;
+2023-12-08 08:46:30.690 PM: info: [object SequelizeInstance:cart_items],[object SequelizeInstance:cart_items]
+2023-12-08 08:46:30.696 PM: debug: Executing (default): SELECT `name`, `price`, `description` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 1;
+2023-12-08 08:46:30.699 PM: debug: Executing (default): SELECT `name`, `price`, `description` FROM `ticket_types` AS `ticket_types` WHERE `ticket_types`.`type_id` = 2;
+2023-12-08 09:06:55.366 PM: info: Server running on port 4000
+2023-12-08 09:07:00.619 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 09:07:00.621 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:22:00.618Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 09:07:00.622 PM: http: 	Request Authenitcated: false
+2023-12-08 09:07:00.686 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 09:07:00.706 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 09:20:10.157 PM: info: Server running on port 4000
+2023-12-08 09:20:16.664 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 09:20:16.665 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:35:16.662Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 09:20:16.671 PM: http: 	Request Authenitcated: false
+2023-12-08 09:20:16.740 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 09:20:16.762 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 09:21:44.743 PM: info: Server running on port 4000
+2023-12-08 09:22:00.491 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 09:22:00.493 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:37:00.490Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 09:22:00.494 PM: http: 	Request Authenitcated: false
+2023-12-08 09:22:00.550 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 09:22:00.561 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 09:22:08.112 PM: info: Server running on port 4000
+2023-12-08 09:27:07.789 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 09:27:07.791 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T21:42:07.788Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 09:27:07.792 PM: http: 	Request Authenitcated: false
+2023-12-08 09:27:07.862 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 09:27:07.875 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 09:39:38.150 PM: info: Server running on port 4000
+2023-12-08 10:08:10.375 PM: info: Server running on port 4000
+2023-12-08 10:21:46.045 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:21:46.046 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:21:46.048 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:36:46.043Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:21:46.048 PM: http: 	Request Authenitcated: false
+2023-12-08 10:21:46.053 PM: error: APIError: Not Found POST:'/api/shop/cart'
+    at notFound (file:///home/admin/dev/CS3365-Lottery/middlewares/error.js:37:14)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:91:12)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+2023-12-08 10:22:10.133 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:22:10.134 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:36:46.056Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:22:10.135 PM: http: 	Request Authenitcated: false
+2023-12-08 10:22:10.182 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:22:10.194 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:24:35.752 PM: info: Server running on port 4000
+2023-12-08 10:24:57.680 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:24:57.682 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:39:57.677Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:24:57.684 PM: http: 	Request Authenitcated: false
+2023-12-08 10:24:57.740 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:24:57.753 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:25:06.612 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:25:06.614 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:25:06.614 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:39:57.762Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:25:06.615 PM: http: 	Request Authenitcated: false
+2023-12-08 10:25:06.637 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:28:55.220 PM: info: Server running on port 4000
+2023-12-08 10:29:23.593 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:29:23.596 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:29:23.598 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:44:23.591Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:29:23.599 PM: http: 	Request Authenitcated: false
+2023-12-08 10:29:23.701 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:29:35.417 PM: info: Server running on port 4000
+2023-12-08 10:29:37.646 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:29:37.647 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:44:37.644Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:29:37.648 PM: http: 	Request Authenitcated: false
+2023-12-08 10:29:37.680 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:29:37.692 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:29:44.884 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:29:44.885 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:29:44.886 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:44:37.699Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:29:44.886 PM: http: 	Request Authenitcated: false
+2023-12-08 10:29:44.889 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:30:45.130 PM: info: Server running on port 4000
+2023-12-08 10:30:51.996 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:30:51.997 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:45:51.995Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:30:51.998 PM: http: 	Request Authenitcated: false
+2023-12-08 10:30:52.036 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:30:52.049 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:32:03.022 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:32:03.027 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:32:03.028 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:47:03.019Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:32:03.030 PM: http: 	Request Authenitcated: false
+2023-12-08 10:32:03.048 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:33:48.104 PM: info: Server running on port 4000
+2023-12-08 10:34:29.797 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:34:29.798 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:34:29.799 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:49:29.795Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:34:29.848 PM: http: 	Request Authenitcated: false
+2023-12-08 10:34:29.930 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:34:29.940 PM: debug: Executing (7a0bab97-cd5c-468a-ae8c-fc9aff58f095): START TRANSACTION;
+2023-12-08 10:34:29.944 PM: debug: Executing (7a0bab97-cd5c-468a-ae8c-fc9aff58f095): COMMIT;
+2023-12-08 10:34:29.955 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 10:34:29.959 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 10:34:43.311 PM: info: Server running on port 4000
+2023-12-08 10:34:47.584 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:34:47.586 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:49:47.583Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:34:47.586 PM: http: 	Request Authenitcated: false
+2023-12-08 10:34:47.622 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:34:47.635 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:34:56.323 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:34:56.325 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:34:56.325 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T22:49:52.115Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:34:56.326 PM: http: 	Request Authenitcated: false
+2023-12-08 10:34:56.329 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:34:56.335 PM: debug: Executing (399300b7-b9a7-4668-a7ef-5514efb86895): START TRANSACTION;
+2023-12-08 10:34:56.339 PM: debug: Executing (399300b7-b9a7-4668-a7ef-5514efb86895): COMMIT;
+2023-12-08 10:34:56.341 PM: debug: Executing (default): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 10:34:56.343 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 10:56:51.629 PM: info: Server running on port 4000
+2023-12-08 10:56:57.575 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:56:57.576 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:11:57.574Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:56:57.577 PM: http: 	Request Authenitcated: false
+2023-12-08 10:56:57.620 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:56:57.626 PM: error: ReferenceError: Cart is not defined
+    at cartInitializer (file:///home/admin/dev/CS3365-Lottery/middlewares/commerceMiddleware.js:9:31)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:328:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at authenticate (file:///home/admin/dev/CS3365-Lottery/middlewares/authenticate.js:11:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-08 10:57:35.137 PM: info: Server running on port 4000
+2023-12-08 10:57:38.775 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:57:38.776 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:12:38.773Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:57:38.777 PM: http: 	Request Authenitcated: false
+2023-12-08 10:57:38.810 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:57:38.818 PM: debug: Executing (bf884eaa-74b9-418b-8457-a4c97af7cf4d): START TRANSACTION;
+2023-12-08 10:57:38.822 PM: debug: Executing (bf884eaa-74b9-418b-8457-a4c97af7cf4d): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 10:57:38.825 PM: debug: Executing (bf884eaa-74b9-418b-8457-a4c97af7cf4d): COMMIT;
+2023-12-08 10:57:38.833 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 10:57:46.417 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:57:46.418 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:57:46.419 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:12:38.840Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:57:46.420 PM: http: 	Request Authenitcated: false
+2023-12-08 10:57:46.422 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:57:46.425 PM: debug: Executing (28ebad77-5c87-42cb-851a-c698a0a9c23e): START TRANSACTION;
+2023-12-08 10:57:46.427 PM: debug: Executing (28ebad77-5c87-42cb-851a-c698a0a9c23e): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 10:57:46.430 PM: debug: Executing (28ebad77-5c87-42cb-851a-c698a0a9c23e): COMMIT;
+2023-12-08 10:57:46.432 PM: error: ReferenceError: cart_id is not defined
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:54:26)
+    at file:///home/admin/dev/CS3365-Lottery/utils/catchAsync.js:4:18
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/layer.js:95:5)
+    at /home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/admin/dev/CS3365-Lottery/node_modules/express/lib/router/index.js:280:10)
+    at cartInitializer (file:///home/admin/dev/CS3365-Lottery/middlewares/commerceMiddleware.js:18:9)
+2023-12-08 10:58:20.579 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:58:20.580 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:58:20.581 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:12:46.434Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:58:20.581 PM: http: 	Request Authenitcated: false
+2023-12-08 10:58:20.589 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:59:01.426 PM: info: Server running on port 4000
+2023-12-08 10:59:14.747 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 10:59:14.749 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 10:59:14.751 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:14:14.744Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 10:59:14.753 PM: http: 	Request Authenitcated: false
+2023-12-08 10:59:14.829 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 10:59:25.929 PM: debug: Executing (6fbc0cbd-9ed0-41f3-a0ac-9d4296d58975): START TRANSACTION;
+2023-12-08 10:59:25.933 PM: debug: Executing (6fbc0cbd-9ed0-41f3-a0ac-9d4296d58975): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 10:59:25.936 PM: debug: Executing (6fbc0cbd-9ed0-41f3-a0ac-9d4296d58975): COMMIT;
+2023-12-08 11:00:09.564 PM: debug: Executing (7d452607-f177-4bfc-969c-2179d83acf66): START TRANSACTION;
+2023-12-08 11:00:09.567 PM: debug: Executing (7d452607-f177-4bfc-969c-2179d83acf66): COMMIT;
+2023-12-08 11:00:14.350 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 11:00:35.773 PM: info: Server running on port 4000
+2023-12-08 11:00:42.353 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:00:42.354 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 11:00:42.355 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:15:42.352Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:00:42.356 PM: http: 	Request Authenitcated: false
+2023-12-08 11:00:42.395 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:00:57.717 PM: debug: Executing (f28cfd4c-2297-46d0-a0a3-69bf846cc930): START TRANSACTION;
+2023-12-08 11:00:57.726 PM: debug: Executing (f28cfd4c-2297-46d0-a0a3-69bf846cc930): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:03:07.670 PM: info: Server running on port 4000
+2023-12-08 11:03:19.543 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:03:19.544 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 11:03:19.545 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:18:19.541Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:03:19.546 PM: http: 	Request Authenitcated: false
+2023-12-08 11:03:19.609 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:03:30.408 PM: debug: Executing (4ecfe396-2f2d-42dd-a4e1-562174a3b495): START TRANSACTION;
+2023-12-08 11:03:30.426 PM: debug: Executing (4ecfe396-2f2d-42dd-a4e1-562174a3b495): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:03:30.434 PM: debug: Executing (4ecfe396-2f2d-42dd-a4e1-562174a3b495): COMMIT;
+2023-12-08 11:07:08.445 PM: info: Server running on port 4000
+2023-12-08 11:07:10.149 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:07:10.150 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:22:10.147Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:07:10.151 PM: http: 	Request Authenitcated: false
+2023-12-08 11:07:10.184 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:07:20.172 PM: debug: Executing (0f4c29a2-ba3e-4b61-b4ab-e96700af6e3f): START TRANSACTION;
+2023-12-08 11:07:20.177 PM: debug: Executing (0f4c29a2-ba3e-4b61-b4ab-e96700af6e3f): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:07:20.181 PM: debug: Executing (0f4c29a2-ba3e-4b61-b4ab-e96700af6e3f): COMMIT;
+2023-12-08 11:07:21.817 PM: debug: [{"cart_id":1,"user_id":1},false]
+2023-12-08 11:08:53.307 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-08 11:08:59.875 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:08:59.876 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 11:08:59.877 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:23:59.875Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:08:59.878 PM: http: 	Request Authenitcated: false
+2023-12-08 11:08:59.881 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:09:12.435 PM: debug: Executing (c604f559-e968-4c2d-a6de-09af7d45a7ff): START TRANSACTION;
+2023-12-08 11:09:12.442 PM: debug: Executing (c604f559-e968-4c2d-a6de-09af7d45a7ff): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:09:12.448 PM: debug: Executing (c604f559-e968-4c2d-a6de-09af7d45a7ff): COMMIT;
+2023-12-08 11:09:12.451 PM: debug: [{"cart_id":1,"user_id":1},false]
+2023-12-08 11:10:14.836 PM: debug: Executing (8f36d0f0-40df-48e5-ad38-73911cd4181d): START TRANSACTION;
+2023-12-08 11:10:14.840 PM: debug: Executing (8f36d0f0-40df-48e5-ad38-73911cd4181d): COMMIT;
+2023-12-08 11:10:19.602 PM: error: Error: WHERE parameter "cart_id" has invalid "undefined" value
+    at MariaDBQueryGenerator.whereItemQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1743:13)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at MariaDBQueryGenerator.whereItemsQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1732:35)
+    at MariaDBQueryGenerator.getWhereConditions (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2075:19)
+    at MariaDBQueryGenerator.selectQuery (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-generator.js:988:28)
+    at MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+2023-12-08 11:11:13.423 PM: info: Server running on port 4000
+2023-12-08 11:11:46.122 PM: info: Server running on port 4000
+2023-12-08 11:15:24.447 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:15:24.449 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:30:24.446Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:15:24.450 PM: http: 	Request Authenitcated: false
+2023-12-08 11:15:39.056 PM: info: Server running on port 4000
+2023-12-08 11:15:44.712 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:15:44.713 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:30:44.710Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:15:44.714 PM: http: 	Request Authenitcated: false
+2023-12-08 11:15:44.801 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:21:55.265 PM: info: Server running on port 4000
+2023-12-08 11:21:59.810 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:21:59.811 PM: http: 	Request body: {"ticket_type_id":1,"quantity":2}
+2023-12-08 11:21:59.812 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:36:59.808Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:21:59.813 PM: http: 	Request Authenitcated: false
+2023-12-08 11:21:59.863 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:22:03.371 PM: debug: Executing (1981d70d-576a-4697-a578-c1cf25b3800d): START TRANSACTION;
+2023-12-08 11:22:03.391 PM: debug: Executing (1981d70d-576a-4697-a578-c1cf25b3800d): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:22:03.405 PM: debug: Executing (1981d70d-576a-4697-a578-c1cf25b3800d): COMMIT;
+2023-12-08 11:22:12.790 PM: debug: Executing (9c9e3a0b-0200-4e47-b451-ec23f0bccfdf): START TRANSACTION;
+2023-12-08 11:22:12.793 PM: debug: Executing (9c9e3a0b-0200-4e47-b451-ec23f0bccfdf): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-08 11:22:12.795 PM: debug: Executing (9c9e3a0b-0200-4e47-b451-ec23f0bccfdf): COMMIT;
+2023-12-08 11:22:46.362 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-08 11:23:03.836 PM: error: ReferenceError: user_cart is not defined
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:67:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-08 11:23:45.644 PM: info: Server running on port 4000
+2023-12-08 11:24:24.523 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:24:24.525 PM: http: 	Request body: {"ticket_type_id":1,"quantity":20}
+2023-12-08 11:24:24.526 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:39:24.521Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:24:24.526 PM: http: 	Request Authenitcated: false
+2023-12-08 11:24:24.575 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:24:24.583 PM: debug: Executing (955dd089-eabc-49aa-8915-3f2ff9233c60): START TRANSACTION;
+2023-12-08 11:24:24.588 PM: debug: Executing (955dd089-eabc-49aa-8915-3f2ff9233c60): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:24:24.591 PM: debug: Executing (955dd089-eabc-49aa-8915-3f2ff9233c60): COMMIT;
+2023-12-08 11:24:24.594 PM: debug: Executing (830779eb-a587-4850-82a3-894355da00c0): START TRANSACTION;
+2023-12-08 11:24:24.599 PM: debug: Executing (830779eb-a587-4850-82a3-894355da00c0): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-08 11:24:24.607 PM: debug: Executing (830779eb-a587-4850-82a3-894355da00c0): COMMIT;
+2023-12-08 11:24:24.613 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-08 11:24:24.616 PM: error: TypeError: res.statusStatus is not a function
+    at addToCart (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:67:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-12-08 11:25:01.576 PM: info: Server running on port 4000
+2023-12-08 11:25:10.767 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.28
+2023-12-08 11:25:10.768 PM: http: 	Request body: {"ticket_type_id":1,"quantity":20}
+2023-12-08 11:25:10.769 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-08T23:40:10.766Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-08 11:25:10.770 PM: http: 	Request Authenitcated: false
+2023-12-08 11:25:10.829 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-08 11:25:10.836 PM: debug: Executing (b31634cb-e343-4a0c-af37-6f6d00ae3685): START TRANSACTION;
+2023-12-08 11:25:10.840 PM: debug: Executing (b31634cb-e343-4a0c-af37-6f6d00ae3685): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-08 11:25:10.842 PM: debug: Executing (b31634cb-e343-4a0c-af37-6f6d00ae3685): COMMIT;
+2023-12-08 11:25:10.853 PM: debug: Executing (d2b3da77-50fa-440e-8e9a-3956c5be35b0): START TRANSACTION;
+2023-12-08 11:25:10.856 PM: debug: Executing (d2b3da77-50fa-440e-8e9a-3956c5be35b0): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-08 11:25:10.859 PM: debug: Executing (d2b3da77-50fa-440e-8e9a-3956c5be35b0): COMMIT;
+2023-12-08 11:25:10.867 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-09 03:44:06.485 AM: info: Server running on port 4000
+2023-12-09 04:00:41.538 AM: info: Server running on port 4000
+2023-12-09 04:00:58.119 AM: http: New Request: POST /api/shop/cart ::ffff:198.232.113.131
+2023-12-09 04:00:58.121 AM: http: 	Request body: {"ticket_type_id":1,"quantity":20}
+2023-12-09 04:00:58.122 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T04:15:58.118Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 04:00:58.123 AM: http: 	Request Authenitcated: false
+2023-12-09 04:00:58.179 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 04:00:58.200 AM: debug: Executing (b43c6386-81ee-436c-a18b-8097d2743846): START TRANSACTION;
+2023-12-09 04:00:58.206 AM: debug: Executing (b43c6386-81ee-436c-a18b-8097d2743846): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 04:00:58.209 AM: debug: Executing (b43c6386-81ee-436c-a18b-8097d2743846): COMMIT;
+2023-12-09 04:00:58.214 AM: debug: Executing (c7b670b6-0d85-46e1-99fc-733e21b37562): START TRANSACTION;
+2023-12-09 04:00:58.217 AM: debug: Executing (c7b670b6-0d85-46e1-99fc-733e21b37562): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 04:00:58.220 AM: debug: Executing (c7b670b6-0d85-46e1-99fc-733e21b37562): COMMIT;
+2023-12-09 04:00:58.228 AM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-09 04:01:04.573 AM: http: New Request: GET /api/shop/cart ::ffff:198.232.113.131
+2023-12-09 04:01:04.589 AM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T04:15:58.234Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 04:01:04.592 AM: http: 	Request Authenitcated: false
+2023-12-09 04:01:04.594 AM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 04:01:04.613 AM: debug: Executing (d70acea3-b9f8-4880-8d7a-6d3e05ea5732): START TRANSACTION;
+2023-12-09 04:01:04.625 AM: debug: Executing (d70acea3-b9f8-4880-8d7a-6d3e05ea5732): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 04:01:04.628 AM: debug: Executing (d70acea3-b9f8-4880-8d7a-6d3e05ea5732): COMMIT;
+2023-12-09 04:01:04.651 AM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 05:59:47.677 AM: http: New Request: GET /favicon.jpg ::ffff:199.45.154.48
+2023-12-09 08:24:07.537 PM: info: Server running on port 4000
+2023-12-09 08:24:22.217 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:24:22.219 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:39:22.216Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:24:22.220 PM: http: 	Request Authenitcated: false
+2023-12-09 08:24:22.284 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:24:22.294 PM: debug: Executing (662a64ed-0311-4f94-b381-c4d9c7ac4118): START TRANSACTION;
+2023-12-09 08:24:22.299 PM: debug: Executing (662a64ed-0311-4f94-b381-c4d9c7ac4118): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:24:22.302 PM: debug: Executing (662a64ed-0311-4f94-b381-c4d9c7ac4118): COMMIT;
+2023-12-09 08:24:22.311 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:27:10.693 PM: info: Server running on port 4000
+2023-12-09 08:28:03.086 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:28:03.088 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:28:03.089 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:43:03.085Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:28:03.090 PM: http: 	Request Authenitcated: false
+2023-12-09 08:28:03.128 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:28:03.141 PM: debug: Executing (1615bee7-8ef7-409a-9563-46d320e7d7d5): START TRANSACTION;
+2023-12-09 08:28:03.148 PM: debug: Executing (1615bee7-8ef7-409a-9563-46d320e7d7d5): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:28:03.152 PM: debug: Executing (1615bee7-8ef7-409a-9563-46d320e7d7d5): COMMIT;
+2023-12-09 08:28:07.418 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 08:28:09.883 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:29:53.979 PM: info: Server running on port 4000
+2023-12-09 08:30:06.601 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:30:06.602 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:30:06.603 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:45:06.600Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:30:06.604 PM: http: 	Request Authenitcated: false
+2023-12-09 08:30:06.684 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:30:06.694 PM: debug: Executing (41e533b3-bae0-4f5c-a686-ac4f17b90724): START TRANSACTION;
+2023-12-09 08:30:06.698 PM: debug: Executing (41e533b3-bae0-4f5c-a686-ac4f17b90724): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:30:06.701 PM: debug: Executing (41e533b3-bae0-4f5c-a686-ac4f17b90724): COMMIT;
+2023-12-09 08:30:09.453 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 08:30:09.458 PM: error: [object Object]
+2023-12-09 08:30:09.462 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:30:48.895 PM: info: Server running on port 4000
+2023-12-09 08:30:52.095 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:30:52.097 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:30:52.098 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:45:52.094Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:30:52.098 PM: http: 	Request Authenitcated: false
+2023-12-09 08:30:52.140 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:30:52.151 PM: debug: Executing (341babfd-d14f-470c-a4b7-29cf1a0fb845): START TRANSACTION;
+2023-12-09 08:30:52.156 PM: debug: Executing (341babfd-d14f-470c-a4b7-29cf1a0fb845): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:30:52.160 PM: debug: Executing (341babfd-d14f-470c-a4b7-29cf1a0fb845): COMMIT;
+2023-12-09 08:30:54.833 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 08:30:54.841 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:31:44.444 PM: info: Server running on port 4000
+2023-12-09 08:31:48.329 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:31:48.330 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:31:48.331 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:46:48.327Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:31:48.332 PM: http: 	Request Authenitcated: false
+2023-12-09 08:31:48.364 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:31:48.371 PM: debug: Executing (220019f3-5253-41fa-a142-df90a67f8285): START TRANSACTION;
+2023-12-09 08:31:48.374 PM: debug: Executing (220019f3-5253-41fa-a142-df90a67f8285): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:31:48.377 PM: debug: Executing (220019f3-5253-41fa-a142-df90a67f8285): COMMIT;
+2023-12-09 08:31:51.510 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 08:31:51.513 PM: error: [{"message":"(conn=13097, no: 1054, SQLState: 42S22) Unknown column 'cart_items.user_id' in 'where clause'\nsql: SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1; - parameters:[]"}]
+2023-12-09 08:31:51.515 PM: error: Error
+    at Query.run (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/mariadb/query.js:53:25)
+    at /home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async cart_items.findAll (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1140:21)
+    at async cart_items.findOne (/home/admin/dev/CS3365-Lottery/node_modules/sequelize/lib/model.js:1240:12)
+    at async updateCartItemQuantity (file:///home/admin/dev/CS3365-Lottery/controllers/commerceControllers.js:89:27)
+2023-12-09 08:32:56.115 PM: info: Server running on port 4000
+2023-12-09 08:33:08.845 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:33:08.846 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:33:08.847 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:48:08.843Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:33:08.847 PM: http: 	Request Authenitcated: false
+2023-12-09 08:33:08.880 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:33:08.891 PM: debug: Executing (dd715777-3e31-4c11-b49e-c480c8bf0a40): START TRANSACTION;
+2023-12-09 08:33:08.895 PM: debug: Executing (dd715777-3e31-4c11-b49e-c480c8bf0a40): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:33:08.897 PM: debug: Executing (dd715777-3e31-4c11-b49e-c480c8bf0a40): COMMIT;
+2023-12-09 08:33:12.183 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:37:38.290 PM: info: Server running on port 4000
+2023-12-09 08:37:49.377 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:37:49.378 PM: http: 	Request body: {"ticket_type_id":1,"quantity":1}
+2023-12-09 08:37:49.379 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:52:49.376Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:37:49.380 PM: http: 	Request Authenitcated: false
+2023-12-09 08:37:49.431 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:37:49.442 PM: debug: Executing (ca699ed4-b1fb-475f-be51-5d6db3168748): START TRANSACTION;
+2023-12-09 08:37:49.448 PM: debug: Executing (ca699ed4-b1fb-475f-be51-5d6db3168748): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:37:49.452 PM: debug: Executing (ca699ed4-b1fb-475f-be51-5d6db3168748): COMMIT;
+2023-12-09 08:37:51.981 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 1 LIMIT 1;
+2023-12-09 08:38:02.653 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-09 08:38:19.866 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:38:19.869 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:53:02.662Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:38:19.870 PM: http: 	Request Authenitcated: false
+2023-12-09 08:38:19.886 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:38:19.896 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:38:33.033 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:38:33.035 PM: http: 	Request body: {"ticket_type_id":2,"quantity":12}
+2023-12-09 08:38:33.036 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:53:19.902Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:38:33.036 PM: http: 	Request Authenitcated: false
+2023-12-09 08:38:33.046 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:38:37.596 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 2 LIMIT 1;
+2023-12-09 08:38:37.600 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
+2023-12-09 08:38:46.058 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:38:46.065 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:53:37.604Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:38:46.066 PM: http: 	Request Authenitcated: false
+2023-12-09 08:38:46.068 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:38:46.072 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:38:57.604 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:38:57.605 PM: http: 	Request body: {"ticket_type_id":3,"quantity":12}
+2023-12-09 08:38:57.606 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:53:46.075Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:38:57.607 PM: http: 	Request Authenitcated: false
+2023-12-09 08:38:57.618 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:38:57.622 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 3 LIMIT 1;
+2023-12-09 08:39:01.929 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:39:01.930 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:53:57.624Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:39:01.931 PM: http: 	Request Authenitcated: false
+2023-12-09 08:39:01.933 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:39:01.939 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:40:37.135 PM: info: Server running on port 4000
+2023-12-09 08:41:01.288 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:41:01.289 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:56:01.287Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:41:01.290 PM: http: 	Request Authenitcated: false
+2023-12-09 08:41:01.331 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:41:01.339 PM: debug: Executing (15e095da-e6d2-4341-b3c8-c4eef8672f53): START TRANSACTION;
+2023-12-09 08:41:01.343 PM: debug: Executing (15e095da-e6d2-4341-b3c8-c4eef8672f53): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:41:01.346 PM: debug: Executing (15e095da-e6d2-4341-b3c8-c4eef8672f53): COMMIT;
+2023-12-09 08:41:01.355 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:41:36.343 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:41:36.345 PM: http: 	Request body: {"cart_item_id":2,"quantity":12}
+2023-12-09 08:41:36.346 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T20:56:01.362Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:41:36.346 PM: http: 	Request Authenitcated: false
+2023-12-09 08:41:36.356 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:41:36.360 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`cart_item_id` = 2;
+2023-12-09 08:46:09.823 PM: info: Server running on port 4000
+2023-12-09 08:46:49.189 PM: http: New Request: PATCH /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:46:49.191 PM: http: 	Request body: {"cart_item_id":2,"quantity":0}
+2023-12-09 08:46:49.192 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T21:01:49.188Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"}}
+2023-12-09 08:46:49.193 PM: http: 	Request Authenitcated: false
+2023-12-09 08:46:49.273 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:46:49.301 PM: debug: Executing (31f6147b-bb8f-4bfa-8da2-d7a3049c7d8c): START TRANSACTION;
+2023-12-09 08:46:49.307 PM: debug: Executing (31f6147b-bb8f-4bfa-8da2-d7a3049c7d8c): SELECT `cart_id`, `user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1;
+2023-12-09 08:46:49.310 PM: debug: Executing (31f6147b-bb8f-4bfa-8da2-d7a3049c7d8c): COMMIT;
+2023-12-09 08:46:49.316 PM: debug: Executing (default): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`cart_item_id` = 2;
+2023-12-09 08:46:49.337 PM: debug: Executing (default): DELETE FROM `cart_items` WHERE `cart_item_id` = 2
+2023-12-09 08:46:57.793 PM: http: New Request: GET /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:46:57.794 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T21:01:49.333Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:46:57.795 PM: http: 	Request Authenitcated: false
+2023-12-09 08:46:57.798 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:46:57.807 PM: debug: Executing (default): SELECT `cart`.*, `cart_items`.`cart_item_id` AS `cart_items.cart_item_id`, `cart_items`.`quantity` AS `cart_items.quantity`, `cart_items`.`cart_id` AS `cart_items.cart_id`, `cart_items`.`ticket_type_id` AS `cart_items.ticket_type_id`, `cart_items->ticket_type`.`name` AS `cart_items.ticket_type.name`, `cart_items->ticket_type`.`price` AS `cart_items.ticket_type.price`, `cart_items->ticket_type`.`description` AS `cart_items.ticket_type.description`, `cart_items->ticket_type`.`type_id` AS `cart_items.ticket_type.type_id` FROM (SELECT `cart`.`cart_id`, `cart`.`user_id` FROM `cart` AS `cart` WHERE `cart`.`user_id` = 1 LIMIT 1) AS `cart` LEFT OUTER JOIN `cart_items` AS `cart_items` ON `cart`.`cart_id` = `cart_items`.`cart_id` LEFT OUTER JOIN `ticket_types` AS `cart_items->ticket_type` ON `cart_items`.`ticket_type_id` = `cart_items->ticket_type`.`type_id`;
+2023-12-09 08:47:20.808 PM: http: New Request: POST /api/shop/cart ::ffff:192.58.125.10
+2023-12-09 08:47:20.810 PM: http: 	Request body: {"ticket_type_id":2,"quantity":20}
+2023-12-09 08:47:20.811 PM: http: 	Request session: {"cookie":{"originalMaxAge":900000,"expires":"2023-12-09T21:01:57.813Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"cart_id":1}
+2023-12-09 08:47:20.812 PM: http: 	Request Authenitcated: false
+2023-12-09 08:47:20.827 PM: debug: Executing (default): SELECT `user_id`, `email`, `password`, `first_name`, `last_name`, `address`, `address2`, `city`, `state`, `zip`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`user_id` = 1;
+2023-12-09 08:47:20.833 PM: debug: Executing (bd6b9da9-0484-4f9e-bec9-72d8b405f55b): START TRANSACTION;
+2023-12-09 08:47:20.838 PM: debug: Executing (bd6b9da9-0484-4f9e-bec9-72d8b405f55b): SELECT `cart_item_id`, `quantity`, `cart_id`, `ticket_type_id` FROM `cart_items` AS `cart_items` WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`ticket_type_id` = 2 LIMIT 1;
+2023-12-09 08:47:20.850 PM: debug: Executing (bd6b9da9-0484-4f9e-bec9-72d8b405f55b): INSERT INTO `cart_items` (`cart_item_id`,`quantity`,`cart_id`,`ticket_type_id`) VALUES (DEFAULT,?,?,?);
+2023-12-09 08:47:20.853 PM: debug: Executing (bd6b9da9-0484-4f9e-bec9-72d8b405f55b): COMMIT;
+2023-12-09 08:47:20.861 PM: debug: Executing (default): UPDATE `cart_items` SET `quantity`=? WHERE `cart_item_id` = ?
