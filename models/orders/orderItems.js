@@ -2,32 +2,46 @@
 
 import { Model, DataTypes } from "sequelize";
 import mariadb_connector from "../../config/maria_db.js";
+import { model as Orders } from "./order.js";
+import { model as Ticket } from "../tickets/ticket.js";
 
-class OrderItemModel extends Model {
-    
+class OrderItem extends Model {
+
 }
 
-OrderItemModel.init({
+OrderItem.init({
+
+    // Foreign keys defined in associations.js
+    // Foreign key: order_id (OrderModel | order.js)
+    // Foreign key: ticket_id (TicketModel | ticket.js)
+    
     order_item_id: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
     },
 
-    quantity: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false,
+    //fk, defined in associations, here for testing purposes
+    order_id: {
+        type: DataTypes.UUID,
+        references: {
+            model: Orders
+        }
     },
 
-    // Foreign key: order_id (OrderModel | order.js)
-    // Foreign key: ticket_id (TicketModel | ticket.js)
-    // Foreign key: ticket_type_id (TicketTypeModel | ticketType.js)
-    // Foreign key: user_id (UserModel | user.js)
+    //fk, defined in associations, here for testing purposes
+    ticket_id: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        references: {
+            model: Ticket,
+        }
+    }
+
 }, {
-    modelName: "order_items",
+    tableName: "order_items",
     freezeTableName: true,
-    timestamps: true,
+    timestamps: false,
     sequelize: mariadb_connector.sequelize
 })
 
-export { OrderItemModel as model }
+export { OrderItem as model }

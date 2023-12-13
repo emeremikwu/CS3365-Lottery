@@ -20,7 +20,7 @@ router.get("/cart", catchAsync(CommerceControllers.getCart));
 router.post("/cart", catchAsync(CommerceControllers.addToCart));
 
 //update or delete item based on quantity (0: delete)
-router.patch("/cart", catchAsync(CommerceControllers.updateCartItemQuantity))
+router.patch("/cart", catchAsync(CommerceControllers.updateItemQuantity))
 
 router.post("/cart/checkout", catchAsync(CommerceControllers.checkout)); 
 

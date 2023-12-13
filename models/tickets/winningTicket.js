@@ -28,7 +28,7 @@ WinningTicketModel.init({
     // foreign keys: ticket_type_id (TicketTypeModel | ticketType.js)
 
 }, {
-    modelName: "winning_tickets",
+    tableName: "winning_tickets",
     freezeTableName: true,
     timestamps: true,
     sequelize: mariadb_connector.sequelize

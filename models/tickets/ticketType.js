@@ -7,11 +7,11 @@ import mariadb_connector from "../../config/maria_db.js";
 
 // TODO: implement geneate ticket number
 
-class TicketTypeModel extends Model {
+class TicketType extends Model {
 
 }
 
-TicketTypeModel.init({
+TicketType.init({
     type_id: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -82,11 +82,11 @@ TicketTypeModel.init({
         }
     },
 
-    modelName: "ticket_types",
+    tableName: "ticket_types",
     freezeTableName: true,
     timestamps: true,
     sequelize: mariadb_connector.sequelize
 
 })
 
-export { TicketTypeModel as model }
+export { TicketType as model }

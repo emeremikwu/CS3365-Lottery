@@ -1,14 +1,5 @@
 "use strict";
-import { 
-    User, 
-    OrderItems, 
-    Ticket, Orders, 
-    TicketType, 
-    WinningTicket, 
-    Cart,
-    CartItem
- } from '../models/associations.js';
-import { model as UserCart } from '../models/cart/cart.js';
+import updatedModels from '../models/associations.js';
 import env_config from './env_config.js';
 import logger from './logger.js';
 import _ from 'lodash';
@@ -107,30 +98,6 @@ Defaults.Models = class {
 
     static async initializeDefaultTables(destructive = false, alter = false) {
 
-        //needs to be in this order
-        const table_order = [
-            User, 
-            TicketType,
-            Ticket, 
-            WinningTicket,
-            Orders, 
-            OrderItems, 
-            UserCart,
-            Cart,
-            CartItem,
-        ] 
-
-        /* const table_order = [
-            User, 
-            TicketType,
-            Ticket, 
-            Cart,
-            CartItem,
-            Orders, 
-            OrderItems, 
-            WinningTicket,
-        ] */
-
         if (env_config.isProduction()) {
             logger.warn("initializeTables is disabled in Production")
             return;
@@ -139,21 +106,24 @@ Defaults.Models = class {
         if (destructive) logger.warn("Executing destructive table queries")
         else logger.warn("Executing non-destructive table queries")
 
-        try {
-            await Promise.all(table_order.map(async (table) => {
+        for (const table of updatedModels.initializationOrder) {
+            try {
                 await table.sync({ force: destructive, alter: alter });
-            }))
-            logger.info("DB sync complete");
-        } catch (error) {
-            logger.error(error)
+                logger.info(`Table ${table.name} synchronized successfully`);
+            } catch (error) {
+                logger.error(`Error synchronizing table ${table.name}: ${error}`);
+            }
         }
+        
+        logger.info("DB sync complete");
+
     }
 
-/*     static async setAssociations() {        
-        UserTable.hasMany(TicketTable, { foreignKey: "user_id" })
-        WinningsTable.belongsTo(TicketTable, { foreignKey: "winning_ticket_id" })
-        WinningsTable.belongsTo(UserTable, { foreignKey: "user_id" })
-    } */
+    /*     static async setAssociations() {        
+            UserTable.hasMany(TicketTable, { foreignKey: "user_id" })
+            WinningsTable.belongsTo(TicketTable, { foreignKey: "winning_ticket_id" })
+            WinningsTable.belongsTo(UserTable, { foreignKey: "user_id" })
+        } */
 
 }
 

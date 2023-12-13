@@ -3,12 +3,12 @@
 import { DataTypes, Model } from 'sequelize';
 import mariadb_connector from '../../config/maria_db.js';
 
-class Cart extends Model {
-
-}
-
+class Cart extends Model {}
 
 Cart.init({
+
+  // Foreign keys defined in associations.js
+  // Foreign key: user_id (UserModel | user.js)
 
   cart_id: {
     type: DataTypes.INTEGER.UNSIGNED,
@@ -16,26 +16,13 @@ Cart.init({
     primaryKey: true,
   },
 
-  /* UserID: {
-    type: DataTypes.INTEGER,
-    allowNull: true, // Users may not be logged in
-    references: {
-      model: User,
-      key: 'UserID',
-    },
-  }, 
-
-  SessionID: {
-    type: DataTypes.STRING,
-    allowNull: true, // Users may not be logged in
-  }, */
-
-
 }, {
+
   sequelize: mariadb_connector.sequelize,
-  modelName: 'cart',
-  timestamps: false,
+  tableName: 'cart',
+  timestamps: true, //set true for users that aren't logged in, not implemented yet
   freezeTableName: true,
+
 });
 
 export { Cart as model }

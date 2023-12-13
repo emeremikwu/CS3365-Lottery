@@ -2,20 +2,26 @@
 import { Model, DataTypes } from "sequelize";
 import mariadb_connector from "../../config/maria_db.js";
 
-class TicketModel extends Model {
+class Ticket extends Model {
     
 }
 
-TicketModel.init({
+Ticket.init({
+    
+    // Foreign keys defined in associations.js
+    // Foreign keys: ticket_type_id (ticketType | ticketType.js), 
+
     ticket_id: {
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
+        autoIncrement: true
     },
 
     //visual identifier for user, will need a script to generate
     ticket_number_ref: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+        unique: true,
     },
 
     // the selected numbers for the ticket separated by colons
@@ -26,15 +32,12 @@ TicketModel.init({
         allowNull: true,
     },
 
-    //  Foreign keys: type_id (ticketTypeModel | ticketType.js), 
-
 }, {
     
-    
-    modelName: "tickets",
+    tableName: "tickets",
     freezeTableName: true,
     timestamps: true,
     sequelize: mariadb_connector.sequelize
 })
 
-export { TicketModel as model }
+export { Ticket as model }

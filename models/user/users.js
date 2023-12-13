@@ -15,6 +15,7 @@ UserModel.init({
         type: DataTypes.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
+        comment: "change to uuid before production"
     },
     
     email: {
@@ -63,7 +64,7 @@ UserModel.init({
     },
 
 }, {
-    modelName: "users",
+    tableName: "users",
     freezeTableName: true,
     timestamps: true,
     sequelize: mariadb_connector.sequelize

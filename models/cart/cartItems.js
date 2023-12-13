@@ -5,6 +5,9 @@ class CartItem extends Model { }
 
 CartItem.init({
 
+    // Foreign key: cart_id ( Cart | cart.js)
+    // Foreign key: ticket_type_id (TicketTypeModel | ticketType.js)
+
     cart_item_id: {
         type: DataTypes.INTEGER.UNSIGNED,
         autoIncrement: true,
@@ -17,10 +20,11 @@ CartItem.init({
     },
 
 }, {
+    
     sequelize: mariadb_connector.sequelize,
     freezeTableName: true,
     timestamps: false,
-    modelName: 'cart_items',
+    tableName: 'cart_items',
 
 });
 
