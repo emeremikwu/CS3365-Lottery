@@ -1,24 +1,20 @@
 "use strict";
 
 import status from "http-status";
-import { DateTime } from "luxon";
 
-
-import {
-    Cart,
-    CartItems,
-    TicketType,
-    Orders,
-    OrderItems,
-    Ticket
-} from "../models/associations.js";
+import models from "../models/associations.js"
 import logger from "../config/logger.js";
+import mariadb_connector from "../config/maria_db.js";
+import EmptyCartError from "../utils/errors/emptyCartError.js";
+import TicketDNEError from "../utils/errors/ticketDNEError.js";
 
 /* 
     TODO: 
-        [ ] - cart_item_id doesn't automaticallty increment/decrement upon item deletion. 
-            Implement something that offloads this to another processor
-        [ ] - set ticket refernce Number
+        [ ] - update CartItems Model to have a local index and a global index,
+            when a user requests their cart, it returns the index of the CartItems in the db. This value doesn't start form one
+        [ ] - set ticket refernce Number during checkout
+        [ ] - implement caching
+        [ ] - updateItemQuantity doesn't check for incorrect index, will be updated after first todo is implemented
  */
 
 export class CommerceControllers {
@@ -27,9 +23,9 @@ export class CommerceControllers {
 
         const userCart = await req.user.getCart({
             include: {
-                model: CartItems,    //model name is cart_items
+                model: models.CartItems,    //model name is cart_items
                 include: {
-                    model: TicketType,
+                    model: models.TicketType,
                     attributes: ["name", "price", "description", "type_id"],
                 },
             },
@@ -59,20 +55,25 @@ export class CommerceControllers {
             quantity,
         } = req.body
 
-        const [cartItem, created] = await CartItems.findOrCreate({
+        //check if the ticket exists, temporary solution, eventually thiw will be cacahed
+        const ticket_type = await models.TicketType.findByPk(ticket_type_id)
+
+        if (!ticket_type) throw new TicketDNEError()
+
+        const [cartItem, created] = await models.CartItems.findOrCreate({
             where: {
-                cart_id: req.user.cart_id, //we ensure that the user has a cart in the middleware 
+                cart_id: req.user.cart_id, //we ensured that the user has a cart in the middleware 
                 ticket_type_id: ticket_type_id
             }
         })
 
         if (created) {
             cartItem.quantity = quantity
-            await cartItem.save()
         } else {
             cartItem.quantity += quantity
-            await cartItem.save()
         }
+
+        await cartItem.save()
 
         res.status(status.CREATED).json({
             status: status.CREATED,
@@ -95,7 +96,7 @@ export class CommerceControllers {
             quantity
         } = req.body
 
-        const cartItem = await CartItems.findOne({
+        const cartItem = await models.CartItems.findOne({
             where: {
                 cart_id: req.user.cart_id,
                 // might xor these in validations later
@@ -125,87 +126,24 @@ export class CommerceControllers {
         })
     }
 
-    // POST method
-
-    /* static async checkout(req, res, next) {
-        const {
-            cart_id,
-            payment_method,
-            payment_info,
-        } = req.body;
-
-        const user_cart = await req.user.getCart({
-            include: {
-                model: CartItem,
-                include: {
-                    model: TicketType,
-                    attributes: ["name", "price", "description", "type_id"],
-                },
-            },
-            attributes: {
-                exclude: ['createdAt', 'updatedAt'],
-            },
-        });
-
-        const cart_items = user_cart.cart_items.map((current_item) => ({
-            // The id of the cart item so we can delete or update it
-            cart_item_id: current_item.cart_item_id,
-
-            // info of the ticket the user plans on buying
-            ticket_info: current_item.ticket_type,
-
-            // The amount they are buying
-            quantity: current_item.quantity,
-        }));
-
-        //create order
-        const order = await Orders.create({
-            user_id: req.user.user_id,
-            payment_method: payment_method,
-            payment_info: payment_info,
-        });
-
-        //create order items
-        const order_items = cart_items.map((current_item) => ({
-            order_id: order.order_id,
-            ticket_type_id: current_item.ticket_info.type_id,
-            quantity: current_item.quantity,
-        }));
-
-        //create order items
-        await OrderItems.bulkCreate(order_items);
-
-        //delete cart items
-        await CartItem.destroy({
-            where: {
-                cart_id: req.user.cart_id,
-            },
-        });
-
-        return res.json({
-            order_id: order.order_id,
-            order_items: order_items,
-        });
-    } */
-
     /* 
-        FIXME: Cache ticket_type_prices to avoid calling the Database every time a user checksout
+    POST method
+        Checkout Steps
+        1. Get User Cart
+        2. Get Cart Item -> Extract Ticket types
+        3. Create Order
+        4. Create Order Items & Tickets (combined)
+        5. Delete Cart Items
+        6. Delete Cart (optional)
+        7. Return Created Order and Order Item
+
+    FIXME: Cache ticket_type_prices to avoid calling the Database every time a user checksout
      */
     static async checkout(req, res, next) {
-        /* Checkout Steps
-            1. Get User Cart
-            2. Get Cart Item -> Extract Ticket types
-            3. Create Order
-            4. Create Order Items
-            5. Delete Cart Items
-            6. Delete Cart (optional)
-            7. Return Created Order and Order Items
-         */
 
-        //BAD
-        //create dictionary of type prices
+        //create dictionary of type prices,
         const ticket_type_prices = {}
-        await TicketType.findAll({ attributes: ["type_id", "price"] })
+        models.TicketType.findAll({ attributes: ["type_id", "price"] })
             .then((ticket_types) =>
                 ticket_types.forEach((ticket_type) => {
                     ticket_type_prices[ticket_type.type_id] = parseFloat(ticket_type.price)
@@ -213,22 +151,21 @@ export class CommerceControllers {
             )
 
         // ----- get user cart ----- 
-
-        const userCart =
-            await req.user.getCart({
-
-                //Cart.findOne({
+        const userCart = await req.user.getCart({
+            include: {
+                model: models.CartItems,
                 include: {
-                    model: CartItems,
-                    include: {
-                        model: TicketType,
-                        attributes: ["name", "price", "description", "type_id"],
-                    }
-                },
-                attributes: {
-                    exclude: ['createdAt', 'updatedAt'],
-                },
-            })
+                    model: models.TicketType,
+                    attributes: ["name", "price", "description", "type_id"],
+                }
+            },
+            attributes: {
+                exclude: ['createdAt', 'updatedAt'],
+            },
+        })
+
+        // Check if cart is empty
+        if (!userCart.CartItems.length) throw new EmptyCartError()
 
         // ----- Get cart items ----- 
         const cartItems = userCart.CartItems.map((current_item) => ({
@@ -237,45 +174,48 @@ export class CommerceControllers {
         }))
 
         // ----- Extract Tickets ----- 
+        // sets an array of ticket types from each cart item since there can be n amount of tickets
+        let subtotal = 0;
+        const extracted_tickets = cartItems.flatMap(
+            (current_item) => {
+                subtotal += ticket_type_prices[current_item.ticket_type_id] * current_item.quantity
 
-        // we need to do this because there can be a quantity of each ticket type
-        let extracted_tickets = [], total = 0;
-        cartItems.forEach((current_item) => {
-            for (let tCount = 0; tCount < current_item.quantity; tCount++) {
-                total += ticket_type_prices[current_item.ticket_type_id]
-                extracted_tickets.push({
-                    ticket_type_id: current_item.ticket_type_id
-                })
+                return Array.from({ length: current_item.quantity },
+                    () => ({ ticket_type_id: current_item.ticket_type_id })
+                )
             }
+        )
+
+        let order_id = null
+        // wrap in a transaction so everything either passes for fails
+        await mariadb_connector.sequelize.transaction(async t => {
+            // ----- Create Order ----- 
+            const order = await models.Orders.create({
+                user_id: req.user.user_id,
+                subtotal,
+            }, { transaction: t })
+            order_id = order.order_id
+
+            // combine the creation of Tickets and OrderItems in the same bulkCreate
+            // if I'm understanding this correctly, this works because OrderItems references tickets (fk ticket_id)
+            await models.Ticket.bulkCreate(
+                extracted_tickets.map((current_ticket) => ({
+                    ...current_ticket,
+                    OrderItems: [{ order_id: order.order_id }] // specify the information needed for OrderItems
+                })),
+                { include: models.OrderItems, transaction: t }
+            )
+
+            await models.CartItems.destroy({ where: { cart_id: req.user.cart_id } }, { transaction: t })
+
         })
 
-        // placeholder tickets that will later be updated with a refernce number upon ticket number selection
-        const created_tickets = await Ticket.bulkCreate(extracted_tickets)
-
-        // ----- Create Order ----- 
-
-        //build instead of create because theres missing required infromation, date (automatic) and subtotal
-        const order = await Orders.create({ 
-            user_id: req.user.user_id,
-            total: total,               //from extracted tickets
-            date: DateTime.now().toISO()
-         })
-
-
-        // ----- Create Order Items ----- 
-        const order_items = created_tickets.map((current_ticket) => ({
-            order_id: order.order_id,
-            ticket_id: current_ticket.ticket_id
-        }));
-
-        await OrderItems.bulkCreate(order_items)
-
-        // ----- Delete Cart Items ----- 
-        //CartItems.destroy({ where: { cart_id: req.user.cart_id } })
+        logger.info(`Order Created: ref: ${order_id}`)
 
         res.status(status.CREATED).json({
             message: "Order Created",
-            ref: order.order_id,
+            subtotal: subtotal,
+            ref: order_id,
         })
 
     }

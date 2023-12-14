@@ -1,6 +1,6 @@
 "use strict";
 
-import APIError from "../utils/apiError.js";
+import APIError from "../utils/errors/apiError.js";
 import httpStatus from "http-status"
 import { passport_config as passport } from "../config/passport.js";
 

@@ -4,7 +4,7 @@ import httpStatus from 'http-status';
 import Joi from 'joi';
 
 import logger from '../config/logger.js';
-import APIError from "../utils/apiError.js"
+import APIError from "../utils/errors/apiError.js"
 import env_config from '../config/env_config.js';
 
 
@@ -21,7 +21,9 @@ export const converter = (err, req, res, next) => {
 		const apiError = new APIError(errorMessage, httpStatus.BAD_REQUEST);
 		apiError.stack = err.stack;
 		return next(apiError);
-	} else if (!(err instanceof APIError)) {
+	}
+	
+	if (!(err instanceof APIError)) {
 		const status = err.status || httpStatus.INTERNAL_SERVER_ERROR;
 		const message = err.message || httpStatus[status];
 		const apiError = new APIError(message, status, false);
