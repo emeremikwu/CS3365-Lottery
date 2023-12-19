@@ -1,5 +1,3 @@
-"use strict";
-
 class APIError extends Error {
 	constructor(message, status, isOperational = true) {
 		super(message);

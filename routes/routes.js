@@ -1,15 +1,14 @@
-"use strict";
-
-import { Router } from "express";
-import authRoute from "./authRoute.js"
-import infoRoute from "./infoRoute.js";
-import commerceRoutes from "./commerceRoutes.js";
-
+import { Router } from 'express';
+import authRoute from './authRoute.js';
+import infoRoute from './infoRoute.js';
+import commerceRoute from './cartRoute.js';
+import orderRoute from './orderRoute.js';
 
 const routes = Router();
 
-routes.use("/auth", authRoute);
-routes.use("/info", infoRoute);
-routes.use("/shop", commerceRoutes)
+routes.use('/auth', authRoute);
+routes.use('/info', infoRoute);
+routes.use('/shop', commerceRoute);
+routes.use('/orders', orderRoute);
 
-export default routes
+export default routes;

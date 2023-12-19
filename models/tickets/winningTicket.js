@@ -1,37 +1,36 @@
-"use strict";
+import { Model, DataTypes } from 'sequelize';
+import sequelize from '../../config/sequelize.js';
 
-import { Model, DataTypes } from "sequelize";
-import mariadb_connector from "../../config/maria_db.js";
-class WinningTicketModel extends Model {
+export class WinningTicket extends Model {}
 
-}
-{}
-//just contains the id, foreign keys will be set Defaults.ModelAssociations in config file in config folder
-WinningTicketModel.init({
-    winningTicket_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        primaryKey: true,
-        autoIncrement: true,
-    },
+WinningTicket.init({
 
-    reward_amount: {
-        type: DataTypes.DECIMAL(18, 2),
-        allowNull: false,
-    },
+	// foreign keys: ticket_id (TicketModel | ticket.js)
+	// foreign keys: ticket_type_id (TicketTypeModel | ticketType.js)
 
-    selected_numbers: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
+	winningTicket_id: {
+		type: DataTypes.INTEGER.UNSIGNED,
+		primaryKey: true,
+		autoIncrement: true,
+	},
 
-    // foreign keys: ticket_id (TicketModel | ticket.js)
-    // foreign keys: ticket_type_id (TicketTypeModel | ticketType.js)
+	reward_amount: {
+		type: DataTypes.DECIMAL(18, 2),
+		allowNull: false,
+	},
+
+	selected_numbers: {
+		type: DataTypes.STRING,
+		allowNull: true,
+	},
 
 }, {
-    tableName: "winning_tickets",
-    freezeTableName: true,
-    timestamps: true,
-    sequelize: mariadb_connector.sequelize
-})
 
-export { WinningTicketModel as model }
+	tableName: 'winning_tickets',
+	freezeTableName: true,
+	timestamps: true,
+	sequelize,
+
+});
+
+export default WinningTicket;

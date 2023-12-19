@@ -1,28 +1,26 @@
-"use strict";
-
 import { DataTypes, Model } from 'sequelize';
-import mariadb_connector from '../../config/maria_db.js';
+import sequelize from '../../config/sequelize.js';
 
-class Cart extends Model {}
+export class Cart extends Model {}
 
 Cart.init({
 
-  // Foreign keys defined in associations.js
-  // Foreign key: user_id (UserModel | user.js)
+	// Foreign keys defined in associations.js
+	// Foreign key: user_id (UserModel | user.js)
 
-  cart_id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
+	cart_id: {
+		type: DataTypes.INTEGER.UNSIGNED,
+		autoIncrement: true,
+		primaryKey: true,
+	},
 
 }, {
 
-  sequelize: mariadb_connector.sequelize,
-  tableName: 'cart',
-  timestamps: true, //set true for users that aren't logged in, not implemented yet
-  freezeTableName: true,
+	tableName: 'cart',
+	timestamps: true, // set true for users that aren't logged in, not implemented yet
+	freezeTableName: true,
+	sequelize,
 
 });
 
-export { Cart as model }
+export default Cart;

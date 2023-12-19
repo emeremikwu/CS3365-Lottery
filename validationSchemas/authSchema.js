@@ -1,9 +1,6 @@
-"use strict";
-
 import Joi from 'joi';
 
-
-export class AuthSchemas {
+export class AuthSchema {
 	/* static #signup = {
 		body: Joi.object().keys({
 			firstName: Joi.string().trim().min(2).max(66).required(),
@@ -17,8 +14,8 @@ export class AuthSchemas {
 	static #signin = {
 		body: Joi.object().keys({
 			email: Joi.string().email().required(),
-			password: Joi.string().required()
-		})
+			password: Joi.string().required(),
+		}),
 	};
 
 	static #updateMe = {
@@ -32,11 +29,11 @@ export class AuthSchemas {
 			zip: Joi.string().trim().min(6).max(50),
 			email: Joi.string().email(),
 			password: Joi.string().trim().min(6).max(50),
-		})
+		}),
 	};
 
 	static get signup() {
-		return this.#updateMe;//same thting 
+		return this.#updateMe;// same thting
 	}
 
 	static get signin() {
@@ -46,6 +43,5 @@ export class AuthSchemas {
 	static get updateMe() {
 		return this.#updateMe;
 	}
-
 }
-export default AuthSchemas
+export default AuthSchema;

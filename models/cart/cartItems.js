@@ -1,31 +1,31 @@
 import { DataTypes, Model } from 'sequelize';
-import mariadb_connector from '../../config/maria_db.js';
+import sequelize from '../../config/sequelize.js';
 
-class CartItem extends Model { }
+export class CartItem extends Model { }
 
 CartItem.init({
 
-    // Foreign key: cart_id ( Cart | cart.js)
-    // Foreign key: ticket_type_id (TicketTypeModel | ticketType.js)
+	// Foreign key: cart_id ( Cart | cart.js)
+	// Foreign key: ticket_type_id (TicketTypeModel | ticketType.js)
 
-    cart_item_id: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        autoIncrement: true,
-        primaryKey: true,
-    },
+	cart_item_id: {
+		type: DataTypes.INTEGER.UNSIGNED,
+		autoIncrement: true,
+		primaryKey: true,
+	},
 
-    quantity: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        defaultValue: 1,
-    },
+	quantity: {
+		type: DataTypes.INTEGER.UNSIGNED,
+		defaultValue: 1,
+	},
 
 }, {
-    
-    sequelize: mariadb_connector.sequelize,
-    freezeTableName: true,
-    timestamps: false,
-    tableName: 'cart_items',
+
+	freezeTableName: true,
+	timestamps: false,
+	tableName: 'cart_items',
+	sequelize,
 
 });
 
-export { CartItem as model }
+export default CartItem;
