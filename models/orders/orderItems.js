@@ -2,7 +2,7 @@ import { Model, DataTypes } from 'sequelize';
 
 import sequelize from '../../config/sequelize.js';
 import { Order } from './order.js';
-import Ticket from '../tickets/ticket.js';
+import { Ticket } from '../tickets/ticket.js';
 
 export class OrderItem extends Model {}
 

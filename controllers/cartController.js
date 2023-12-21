@@ -25,7 +25,7 @@ TicketType.findAll({ attributes: ['type_id', 'price'] })
 
 export class CartController {
 	// [ ] - update CartItems Model to return a local index rather then global(cart_item_id),
-	// [ ] - return subtotal
+	// [x] - return subtotal
 	static async getCart(req, res) {
 		let subtotal = 0;
 		const cartItems = req.user.filteredCart.CartItems.map((current_item) => {
@@ -109,9 +109,10 @@ export class CartController {
 		});
 
 		if (!cartItem) {
-			return res.status(status.NOT_FOUND).json({
+			res.status(status.NOT_FOUND).json({
 				message: 'Cart item not found',
 			});
+			return;
 		}
 
 		let retStatus = status.OK;
@@ -129,8 +130,6 @@ export class CartController {
 			message: `Cart item ${quantity ? 'updated' : 'deleted'}`,
 			...(retStatus !== status.NO_CONTENT && { cart_item: cartItem }),
 		});
-
-		return null;
 	}
 
 	/*

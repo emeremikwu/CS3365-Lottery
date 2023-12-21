@@ -1,27 +1,25 @@
 import status from 'http-status';
-import {
-	OrderItem, Ticket, TicketType,
-} from '../models/associations.js';
+import { logger } from '../config/logger.js';
 // TODO:
 export class OrderController {
-	static async getAll(req, res) {
-		// [ ] - move this to middleware and implement caching,
-		const orders = await req.user.getOrders({
-			include: {
-				model: OrderItem,
-				include: {
-					model: Ticket,
-					include: {
-						model: TicketType,
-					},
-				},
-			},
-		});
+	// returns a page count given the
+	static async getPageCount(req, res) {
+		const { pageSize } = req.body;
 
-		const orderHistory = orders.map((order) => ({
+		const orderCount = (await req.user.getOrders()).length;
+		const pageCount = Math.ceil(orderCount / pageSize);
+
+		res.json(pageCount);
+	}
+
+	static async mapAndSend(req, res) {
+		logger.info(`Mapping Order Data: ${req.user.user_id}`);
+		// promise.all wouldn't make sense here because the operation is synchronous
+		const orderHistory = req.user.orders.map((order) => ({
 			order_number: order.order_id,
 			date: order.date,
 			subtotal: order.subtotal,
+
 			tickets: order.OrderItems.map((orderItem) => ({
 				id: orderItem.ticket_id,
 				type_name: orderItem.Ticket.TicketType.name,
@@ -33,8 +31,8 @@ export class OrderController {
 		}));
 
 		res.status(status.OK).json({
-			message: 'Order History - All',
-			order_history: orderHistory,
+			...(req.response_messaege && { messasge: req.response_messaege }),
+			order_history: orderHistory.length !== 1 ? orderHistory : orderHistory[0],
 		});
 	}
 }
