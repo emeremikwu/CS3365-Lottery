@@ -1,4 +1,4 @@
-import { TicketType } from './tickets/ticketTypes.js';
+import { TicketType } from './tickets/ticketType.js';
 import { Ticket } from './tickets/ticket.js';
 import { WinningTicket } from './tickets/winningTicket.js';
 import { User } from './user/user.js';

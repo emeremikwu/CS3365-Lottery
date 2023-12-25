@@ -1,19 +1,26 @@
 import status from 'http-status';
 import { logger } from '../config/logger.js';
+import { sequelizeQuery_date } from '../utils/sequelizeQuery.js';
+
 // TODO:
 export class OrderController {
 	// returns a page count given the
 	static async getPageCount(req, res) {
-		const { pageSize } = req.body;
-
-		const orderCount = (await req.user.getOrders()).length;
+		const { pageSize = 10 } = req.query;
+		const [sequelizedQueryObject, message] = sequelizeQuery_date(req.query);
+		const orderCount = (await req.user.getOrders({ sequelizedQueryObject })).length;
 		const pageCount = Math.ceil(orderCount / pageSize);
 
-		res.json(pageCount);
+		res.json({
+			pageCount,
+			pageSize,
+			...(message && { message: `time-range:'${message}'` }),
+
+		});
 	}
 
 	static async mapAndSend(req, res) {
-		logger.info(`Mapping Order Data: ${req.user.user_id}`);
+		logger.info(`Mapping Order Data: UID-${req.user.user_id}`);
 		// promise.all wouldn't make sense here because the operation is synchronous
 		const orderHistory = req.user.orders.map((order) => ({
 			order_number: order.order_id,
@@ -31,7 +38,9 @@ export class OrderController {
 		}));
 
 		res.status(status.OK).json({
-			...(req.response_messaege && { messasge: req.response_messaege }),
+			...(req.response_message && { messasge: req.response_message }),
+			...(req.pageCount && { pageCount: req.pageCount }),
+			...(req.page && { page: req.page }),
 			order_history: orderHistory.length !== 1 ? orderHistory : orderHistory[0],
 		});
 	}

@@ -12,12 +12,12 @@ const router = Router();
 router.use(catchAsync(authenticate));
 
 // query based, orders based on the page and page size (page, pageSize)
-router.get('', catchAsync(OrderMiddleware.retrieveByPage), catchAsync(OrderController.mapAndSendOrders));
+router.get('/orders', catchAsync(OrderMiddleware.retrieveByPage), catchAsync(OrderController.mapAndSend));
 
 // router.get('/', catchAsync(OrderController.mapAndSend));
-router.get('/pages', catchAsync(OrderController.getPageCount));
+router.get('/orders/pages', catchAsync(OrderController.getPageCount));
 
 // returns details about a specific order
-// router.get("/order-details")
+router.get(['/order-details', '/order-details/:orderID'], catchAsync(OrderMiddleware.retrieveOrderById), catchAsync(OrderController.mapAndSend));
 
 export default router;

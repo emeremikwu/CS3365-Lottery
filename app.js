@@ -34,8 +34,6 @@ app.use(converter);
 app.use(notFound);
 app.use(handler);
 
-// await Defaults.Models.initializeDefaultTables(false, true)
-
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);
 });
