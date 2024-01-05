@@ -1,7 +1,7 @@
 /*
-	Will return the index of the first number that is greater than the constraint
-	Will return 0 if all numbers are valid
-	Will return -1 if the input number string length and constraint length do not match
+ *	Returns the index of the first number that is greater than the constraint
+ *	Returns 0 if all numbers are valid
+ *	Returns -1 if the input number string length and constraint length do not match
  */
 function validateSelectedNumbers(inputNumberString, inputConstraint, delimiter = ':') {
 	const numberArray = inputNumberString.split(':').map(Number);
@@ -19,9 +19,9 @@ function validateSelectedNumbers(inputNumberString, inputConstraint, delimiter =
 
 	for (let index = 0; index < numberArray.length; index += 1) {
 		/*
-		*	despite the fact that comparing string integers works by itself,
-		*	we'll still use parseInt for good practice and consistency but its not necessary
-		*/
+		 *	despite the fact that comparing string integers works by itself,
+		 *	we'll still use parseInt for good practice and consistency but its not necessary
+		 */
 		if (Number(numberArray[index]) > Number(constraintArray[index])) return index + 1;
 	}
 

@@ -8,7 +8,14 @@ import validateSelectedNumbers from '../utils/ticket/validateSelectedNumbers.js'
 
 // TODO:
 export class TicketController {
-	// will be depricated(but like actually)
+	/*
+		Updates the selected numbers for the given a list of tickets and their selected numbers
+		Sends the updated ids to the user
+		Middleware that attaches the requested tickets to req.requestedTickets must be called first
+		Appropriate associations must be included:
+			OrderItem -> Order, Ticket (see models/includeClauses.js | ticketIncludeClauses)
+	*/
+
 	static async selectNumbers_ID(req, res) {
 		// [ ] - remove .toLowerCase() ... once validations are implemented
 		const haultOnError = req.body.haultOnError

@@ -1,4 +1,3 @@
-import status from 'http-status';
 import { logger } from '../config/logger.js';
 import { queryDate } from '../utils/sequelizeQueryGenerator.js';
 
@@ -19,6 +18,13 @@ export class OrderController {
 		});
 	}
 
+	/*
+		Maps a user's order history to a more readable format
+		Sends the mapped data to the user
+		Order middleware that attaches the user's order history to req.user must be called first
+		Appropriate associations must be included:
+			OrderItem -> Ticket -> TicketType(see models/includeClauses.js)
+	*/
 	static async mapAndSend(req, res) {
 		logger.info(`Mapping Order Data: UID-${req.user.user_id}`);
 		// promise.all wouldn't make sense here because the operation is synchronous
@@ -38,7 +44,7 @@ export class OrderController {
 			})),
 		}));
 
-		res.status(status.OK).json({
+		res.json({
 			...(req.response_message && { messasge: req.response_message }),
 			...(req.pageCount && { pageCount: req.pageCount }),
 			...(req.page && { page: req.page }),

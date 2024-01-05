@@ -6,11 +6,12 @@ import { queryTicketIDs } from '../utils/sequelizeQueryGenerator.js';
 // TODO:
 export class TicketMiddleware {
 	/*
-		Creates a 'requestedTickets' object containing the following variables:
+		Creates a 'requestedTickets' object on containing the following variables:
 			raw - the unaltered queried objects from the ticket ids passed in the body
 			authorized - raw object filtered with the authorized tickets
 			unauthorized - raw object filerewd with the unauthorized ticket 'IDs ONLY'
 			unknown - ids of tickets that weren't found
+		Attaches the object to the request body
 	 */
 	// [ ] - switch to ticket refernce number once implemented
 	static async attachRequestedTickets_ID(req, res, next) {

@@ -13,7 +13,9 @@ export const ticketIncludeClause = {
 				model: Order,
 				attributes: ['user_id'],
 			},
-		}, {
+		},
+
+		{
 			model: TicketType,
 		},
 	],
