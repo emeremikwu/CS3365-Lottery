@@ -1,24 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-empty-function */
-import { DateTime } from 'luxon';
-import {
-	Order, OrderItem, Ticket, TicketType,
-} from '../models/associations.js';
-import { sequelizeQuery_date } from '../utils/sequelizeQuery.js';
+import { queryDate } from '../utils/sequelizeQueryGenerator.js';
 import OrderNotFoundError from '../utils/errors/orderNotFoundError.js';
+import { orderIncludeClause } from '../models/includeClauses.js';
 
 // eager loading for sequelize
-const include_clause = {
-	include: {
-		model: OrderItem,
-		include: {
-			model: Ticket,
-			include: {
-				model: TicketType,
-			},
-		},
-	},
-};
 
 // TODO:
 export class OrderMiddleware {
@@ -28,10 +12,7 @@ export class OrderMiddleware {
 	// [x] - implement pagination
 
 	static async retrieveAll(req, res, next) {
-		const orders = await req.user.getOrders({
-			...include_clause,
-		});
-
+		const orders = await req.user.getOrders({ ...orderIncludeClause });
 		req.user.orders = orders;
 		req.response_message = 'Order History - All';
 		next();
@@ -46,7 +27,7 @@ export class OrderMiddleware {
 
 		const order = await req.user.getOrders({
 			where: { order_id: orderID },
-			...include_clause, // include order items and tickets
+			...orderIncludeClause, // include order items and tickets
 		});
 		// if order length equals 0, then the order doesn't exist
 		if (order.length === 0) throw new OrderNotFoundError(orderID);
@@ -61,16 +42,15 @@ export class OrderMiddleware {
 		// pagesize is also the limitl
 		const { page = 1, pageSize = 10 } = req.query;
 		// although pagesize is passed as a string, it is converted to a number here, js is weird.
-		// parseInt anyways to be save and its good practice
-		const offset = (parseInt(page, 10) - 1) * parseInt(pageSize, 10);
-		const [where_clause, range_message] = sequelizeQuery_date(req.query);
+		// convert using 'Number' anyways to be safe and its good practice
+		const offset = (Number(page) - 1) * Number(pageSize);
+		const [where_clause, range_message] = queryDate(req.query);
 
 		const orders = await req.user.getOrders({
 			offset,
-			limit: parseInt(pageSize, 10),
-			order: [['date', 'DESC']],
+			limit: Number(pageSize), // needs to be a number
 			...where_clause,
-			...include_clause,
+			...orderIncludeClause,
 		});
 
 		req.user.orders = orders;

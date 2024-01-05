@@ -28,10 +28,12 @@ TicketType.init({
 	},
 
 	// string of numbers seperated by colons denoting the maximum number of each number allowed
-	// e.g powerball: "69:26:26:26:26:26:26"
-	number_maxes: {
+	// e.g powerball: "69:69:69:69:69:26"
+	constraint: {
 		type: DataTypes.STRING,
 		allowNull: false,
+		comment: `string of numbers seperated by colons denoting the maximum number of each number allowed 
+		e.g powerball: "69:69:69:69:69:26"`,
 	},
 
 	//  price ...

@@ -1,7 +1,8 @@
 import { logger } from '../config/logger.js';
 // TODO: add functionality for users who are not logged in
 
-import { Cart, CartItem, TicketType } from '../models/associations.js';
+import { Cart } from '../models/associations.js';
+import { cartIncludeClause } from '../models/includeClauses.js';
 import EmptyCartError from '../utils/errors/emptyCartError.js';
 
 export class CartMiddleware {
@@ -60,16 +61,7 @@ export class CartMiddleware {
 	// attaches the user cart to the request with the appropriate filtering
 	static filterAndAttachCart = (throwError = false) => async (req, res, next) => {
 		const userCart = await req.user.getCart({
-			include: {
-				model: CartItem, // model name is cart_items
-				include: {
-					model: TicketType,
-					attributes: ['name', 'price', 'description', 'type_id'],
-				},
-			},
-			attributes: {
-				exclude: ['createdAt', 'updatedAt'],
-			},
+			...cartIncludeClause,
 		});
 
 		// throw an error of the cart is empty

@@ -1,6 +1,8 @@
 import { DateTime } from 'luxon';
 import { Op } from 'sequelize';
-
+import httpStatus from 'http-status';
+import APIError from './errors/apiError.js';
+// TODO:
 /*
 	returns the month token for luxon given the month_value param
 	e.g input: "12" (december), 	output: MM
@@ -20,9 +22,9 @@ export const getMonthAbbreviation = (month_value = '') => {
 	if (!month_value || typeof month_value !== 'string' || month_value.length < 3) throw new Error('Invalid month string');
 
 	const month_abberivation = month_value.length > 3 ? 'MMMM' : 'MMM';
-	const err = DateTime.fromFormat(`${month_value}`, month_abberivation).invalidReason;
+	const errmsg = DateTime.fromFormat(`${month_value}`, month_abberivation).invalidReason;
 
-	if (err) throw new Error(err);
+	if (errmsg) throw new APIError(errmsg, httpStatus.INTERNAL_SERVER_ERROR, false);
 
 	return month_abberivation;
 };
@@ -31,7 +33,7 @@ export const getMonthAbbreviation = (month_value = '') => {
 	returns an object containing the "where" clause for sequelize given a query object
 */
 
-export const sequelizeQuery_date = (query) => {
+export const queryDate = (query) => {
 	const query_entries = Object.entries(query);
 	let extracted_time = DateTime.now();
 	let range_message = 'last 90 days';
@@ -79,4 +81,33 @@ export const sequelizeQuery_date = (query) => {
 		}
 	});
 	return [sequelized_object, range_message];
+};
+
+/*
+	Will sequelize a query or ticketIDs.
+	TicketIDs till take presedence over query if provided.
+	For now it updated the tickets by ticketid but will be changed to ticket_reference_number
+		once the ticket_reference_number generation is implemented.
+*/
+
+// [ ] - change to ticket_reference_number once implemented
+// [ ] - potentially remove query parameter all together
+export const queryTicketIDs = (query = null, ticketIDs = null) => {
+	if (!query && !ticketIDs) {
+		throw new APIError('Expected query or list of ticket IDs, got null for both', httpStatus.INTERNAL_SERVER_ERROR, false);
+	}
+
+	const query_keys = !ticketIDs ? Object.keys(query) : null;
+
+	const localTicketIDs = ticketIDs || query_keys.map((key) => Number(key));
+
+	const sequelized_object = {
+		where: {
+			ticket_id: { [Op.or]: localTicketIDs },
+		},
+	};
+
+	// second parameter is meant for the "response message" but isn't needed
+	// this is kep there for consistency
+	return [sequelized_object, null];
 };
