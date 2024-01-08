@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import env_config from './env_config.js';
-import { logger } from './logger.js';
+import logger from './logger.js';
 
 /* import { model as TicketTable, model } from '../models/ticketModel.js';
 import { model as WinningsTable } from '../models/winningTicketModel.js';

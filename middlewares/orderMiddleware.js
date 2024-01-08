@@ -19,7 +19,7 @@ export class OrderMiddleware {
 	}
 
 	/*
-		returns details about a specific order
+		Attached the order to the request object (req.user)
 		order must belong to the user
 	 */
 	static async retrieveOrderById(req, res, next) {
@@ -37,26 +37,34 @@ export class OrderMiddleware {
 		next();
 	}
 
-	// retrieves a list of orders given a specific page and optional page size
+	/*
+		retrieves and attaches a list of orders given a page
+		other optional query filters include:
+			- pageSize (default is 10)
+			- year
+			- month
+			- last (followed by a value of the number of days, default is 90)
+
+	 */
 	static async retrieveByPage(req, res, next) {
 		// pagesize is also the limitl
 		const { page = 1, pageSize = 10 } = req.query;
 		// although pagesize is passed as a string, it is converted to a number here, js is weird.
 		// convert using 'Number' anyways to be safe and its good practice
 		const offset = (Number(page) - 1) * Number(pageSize);
-		const [where_clause, range_message] = queryDate(req.query);
+		const [whereClause, rangeMessage] = queryDate(req.query);
 
 		const orders = await req.user.getOrders({
 			offset,
 			limit: Number(pageSize), // needs to be a number
-			...where_clause,
+			...whereClause,
 			...orderIncludeClause,
 		});
 
 		req.user.orders = orders;
 		// req.pageCount = Math.ceil((await Order.count({ where: where_clause })) / pageSize);
 		req.page = page;
-		req.response_message = `Order History - page:${page}|index:${offset}|time-frame:'${range_message}'`;
+		req.response_message = `Order History - page:${page}|index:${offset}|time-frame:'${rangeMessage}'`;
 		next();
 	}
 }

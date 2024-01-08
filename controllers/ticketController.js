@@ -1,9 +1,11 @@
-import { logger } from '../config/logger.js';
+import httpStatus from 'http-status';
+import logger from '../config/logger.js';
 import sequelize from '../config/sequelize.js';
+import APIError from '../utils/errors/apiError.js';
 import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import TicketInvalidNumbersError from '../utils/errors/ticketInvalidNumbersError.js';
 import UnauthorizedError from '../utils/errors/unauthorizedError.js';
-import validateSelectedNumbers from '../utils/ticket/validateSelectedNumbers.js';
+import { formatNumbers, validateParital, validateStrict } from '../utils/ticket/numberTools.js';
 // api/ticket
 
 // TODO:
@@ -47,12 +49,11 @@ export class TicketController {
 			for (const ticket of authorized) {
 				const { constraint } = ticket.TicketType;
 				const { ticket_id } = ticket;
-				const selected_numbers = req.body.tickets[ticket_id];
-
-				const result = validateSelectedNumbers(selected_numbers, constraint);
-
+				const selected_numbers = formatNumbers(req.body.tickets[ticket_id]);
+				const result = validateStrict(selected_numbers, constraint);
 				// if result is 0 and selected_numbers is not the same as the one in the db, save it
 				// reduce db calls as much as possible
+
 				if (!result && selected_numbers !== ticket.selected_numbers) {
 					// eslint-no-param-reassign compliance
 					const newTicketInfo = { selected_numbers };
@@ -72,6 +73,58 @@ export class TicketController {
 			message: `Updated ${updatedTickets.length} ticket${updatedTickets.length > 1 ? 's' : ''}.`,
 			updatedTickets,
 		});
+	}
+
+	/*
+		Validates the given numbers against the given constraints
+		One ticket type per request
+		e.g:
+		{ "type_id", "selected_numbers" }
+		or
+		[
+			{ "type_id", "selected_numbers" },
+			{ "type_id", "selected_numbers" },
+			{ "type_id", "selected_numbers" },
+			...max 15
+		]
+
+		returns an array of booleans corresponding to the input numbers
+	 */
+	static async validateNumbers(req, res) {
+		// { ticket_type, selected_numbers }
+		// evaluate as array to avoid redundency
+		const tickets = Array.isArray(req.body) ? req.body : [req.body];
+
+		if (!req.ticketTypes) {
+			throw new APIError(
+				'TicketTypes not attached to request object prior to "validateNumbers", call "attachTicketTypes" or simlar middleware',
+				httpStatus.INTERNAL_SERVER_ERROR,
+				false,
+			);
+		}
+
+		let status = httpStatus.OK;
+		const responseArray = [];
+
+		const max = Math.min(tickets.length, 10);
+
+		for (let index = 0; index < max; index += 1) {
+			const currentTicket = Object.entries(tickets[index]);
+			const [type_id, selecte_numbers] = currentTicket[0];
+			const ticketType = req.ticketTypes.find((tt) => tt.type_id === Number(type_id));
+
+			if (!ticketType) {
+				responseArray.push({});
+				status = httpStatus.BAD_REQUEST;
+			} else {
+				const { constraint } = ticketType;
+				const resultArray = validateParital(selecte_numbers, constraint);
+				if (!resultArray.length || resultArray.includes(false)) status = httpStatus.BAD_REQUEST;
+				responseArray.push({ [type_id]: resultArray });
+			}
+		}
+
+		res.status(status).json(responseArray.length === 1 ? responseArray[0] : responseArray);
 	}
 }
 

@@ -2,7 +2,7 @@ import httpStatus from 'http-status';
 import APIError from '../utils/errors/apiError.js';
 import { passport_config as passport } from '../config/passport.js';
 
-import { logger } from '../config/logger.js';
+import logger from '../config/logger.js';
 import { User as Users } from '../models/associations.js';
 
 // eslint-disable-next-line max-len

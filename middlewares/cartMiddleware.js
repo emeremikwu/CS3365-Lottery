@@ -1,4 +1,4 @@
-import { logger } from '../config/logger.js';
+import logger from '../config/logger.js';
 // TODO: add functionality for users who are not logged in
 
 import { Cart } from '../models/associations.js';

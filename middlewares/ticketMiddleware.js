@@ -1,5 +1,5 @@
-import { logger } from '../config/logger.js';
-import { Ticket } from '../models/associations.js';
+import logger from '../config/logger.js';
+import { Ticket, TicketType } from '../models/associations.js';
 import { ticketIncludeClause } from '../models/includeClauses.js';
 import { queryTicketIDs } from '../utils/sequelizeQueryGenerator.js';
 
@@ -55,6 +55,13 @@ export class TicketMiddleware {
 		});
 
 		logger.debug(`Authorized: ${authorized.length}, Unauthorized: ${unauthorized.length}, Unknown: ${unknown.length} - attached to request body`);
+		next();
+	}
+
+	// [ ] - implement caching, unnecessary to be a middlware without it
+	static async attachTicketTypes(req, res, next) {
+		const ticketTypes = await TicketType.findAll();
+		req.ticketTypes = ticketTypes;
 		next();
 	}
 }

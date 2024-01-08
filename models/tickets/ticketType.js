@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Model, DataTypes } from 'sequelize';
-import { logger } from '../../config/logger.js';
+import logger from '../../config/logger.js';
 import sequelize from '../../config/sequelize.js';
 
 // TODO: implement geneate ticket number

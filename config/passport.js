@@ -1,7 +1,7 @@
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { User } from '../models/associations.js';
-import { logger } from './logger.js';
+import logger from './logger.js';
 
 // Configure Passport.js to use the local strategy
 

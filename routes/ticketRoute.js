@@ -11,5 +11,5 @@ router.patch('/select-numbers', catchAsync(TicketMiddleware.attachRequestedTicke
 
 // [ ] - implement
 // eslint-disable-next-line max-len
-// router.get("/validate-numbers", catchAsync(TicketMiddleware.attachRequestedTickets_ID), catchAsync(TicketController.validateNumbers_ID));
+router.get('/validate-numbers', catchAsync(TicketMiddleware.attachTicketTypes), catchAsync(TicketController.validateNumbers));
 export default router;

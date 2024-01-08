@@ -6,7 +6,7 @@
  */
 
 import env_config from './env_config.js';
-import { logger } from './logger.js';
+import logger from './logger.js';
 import { initializationOrder } from '../models/associations.js';
 
 export default class mariaDBTools {

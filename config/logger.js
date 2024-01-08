@@ -17,7 +17,7 @@ winston.addColors({
 	debug: 'white',
 });
 
-export const logger = winston.createLogger({
+const logger = winston.createLogger({
 	levels,
 	level: env_config.isDevelopment() ? 'debug' : 'warn',
 	format: winston.format.combine(

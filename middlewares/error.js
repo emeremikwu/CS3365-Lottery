@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
 import Joi from 'joi';
 
-import { logger } from '../config/logger.js';
+import logger from '../config/logger.js';
 import APIError from '../utils/errors/apiError.js';
 import env_config from '../config/env_config.js';
 

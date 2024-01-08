@@ -3,7 +3,7 @@ import status from 'http-status';
 import {
 	Ticket, TicketType, CartItem, Order, OrderItem,
 } from '../models/associations.js';
-import { logger } from '../config/logger.js';
+import logger from '../config/logger.js';
 import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import sequelize from '../config/sequelize.js';
 

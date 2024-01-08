@@ -4,7 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
 import env_config from './config/env_config.js';
-import { logger } from './config/logger.js';
+import logger from './config/logger.js';
 import { passport_config as passport } from './config/passport.js';
 import { Defaults } from './config/defaults.js';
 import { converter, notFound, handler } from './middlewares/error.js';
