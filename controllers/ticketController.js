@@ -45,8 +45,7 @@ export class TicketController {
 				https://stackoverflow.com/questions/61369310/sequelize-transactions-inside-foreach-issue
 			*/
 
-			// eslint-disable-next-line no-restricted-syntax,
-			for (const ticket of authorized) {
+			const ticketPromises = authorized.map(async (ticket) => {
 				const { constraint } = ticket.TicketType;
 				const { ticket_id } = ticket;
 				const selected_numbers = formatNumbers(req.body.tickets[ticket_id]);
@@ -64,7 +63,9 @@ export class TicketController {
 				} else if (haultOnError) {
 					throw new TicketInvalidNumbersError(ticket_id, constraint, selected_numbers, result);
 				}
-			}
+			});
+
+			await Promise.all(ticketPromises);
 		});
 
 		logger.debug(`Updated ${authorized.length} tickets, user_id: ${req.user.user_id}`);
