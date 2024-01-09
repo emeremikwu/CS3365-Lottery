@@ -105,7 +105,6 @@ export class TicketController {
 
 		let status = httpStatus.OK;
 		const responseArray = [];
-
 		const max = Math.min(tickets.length, 10);
 
 		for (let index = 0; index < max; index += 1) {

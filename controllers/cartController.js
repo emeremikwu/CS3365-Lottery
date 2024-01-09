@@ -1,16 +1,18 @@
 /* eslint-disable max-len */
 import status from 'http-status';
+import { DateTime } from 'luxon';
 import {
 	Ticket, TicketType, CartItem, Order, OrderItem,
 } from '../models/associations.js';
 import logger from '../config/logger.js';
 import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import sequelize from '../config/sequelize.js';
+import generateTicketReference from '../utils/ticket/generateReferenceNumber.js';
 
 /*
     TODO: implementing caching, see others below
             when a user requests their cart, it returns the index of the CartItems in the db. This value doesn't start form one
-        [ ] - set ticket refernce Number during checkout
+        [x] - set ticket refernce Number during checkout
         [ ] - implement caching
         [ ] - updateItemQuantity doesn't check for incorrect index, will be updated after first todo is implemented
  */
@@ -32,20 +34,20 @@ export class CartController {
 			subtotal += ticket_type_prices[current_item.ticket_type_id] * current_item.quantity;
 
 			return {
+				// The amount they are buying
+				quantity: current_item.quantity,
+
 				// The id of the cart item so we can delete or update it
 				cart_item_id: current_item.cart_item_id,
 
 				// info of the ticket the user plans on buying
 				ticket_info: current_item.TicketType,
-
-				// The amount they are buying
-				quantity: current_item.quantity,
 			};
 		});
 
 		return res.json({
-			cartItems,
 			subtotal,
+			cartItems,
 		});
 	}
 
@@ -146,6 +148,8 @@ export class CartController {
     FIXME: Cache ticket_type_prices to avoid calling the Database every time a user checksout
      */
 	static async checkout(req, res) {
+		const currentDate = DateTime.now().toISO();
+
 		// ----- Get cart items -----
 		// filtered cart defined in middlware
 		const cartItems = req.user.filteredCart.CartItems.map((current_item) => ({
@@ -173,6 +177,7 @@ export class CartController {
 			// ----- Create Order -----
 			const order = await Order.create({
 				user_id: req.user.user_id,
+				date: currentDate,
 				subtotal,
 			}, { transaction: t });
 			order_id = order.order_id;
@@ -183,11 +188,21 @@ export class CartController {
                     there for assigning foreign keys accordingly
             */
 			await Ticket.bulkCreate(
-				extracted_tickets.map((current_ticket) => ({
-					...current_ticket,
-					// specify the information needed for OrderItems
-					OrderItems: [{ order_id: order.order_id }],
-				})),
+				extracted_tickets.map((current_ticket) => {
+					const ref = generateTicketReference(
+						current_ticket.ticket_type_id,
+						order.order_id,
+						currentDate,
+						req.user.user_id,
+					);
+
+					return {
+						...current_ticket,
+						ticket_reference_number: ref,
+						// specify the information needed for OrderItems
+						OrderItems: [{ order_id: order.order_id }],
+					};
+				}),
 				{ include: OrderItem, transaction: t },
 			);
 

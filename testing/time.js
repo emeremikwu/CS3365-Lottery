@@ -1,4 +1,5 @@
 import { DateTime } from 'luxon';
+import { v4 } from 'uuid';
 
 const time = DateTime.fromObject({ day: 27 });
 
@@ -7,4 +8,4 @@ console.log(time.set({ year: 2019 }).toISO());
 
 console.log(time.minus({ days: 90 }).toLocaleString(DateTime.DATE_MED));
 
-console.log('03' > '.002');
+console.log(v4());

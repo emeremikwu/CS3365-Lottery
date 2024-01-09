@@ -24,7 +24,7 @@ export const getMonthAbbreviation = (month_value = '') => {
 	const month_abberivation = month_value.length > 3 ? 'MMMM' : 'MMM';
 	const errmsg = DateTime.fromFormat(`${month_value}`, month_abberivation).invalidReason;
 
-	if (errmsg) throw new APIError(errmsg, httpStatus.INTERNAL_SERVER_ERROR, false);
+	if (errmsg) throw new Error(errmsg);
 
 	return month_abberivation;
 };
@@ -32,7 +32,7 @@ export const getMonthAbbreviation = (month_value = '') => {
 /*
 	returns an object containing the "where" clause for sequelize given a query object
 */
-
+// [ ] - error handling might be needed here but I think validations should catch most of them
 export const queryDate = (query) => {
 	const query_entries = Object.entries(query);
 	let extracted_time = DateTime.now();

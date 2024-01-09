@@ -14,28 +14,9 @@ export class CartMiddleware {
             this will be a todo for later
     */
 
-	// request based
-	// static async cartInitializer(req, res, next) {
-	//     if (!req.user.cart_id) {
-	//         const [user_cart, created] = await Cart.findOrCreate({
-	//             where: {
-	//                 user_id: req.user.user_id
-	//             }
-	//         })
-
-	//         if (created) {
-	//             logger.info(`Created cart for user ${req.user.user_id}`)
-	//         }
-
-	//         req.user.cart_id = user_cart.cart_id
-	//     }
-
-	//     next()
-	// }
-
-	// session based
-	// will prevent the need to query the database every time the user makes a request
-	// wont make a difference if we usse db based sessions
+	/*
+		Attach the user's cart_id to the session
+	 */
 	static async initializeCart(req, res, next) {
 		if (!req.user.cart_id) {
 			if (!req.session.cart_id) {
