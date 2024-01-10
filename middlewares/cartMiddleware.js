@@ -40,7 +40,7 @@ export class CartMiddleware {
 	}
 
 	// attaches the user cart to the request with the appropriate filtering
-	static filterAndAttachCart = (throwError = false) => async (req, res, next) => {
+	static attachCart = (throwError = false) => async (req, res, next) => {
 		const userCart = await req.user.getCart({
 			...cartIncludeClause,
 		});
@@ -48,7 +48,7 @@ export class CartMiddleware {
 		// throw an error of the cart is empty
 		if (throwError && !userCart.CartItems.length) throw new EmptyCartError();
 
-		req.user.filteredCart = userCart;
+		req.user.userCart = userCart;
 		next();
 	};
 }

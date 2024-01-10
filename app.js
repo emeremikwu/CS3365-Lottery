@@ -10,6 +10,7 @@ import { Defaults } from './config/defaults.js';
 import { converter, notFound, handler } from './middlewares/error.js';
 import routes from './routes/routes.js';
 import cookie_tester from './utils/cookieTester.js';
+// import mariaDBTools from './config/maria_db.js';
 
 const app = express();
 
@@ -33,6 +34,9 @@ app.use(cookie_tester); // url: /cookie
 app.use(converter);
 app.use(notFound);
 app.use(handler);
+
+// await mariaDBTools.initializeNullTicketReferenceNumbers();
+// await mariaDBTools.initializeDefaultTables(false, true);
 
 app.listen(env_config.APP_PORT, () => {
 	logger.info(`Server running on port ${env_config.APP_PORT}`);

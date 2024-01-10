@@ -39,6 +39,8 @@ function split(inputNumberString, inputConstraint, delimiter) {
  *	Returns -1 if the input number string length and constraint length do not match
  *  Returns -1 if the input number string or constraint contains stray characters
  */
+
+// [ ] - return failure message, validatePartial aswell
 function validateStrict(inputNumberString, inputConstraint, delimiter = defaultDelimiter) {
 	const reResult = reValidation(inputNumberString, inputConstraint, delimiter, defaultNullChar);
 	if (reResult) return reResult;

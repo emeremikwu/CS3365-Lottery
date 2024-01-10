@@ -38,7 +38,7 @@ export class Defaults {
 			'session',
 			'user',
 			'isAuthenticated',
-			'cookiee',
+			'cookies',
 		]);
 
 		logger.http(`New Request: ${req.method} ${req.originalUrl} ${req.ip}`);
@@ -46,13 +46,13 @@ export class Defaults {
 		Object.entries(relevant_headers).forEach(([key, value]) => {
 			switch (key) {
 			case 'headers':
-				if (detail === 'full') logger.http(`\tRequest {Headers}: ${JSON.stringify(value)}`);
+				if (detail === 'full') logger.http(`\t${Headers}: ${JSON.stringify(value)}`);
 				break;
 			case 'isAuthenticated':
-				logger.http(`\tRequest Authenitcated: ${req.isAuthenticated()}`);
+				logger.http(`\tAuthenitcated: ${req.isAuthenticated()}`);
 				break;
 			default:
-				if (Object.entries(value).length) { logger.http(`\tRequest ${key}: ${JSON.stringify(value)}`); }
+				if (Object.entries(value).length) { logger.http(`\t${key}: ${JSON.stringify(value)}`); }
 				break;
 			}
 		});

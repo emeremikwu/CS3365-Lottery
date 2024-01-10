@@ -11,7 +11,6 @@ export const ticketIncludeClause = {
 			attributes: ['order_id'],
 			include: {
 				model: Order,
-				attributes: ['user_id'],
 			},
 		},
 
@@ -31,6 +30,10 @@ export const cartIncludeClause = {
 			attributes: ['name', 'price', 'description', 'type_id'],
 		},
 	},
+
+	order: [
+		[CartItem, 'cart_item_id', 'ASC'],
+	],
 
 	// attributes: { exclude: ['createdAt', 'updatedAt'] },
 };

@@ -11,7 +11,7 @@ const router = Router();
 router.use(authenticate, catchAsync(CartMiddleware.initializeCart));
 
 // gets users cart
-router.get('/cart', catchAsync(CartMiddleware.filterAndAttachCart()), catchAsync(CartController.getCart));
+router.get('/cart', catchAsync(CartMiddleware.attachCart()), catchAsync(CartController.getCart));
 
 // add to cart
 router.post('/cart', catchAsync(CartController.addToCart));
@@ -20,6 +20,6 @@ router.post('/cart', catchAsync(CartController.addToCart));
 router.patch('/cart', catchAsync(CartController.updateItemQuantity));
 
 // checkout
-router.post('/cart/checkout', catchAsync(CartMiddleware.filterAndAttachCart(true)), catchAsync(CartController.checkout));
+router.post('/cart/checkout', catchAsync(CartMiddleware.attachCart(true)), catchAsync(CartController.checkout));
 
 export default router;
