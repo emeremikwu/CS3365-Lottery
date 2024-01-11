@@ -14,12 +14,12 @@ function validateContentType(request, content_type = [], throwError = true) {
 	Validates the request object against a list  schemsas and a content types
 	schemas and contentt content_type should be arrays but can be singular values, arrays preferred
  */
-const validate = (schemas = [], content_type = ['application/json']) => catchAsync(async (req, res, next) => {
+const validate = (schemas = [], content_type = []) => catchAsync(async (req, res, next) => {
 	// should probably avoid mixing types but this ensures that the schemas are always an array
 	const schemaArray = Array.isArray(schemas) ? schemas : [schemas];
 	const contentTypeArray = Array.isArray(content_type) ? content_type : [content_type];
 
-	validateContentType(req, contentTypeArray);
+	if (contentTypeArray.length) { validateContentType(req, contentTypeArray); }
 
 	const validationPromises = schemaArray.map(async (schema) => {
 		// ensure that the schema has atleast one of the following keys
@@ -40,7 +40,11 @@ const validate = (schemas = [], content_type = ['application/json']) => catchAsy
 
 		// pull the present keys from the Joi schema object
 		const reqProperties = Object.entries(_.pick(req, joiSchemaObj_keys))
-			.filter(([, value]) => Object.keys(value).length);
+			.filter(([, value]) => {
+				const valueEntries = Object.entries(value);
+				// account for params as they have default values of undefined
+				return valueEntries.length && valueEntries.every(([, v]) => v !== undefined);
+			});
 
 		// create an object from the entries
 		const validReqProperties = Object.fromEntries(reqProperties);

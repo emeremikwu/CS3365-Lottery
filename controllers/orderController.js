@@ -4,6 +4,7 @@ import { queryDate } from '../utils/sequelizeQueryGenerator.js';
 // TODO:
 export class OrderController {
 	// returns a page count given the
+	// [ ] - adjust to only pass sequelizeQueryObject if req.query is not empty
 	static async getPageCount(req, res) {
 		const { pageSize = 10 } = req.query;
 		const [sequelizedQueryObject, message] = queryDate(req.query);
@@ -13,6 +14,7 @@ export class OrderController {
 		res.json({
 			pageCount,
 			pageSize,
+			orderCount,
 			...(message && { message: `time-range:'${message}'` }),
 
 		});

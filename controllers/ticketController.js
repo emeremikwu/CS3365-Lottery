@@ -5,7 +5,7 @@ import APIError from '../utils/errors/apiError.js';
 import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import TicketInvalidNumbersError from '../utils/errors/ticketInvalidNumbersError.js';
 import UnauthorizedError from '../utils/errors/unauthorizedError.js';
-import { formatNumbers, validateParital, validateStrict } from '../utils/ticket/numberTools.js';
+import { formatNumbers, validateParital, validateStrict } from '../utils/ticket/ticketNumberTools.js';
 // api/ticket
 
 // TODO:

@@ -14,6 +14,7 @@ export class TicketMiddleware {
 		Attaches the object to the request body
 	 */
 	// [ ] - switch to ticket refernce number once implemented
+	// [ ] - implement referenc number based search
 	static async attachRequestedTickets_ID(req, res, next) {
 		logger.debug('ticket update request');
 		const { tickets } = req.body;

@@ -7,10 +7,10 @@ import {
 import logger from '../config/logger.js';
 import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import sequelize from '../config/sequelize.js';
-import generateTicketReference from '../utils/ticket/generateReferenceNumber.js';
 import APIError from '../utils/errors/apiError.js';
 import InvalidCartIndexError from '../utils/errors/invalidCartIndexError.js';
 import EmptyCartError from '../utils/errors/emptyCartError.js';
+import { generateRefernceNumber } from '../utils/ticket/ticketNumberTools.js';
 
 /*
     TODO: implementing caching, see others below
@@ -55,10 +55,8 @@ export class CartController {
 
 	// post
 	static async addToCart(req, res) {
-		const {
-			ticket_type_id,
-			quantity,
-		} = req.body;
+		const ticket_type_id = req.body.ticket_type_id || req.query.ticket_type_id;
+		const quantity = req.body.quantity || req.query.quantity;
 
 		// check if the ticket exists, temporary solution, eventually thiw will be cacahed
 		const ticket_type = await TicketType.findByPk(ticket_type_id);
@@ -192,7 +190,7 @@ export class CartController {
             */
 			await Ticket.bulkCreate(
 				extracted_tickets.map((current_ticket) => {
-					const ref = generateTicketReference(
+					const ref = generateRefernceNumber(
 						current_ticket.ticket_type_id,
 						order.order_id,
 						order.date.toISOString(),

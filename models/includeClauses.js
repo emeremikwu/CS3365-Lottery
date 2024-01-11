@@ -19,6 +19,10 @@ export const ticketIncludeClause = {
 		},
 	],
 
+	order: [
+		[OrderItem, 'order_item_id', 'ASC'],
+	],
+
 	// attributes: { exclude: ['createdAt', 'updatedAt'] },
 };
 
@@ -48,6 +52,10 @@ export const orderIncludeClause = {
 				model: TicketType,
 			},
 		},
+
+		order: [
+			[OrderItem, 'order_item_id', 'ASC'],
+		],
 	},
 
 	// this sets the ordering for Order and Ticket, the include order needs to be specified
@@ -55,6 +63,7 @@ export const orderIncludeClause = {
 	//		*[OrderItem, Ticket, TicketType, ...]
 	order: [
 		['date', 'DESC'],							// display order for Order
+		[OrderItem, 'order_item_id', 'ASC'],		// display order for OrderItem
 		[OrderItem, Ticket, 'ticket_id', 'DESC'],	// display order for Ticket
 	],
 
