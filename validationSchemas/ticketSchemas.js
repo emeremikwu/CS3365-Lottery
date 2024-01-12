@@ -18,6 +18,10 @@ export const patch_SelectNumbers = (() => {
 			tickets: ticketKeyPattern.required(),
 			haultOnError: Joi.boolean().optional(),
 		}),
+
+		query: Joi.object().keys({
+			haultOnError: Joi.boolean().optional(),
+		}),
 	};
 })();
 

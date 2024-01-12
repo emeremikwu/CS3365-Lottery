@@ -7,35 +7,53 @@ import { OrderItem } from './orders/orderItems.js';
 import { Cart } from './cart/cart.js';
 import { CartItem } from './cart/cartItems.js';
 
-// ------ fk creation in Orders ------
-User.hasMany(Order, { foreignKey: 'user_id' });
-Order.belongsTo(User, { foreignKey: 'user_id' });
+let associationsAlreadySet = false;
+function setAssociations() { // ------ fk creation in Orders ------
+	if (associationsAlreadySet) return;
+	associationsAlreadySet = true;
 
-//  ------ fk creation in OrderItems ------
-Order.hasMany(OrderItem, { foreignKey: 'order_id' });
-OrderItem.belongsTo(Order, { foreignKey: 'order_id' });
+	User.hasMany(Order, { foreignKey: 'user_id' });
+	Order.belongsTo(User, { foreignKey: 'user_id' });
 
-OrderItem.belongsTo(Ticket, { foreignKey: 'ticket_id', onDelete: 'SET NULL', onUpdate: 'CASCADE' });
-Ticket.hasMany(OrderItem, { foreignKey: 'ticket_id', onDelete: 'SET NULL', onUpdate: 'CASCADE' });
+	//  ------ fk creation in OrderItems ------
+	Order.hasMany(OrderItem, { foreignKey: 'order_id' });
+	OrderItem.belongsTo(Order, { foreignKey: 'order_id' });
 
-// ------ fk creation in Ticket ------
-TicketType.hasMany(Ticket, { foreignKey: 'ticket_type_id' });
-Ticket.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
+	OrderItem.belongsTo(Ticket, { foreignKey: 'ticket_id', onDelete: 'SET NULL', onUpdate: 'CASCADE' });
+	Ticket.hasMany(OrderItem, { foreignKey: 'ticket_id', onDelete: 'SET NULL', onUpdate: 'CASCADE' });
 
-// ------ fk creation in WinningTicket ------
-Ticket.hasOne(WinningTicket, { foreignKey: 'ticket_id' });
-WinningTicket.belongsTo(Ticket, { foreignKey: 'ticket_id' });
+	// ------ fk creation in Ticket ------
+	TicketType.hasMany(Ticket, { foreignKey: 'ticket_type_id' });
+	Ticket.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
 
-// ------ fk creation in Cart ------
-User.hasOne(Cart, { foreignKey: 'user_id' });
-Cart.belongsTo(User, { foreignKey: 'user_id' });
+	// ------ fk creation in WinningTicket ------
+	Ticket.hasOne(WinningTicket, { foreignKey: 'ticket_id' });
+	WinningTicket.belongsTo(Ticket, { foreignKey: 'ticket_id' });
 
-// ------ fk creation in CartItems ------
-Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
-CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });
+	// ------ fk creation in Cart ------
+	User.hasOne(Cart, { foreignKey: 'user_id' });
+	Cart.belongsTo(User, { foreignKey: 'user_id' });
 
-CartItem.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
-TicketType.hasMany(CartItem, { foreignKey: 'ticket_type_id' });
+	// ------ fk creation in CartItems ------
+	Cart.hasMany(CartItem, { foreignKey: 'cart_id' });
+	CartItem.belongsTo(Cart, { foreignKey: 'cart_id' });
+
+	CartItem.belongsTo(TicketType, { foreignKey: 'ticket_type_id' });
+	TicketType.hasMany(CartItem, { foreignKey: 'ticket_type_id' });
+}
+
+setAssociations();
+
+const initializationOrder = [
+	User,
+	TicketType,
+	Ticket,
+	WinningTicket,
+	Order,
+	OrderItem,
+	Cart,
+	CartItem,
+];
 
 /*
     initialization order is important
@@ -51,28 +69,6 @@ TicketType.hasMany(CartItem, { foreignKey: 'ticket_type_id' });
     WinningTickets
 
  */
-export const initializationOrder = [
-	User,
-	TicketType,
-	Ticket,
-	WinningTicket,
-	Order,
-	OrderItem,
-	Cart,
-	CartItem,
-];
-
-export default {
-	TicketType,
-	Ticket,
-	WinningTicket,
-	User,
-	Orders: Order,
-	OrderItems: OrderItem,
-	Cart,
-	CartItem,
-	initializationOrder,
-};
 
 export {
 	TicketType,
@@ -83,4 +79,6 @@ export {
 	OrderItem,
 	Cart,
 	CartItem,
+	setAssociations,
+	initializationOrder,
 };

@@ -6,10 +6,11 @@ import TicketDNEError from '../utils/errors/ticketDNEError.js';
 import TicketInvalidNumbersError from '../utils/errors/ticketInvalidNumbersError.js';
 import UnauthorizedError from '../utils/errors/unauthorizedError.js';
 import { formatNumbers, validateParital, validateStrict } from '../utils/ticket/ticketNumberTools.js';
+import env_config from '../config/env_config.js';
 // api/ticket
 
 // TODO:
-export class TicketController {
+class TicketController {
 	/*
 		Updates the selected numbers for the given a list of tickets and their selected numbers
 		Sends the updated ids to the user
@@ -19,10 +20,11 @@ export class TicketController {
 	*/
 
 	static async selectNumbers_ID(req, res) {
-		// [ ] - remove .toLowerCase() ... once validations are implemented
+		// [x] - remove .toLowerCase() ... once validations are implemented
 		const haultOnError = req.body.haultOnError
-			|| (req.query.haultOnError && req.query.haultOnError.toLowerCase() === 'true')
-			|| false;
+		// || (req.query.haultOnError && req.query.haultOnError.toLowerCase() === 'true')
+			|| req.query.haultOnError
+			|| env_config.isProduction(); // default to true in production
 
 		const { authorized, unauthorized, unknown } = req.requestedTickets;
 
@@ -40,8 +42,8 @@ export class TicketController {
 		// [ ] - switch ticket_id to ticket_reference_number once implemented
 		await sequelize.transaction(async (t) => {
 			/*
-				'no-restricted-syntax' and 'no-await-in-loop' are unavoidable
-				for whatever reason transactions do not work well with forEach or Promise.all(...map)
+				Resolved 'no-restricted-syntax' and 'no-await-in-loop', reference below
+
 				https://stackoverflow.com/questions/61369310/sequelize-transactions-inside-foreach-issue
 			*/
 
@@ -50,18 +52,20 @@ export class TicketController {
 				const { ticket_id } = ticket;
 				const selected_numbers = formatNumbers(req.body.tickets[ticket_id]);
 				const result = validateStrict(selected_numbers, constraint);
-				// if result is 0 and selected_numbers is not the same as the one in the db, save it
-				// reduce db calls as much as possible
 
-				if (!result && selected_numbers !== ticket.selected_numbers) {
+				// if result is anything other than 0
+				// reduce db calls as much as possible
+				if (result && haultOnError) {
+					throw new TicketInvalidNumbersError(ticket_id, constraint, selected_numbers, result);
+				}
+
+				if (selected_numbers !== ticket.selected_numbers) {
 					// eslint-no-param-reassign compliance
 					const newTicketInfo = { selected_numbers };
 					Object.assign(ticket, newTicketInfo);
 					// eslint-disable-next-line no-await-in-loop
 					await ticket.save({ fields: ['selected_numbers'], transaction: t });
 					updatedTickets.push(ticket_id);
-				} else if (haultOnError) {
-					throw new TicketInvalidNumbersError(ticket_id, constraint, selected_numbers, result);
 				}
 			});
 

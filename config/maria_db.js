@@ -7,10 +7,12 @@
 
 import env_config from './env_config.js';
 import logger from './logger.js';
-import { Ticket, initializationOrder } from '../models/associations.js';
-import { ticketIncludeClause } from '../models/includeClauses.js';
 import sequelize from './sequelize.js';
-import generateTicketReference from '../utils/ticket/generateReferenceNumber.js';
+import {
+	Ticket, User, initializationOrder, setAssociations,
+} from '../models/associations.js';
+import { ticketIncludeClause } from '../models/includeClauses.js';
+import { generateRefernceNumber } from '../utils/ticket/ticketNumberTools.js';
 
 export default class mariaDBTools {
 	// initializes sequelize class model
@@ -77,7 +79,7 @@ export default class mariaDBTools {
 				logger.error(`Error synchronizing table ${table.name}: ${error}`);
 			}
 		}
-
+		setAssociations();
 		logger.info('DB sync complete');
 	}
 
@@ -98,7 +100,7 @@ export default class mariaDBTools {
 
 		await sequelize.transaction(async (t) => {
 			const ticketPromises = nullReferenceTickets.map(async (ticket) => {
-				const ticket_reference_number = generateTicketReference(
+				const ticket_reference_number = generateRefernceNumber(
 					ticket.ticket_type_id,
 					ticket.OrderItems[0].order_id,
 					ticket.OrderItems[0].Order.date.toISOString(), // date object

@@ -1,11 +1,14 @@
+import httpStatus from 'http-status';
 import { queryDate } from '../utils/sequelizeQueryGenerator.js';
 import OrderNotFoundError from '../utils/errors/orderNotFoundError.js';
 import { orderIncludeClause } from '../models/includeClauses.js';
+import { Order } from '../models/associations.js';
+import APIError from '../utils/errors/apiError.js';
 
 // eager loading for sequelize
 
 // TODO:
-export class OrderMiddleware {
+class OrderMiddleware {
 	// attached the user orders to the request object (req.user)
 	// Eagerely loads the order items and tickets and ticket types
 	// [ ] - implement caching
@@ -25,14 +28,24 @@ export class OrderMiddleware {
 	static async retrieveOrderById(req, res, next) {
 		const orderID = req.query.orderID || req.body.orderID || req.params.orderID;
 
-		const order = await req.user.getOrders({
+		const order = await Order.findOne({
 			where: { order_id: orderID },
 			...orderIncludeClause, // include order items and tickets
 		});
 		// if order length equals 0, then the order doesn't exist
 		if (order.length === 0) throw new OrderNotFoundError(orderID);
+		/*
+			if the order belongs to a user and:
+				- the user is not logged in or
+				- the order doesn't belong to the user
+		 */
+		if (order.user_id && (!req.user || order.user_id !== req.user.user_id)) {
+			const msg = req.user ? 'Order does not belong to user' : 'This order is associated with an account, please login';
+			const status = req.user ? httpStatus.FORBIDDEN : httpStatus.UNAUTHORIZED;
+			throw new APIError(msg, status);
+		}
 
-		req.user.orders = order;
+		req.user.orders = [order]; // mapAndSend expects an array of orders
 		req.response_message = `Order History - orderID:${orderID}`;
 		next();
 	}

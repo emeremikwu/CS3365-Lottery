@@ -1,10 +1,11 @@
+import httpStatus from 'http-status';
 import logger from '../config/logger.js';
 import { Ticket, TicketType } from '../models/associations.js';
 import { ticketIncludeClause } from '../models/includeClauses.js';
 import { queryTicketIDs } from '../utils/sequelizeQueryGenerator.js';
 
 // TODO:
-export class TicketMiddleware {
+class TicketMiddleware {
 	/*
 		Creates a 'requestedTickets' object on containing the following variables:
 			raw - the unaltered queried objects from the ticket ids passed in the body
@@ -14,8 +15,18 @@ export class TicketMiddleware {
 		Attaches the object to the request body
 	 */
 	// [ ] - switch to ticket refernce number once implemented
-	// [ ] - implement referenc number based search
+	// [ ] - implement reference number based search
+	// [ ] - implement user accountless ticket search, if authorized, attach to body
 	static async attachRequestedTickets_ID(req, res, next) {
+		if (req.user == null) {
+			// logger.debug('ticket update request - no user');
+			const msg = 'Userless ticket update requests not yet implemented';
+			logger.debug(msg);
+			return res.status(httpStatus.NOT_IMPLEMENTED).json({
+				message: msg.concat(' - please login and try again'),
+			});
+		}
+
 		logger.debug('ticket update request');
 		const { tickets } = req.body;
 		// Parse ticket IDs to integers
@@ -56,7 +67,7 @@ export class TicketMiddleware {
 		});
 
 		logger.debug(`Authorized: ${authorized.length}, Unauthorized: ${unauthorized.length}, Unknown: ${unknown.length} - attached to request body`);
-		next();
+		return next();
 	}
 
 	// [ ] - implement caching, unnecessary to be a middlware without it
