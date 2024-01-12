@@ -8,7 +8,7 @@ class TicketInvalidNumbersError extends APIError {
 Given: ${selectedNumbers}, \
 Invalid Index:${invalidIndex} )`;
 
-		super(message, httpStatus.BAD_REQUEST);
+		super(message, httpStatus.BAD_REQUEST, true, false);
 	}
 }
 

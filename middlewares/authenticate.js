@@ -1,17 +1,26 @@
-import { User } from '../models/associations.js';
+import httpStatus from 'http-status';
+/*
+	checks if the user is authenticated
+	initalizes req.user to null if Proceed
+ */
 
-export const authenticate = async (req, res, next) => {
+const authenticate = (proceedOnFailure = false) => (req, res, next) => {
+	/* const user = await User.findByPk(1);
+	req.user = user;
+	return next(); */
+
+	// if the isAuthenticated function exists and returns true, continue
 	if (req.isAuthenticated()) {
 		return next();
 	}
-	const user = await User.findByPk(1);
-	req.user = user;
-	return next();
 
-	// eslint-disable-next-line no-unreachable
-	res.status(401).json({
-		status: 'error',
-		message: 'You are not logged in!',
+	if (proceedOnFailure) {
+		req.user = null;
+		return next();
+	}
+
+	return res.status(httpStatus.UNAUTHORIZED).json({
+		message: 'You are not logged in',
 	});
 };
 

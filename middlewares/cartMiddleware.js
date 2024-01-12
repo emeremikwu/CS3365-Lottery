@@ -5,11 +5,11 @@ import { Cart } from '../models/associations.js';
 import { cartIncludeClause } from '../models/includeClauses.js';
 import EmptyCartError from '../utils/errors/emptyCartError.js';
 
-export class CartMiddleware {
+class CartMiddleware {
 	// ensure that the user has a cart
 
-	/* TODO:
-        we can lighten the load by sending and storing the cart_id in the
+	/*
+        [ ] - we can lighten the load by sending and storing the cart_id in the
             session instead of querying the database every time the user makes a request
             this will be a todo for later
     */

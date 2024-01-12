@@ -3,7 +3,11 @@ import { Model, DataTypes } from 'sequelize';
 import logger from '../../config/logger.js';
 import sequelize from '../../config/sequelize.js';
 
-// TODO: implement geneate ticket number
+// TODO:
+/*
+	[ ] - implement delimiter resolver
+	[ ] = implement method that saves previous delimiters to a file
+ */
 
 export class TicketType extends Model {}
 
@@ -32,8 +36,7 @@ TicketType.init({
 	constraint: {
 		type: DataTypes.STRING,
 		allowNull: false,
-		comment: `string of numbers seperated by colons denoting the maximum number of each number allowed 
-		e.g powerball: "69:69:69:69:69:26"`,
+		comment: 'string of numbers seperated by colons denoting the maximum number of each number allowed e.g powerball: "69:69:69:69:69:26"',
 	},
 
 	//  price ...
@@ -53,6 +56,7 @@ TicketType.init({
 		type: DataTypes.DECIMAL(18, 2),
 		allowNull: false,
 		defaultValue: 0,
+		comment: 'Running total of tickets sold maximum of 1 quadrillion. (e.g user buys a ticket, total added to running total).',
 	},
 
 	// if the ticket type is disabled it will not be available for purchase
@@ -65,8 +69,6 @@ TicketType.init({
 }, {
 	hooks: {
 		beforeCreate: (ticketType, options) => {
-			// ticket.number = generateTicketNumber() // [ ] implement
-
 			const newTicketType = { ...ticketType };
 
 			if (!newTicketType.disabled && newTicketType.price) {

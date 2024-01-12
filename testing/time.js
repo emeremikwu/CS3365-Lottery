@@ -8,4 +8,4 @@ console.log(time.set({ year: 2019 }).toISO());
 
 console.log(time.minus({ days: 90 }).toLocaleString(DateTime.DATE_MED));
 
-console.log(v4());
+console.log(DateTime.now().minus({ seconds: 10 }).diffNow('seconds').seconds);

@@ -1,97 +1,134 @@
 import httpStatus from 'http-status';
+import bcrypt from 'bcrypt';
+import _ from 'lodash';
 import APIError from '../utils/errors/apiError.js';
 import { passport_config as passport } from '../config/passport.js';
-
 import logger from '../config/logger.js';
-import { User as Users } from '../models/associations.js';
+import { User } from '../models/associations.js';
+import env_config from '../config/env_config.js';
+
+const verifyCallback = (req, resolve, reject) => async (err, user, info) => {
+	if (err) {
+		return reject(new APIError(
+			err.message || err,
+			httpStatus.INTERNAL_SERVER_ERROR,
+			false,
+		));
+	}
+
+	if (!user) {
+		return reject(new APIError(
+			info,
+			httpStatus.UNAUTHORIZED,
+			false,
+		));
+	}
+	// req.user = user; //not needed since were calling login, jwt would need this
+
+	// logger.info(`User logged in:  ${user.id}-${user.first_name}`)
+
+	return req.login(user, () => resolve());
+};
+
+function formatUserData(user) {
+	return env_config.isProduction() ? _.omit(user, ['password']) : user;
+}
 
 // eslint-disable-next-line max-len
 // since we're pasing verifyCallback to authenticate, the UserAccountModel object isn't automatically added to the request as user(req.user)
 // so we have to assign it ourselves
 
-export class AuthController {
+class AuthController {
 	static signup = async (req, res) => {
-		const user = Users.create(req.body);
-		logger.info(`Created user ${user.id} | ${user.first_name}`);
+		const saltRounds = 10;
+		const { password: unhashedPassword } = req.body;
+
+		const existingEmail = await User.findOne({ where: { email: req.body.email } });
+		const existingUsername = await User.findOne({ where: { username: req.body.username } });
+
+		if (existingEmail || existingUsername) {
+			throw new APIError(`${existingEmail ? 'Email' : 'Username'} already in use`, httpStatus.BAD_REQUEST);
+		}
+
+		// this could also be done as a hook in the database
+		await bcrypt.hash(unhashedPassword, saltRounds).then((hash) => {
+			const newPassword = { password: hash };
+			Object.assign(req.body, newPassword);
+		});
+
+		const user = await User.create(req.body);
+		logger.info(`AUTH - Created user - ${user.email} | ${user.user_id}`);
 		return res.status(httpStatus.CREATED).json({
-			success: true,
-			data: user,
+			message: 'User created',
+			user: formatUserData(user),
 		});
 	};
 
-	static verifyCallback = (req, resolve, reject) => async (err, user, info) => {
-		if (err || info || !user) {
-			return reject(
-				new APIError(
-					httpStatus[httpStatus.UNAUTHORIZED],
-					httpStatus.UNAUTHORIZED,
-				),
-			);
-		}
+	static async signin(req, res, next) {
+		if (req.body.email) req.body.username = req.body.email;
 
-		req.login(user, (error) => reject(error));
-		// req.user = user; //not needed since were calling login, jwt would need this
+		const authenticationPromise = new Promise((resolve, reject) => {
+			passport.authenticate(
+				'local',
+				{ failureRedirect: '/index.html', failureMessage: true },
+				verifyCallback(req, resolve, reject),
+			)(req, res, next);
+		});
 
-		// logger.info(`User logged in:  ${user.id}-${user.first_name}`)
-		return resolve();
-	};
-
-	static signin = async (req, res, next) => new Promise((resolve, reject) => {
-		passport.authenticate(
-			'local',
-			{ failureRedirect: '/index.html' },
-			AuthController.verifyCallback(req, resolve, reject, next),
-		)(req, res, next);
-	}).then(() => {
-		logger.info(`User logged in: ${req.user.id}-${req.user.first_name}`);
-		res.redirect('/profile.html');
-	}).catch((err) => {
-		logger.error(`Error logging in: ${err.message}`);
-		res.redirect('/login.html');
-	});
+		return authenticationPromise
+			.then(() => {
+				logger.info(`AUTH - login - ${req.user.email} | ${req.user.user_id}`);
+				res.redirect('/profile.html');
+			});
+	}
 
 	// returns partial information about the user
-	static current = async (req, res) => {
-		const user = await Users.findByPk(req.user.id);
-		if (!user) {
-			throw new APIError('User not found', httpStatus.NOT_FOUND);
-		}
-
+	static async current(req, res) {
+		const { user } = req;
 		return res.json({
-			success: true,
 			data: {
 				first_name: user.first_name,
 				last_name: user.last_name,
-				id: user.id,
+				email: user.email,
+				username: user.username,
+				id: user.user_id,
 			},
 		});
-	};
+	}
 
-	static getMe = async (req, res) => {
-		const user = await Users.findByPk(req.user.id);
-		if (!user) {
-			throw new APIError('User not found', httpStatus.NOT_FOUND);
-		}
+	static async signout(req, res) {
+		req.logout((err) => {
+			if (err) {
+				logger.error(`Error logging out: ${err}`);
+				throw new APIError('Error logging out', httpStatus.INTERNAL_SERVER_ERROR);
+			}
+		});
+
+		logger.info(`AUTH - Logout - ${req.user.email} | :${req.user.user_id}`);
+
+		res.status(httpStatus.INTERNAL_SERVER_ERROR).redirect('/');
+	}
+
+	static async getMe(req, res) {
+		const { user } = req;
+		res.json({
+			success: true,
+			data: formatUserData(user),
+		});
+	}
+
+	static async updateMe(req, res) {
+		const { user } = req;
+
+		const affected = await user.update(req.body);
+		logger.info(`Updated user ${user.email} | ${user.user_id}`);
+		logger.info(`Affected: ${affected}`);
+
 		return res.json({
 			success: true,
-			data: user,
+			data: formatUserData(user),
 		});
-	};
-
-	static updateMe = async (req, res) => {
-		const user = await Users.findByPk(req.user.id);
-		if (!user) {
-			throw new APIError('User not found', httpStatus.NOT_FOUND);
-		}
-
-		const [affected_rows, affected_rows_data] = await user.update(req.body);
-		logger.info(`Updated user ${user.id} | ${user.first_name}`);
-		logger.info(`Rows (${affected_rows}): ${JSON.stringify(affected_rows_data)}`);
-		return res.json({
-			success: true,
-			data: user,
-		});
-	};
+	}
 }
 
 export default AuthController;

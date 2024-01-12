@@ -6,17 +6,33 @@ export class User extends Model {
 		const user = await User.findOne({ where: { email } });
 		return user;
 	}
+
+	fullUserID() {
+		return this.getDataValue('user_id');
+	}
+
+	get user_id() {
+		const user_id = this.getDataValue('user_id');
+		if (typeof user_id === 'string') {
+			return user_id.length > 5 ? `...${user_id.slice(-9)}` : user_id;
+		}
+		return user_id;
+	}
 }
 
 User.init({
 	user_id: {
-		type: DataTypes.INTEGER.UNSIGNED,
+		type: DataTypes.UUID,
 		primaryKey: true,
-		autoIncrement: true,
-		comment: 'change to uuid before production',
+		defaultValue: DataTypes.UUIDV4,
 	},
 
 	email: {
+		type: DataTypes.STRING,
+		allowNull: false,
+	},
+
+	username: {
 		type: DataTypes.STRING,
 		allowNull: false,
 	},

@@ -3,7 +3,7 @@ import {
 	WinningTicket as WinningTickets,
 } from '../models/associations.js';
 
-export class InfoController {
+class InfoController {
 	static async getCatalog(req, res) {
 		const catalog = await TicketCatalog.findAll({
 			attributes: { exclude: ['createdAt', 'updatedAt', 'type_id'] },

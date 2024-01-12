@@ -3,6 +3,7 @@
 import crypto from 'crypto';
 import { DateTime } from 'luxon';
 import { v4 as uuidv4 } from 'uuid';
+import _ from 'lodash';
 import ReferenceNumberRegexMismatchError from '../errors/referenceNumberRegexMismatchError.js';
 
 const DELIMITER = ':';
@@ -123,6 +124,21 @@ function formatNumbers(selectedNumbers, delimiter = DELIMITER, newDelimiter = nu
 	incrementive and random components to it. It should be fine for now.
 */
 
+function getRandomSection(stringLength) {
+	let end = Math.floor(Math.random() * stringLength);
+	const start = end - 5 > 0 ? end - 5 : 0;
+
+	if (start === 0) end = 5;
+	return [start, end];
+}
+
+/*
+	FIXME: this function has a high chance of collision if the same data is used
+			 paritally mitigated by
+			 shuffling combined data,
+			 using current time as a seed
+			 selecting random section of hash
+ */
 function generateRefernceNumber(ticketTypeID, orderID, orderDate, userID = null) {
 	// Concatenate user ID, order ID, and additional data
 	// s = short or simplified depending on the context
@@ -135,12 +151,25 @@ function generateRefernceNumber(ticketTypeID, orderID, orderDate, userID = null)
 	// ensure that the date is valid
 	if (sDate.invalidReason) { throw new Error(sDate.invalidReason); } else { sDate = sDate.toFormat('yyLL'); }
 
-	// Combine the data for hashing
-	const combinedData = `${ticketTypeID}-${orderID}-${orderDate}-${userID || uuidv4()}`;
+	// old method
+	// `${ticketTypeID}-${orderID}-${orderDate}-${userID || uuidv4()}-${DateTime.now().toISO()}`;
+
+	// Combine the data for hashing, shuffle the data to help mitigate collisions
+	// not sure of the time complexity of this
+	const combinedData = _.shuffle(
+		[
+			ticketTypeID.toString(),
+			orderID,
+			orderDate,
+			userID || uuidv4(),
+			DateTime.now().toISO().toString(),
+		],
+	).join('-');
 
 	// Create a hash of the combined data to ensure uniqueness
 	const hash = crypto.createHash('sha256').update(combinedData).digest('hex');
-	const ticketUID = hash.substring(0, 5);
+	const [start, end] = getRandomSection(hash.length); // random sections to help mitigate collisions
+	const ticketUID = hash.substring(start, end);
 
 	// Concatenate the data to create the reference number
 

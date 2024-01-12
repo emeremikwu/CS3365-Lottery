@@ -2,7 +2,7 @@ import logger from '../config/logger.js';
 import { queryDate } from '../utils/sequelizeQueryGenerator.js';
 
 // TODO:
-export class OrderController {
+class OrderController {
 	// returns a page count given the
 	// [ ] - adjust to only pass sequelizeQueryObject if req.query is not empty
 	static async getPageCount(req, res) {

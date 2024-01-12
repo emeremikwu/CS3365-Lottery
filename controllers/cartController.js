@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import status from 'http-status';
 import _ from 'lodash';
+import { DateTime } from 'luxon';
 import {
 	Ticket, TicketType, CartItem, Order, OrderItem,
 } from '../models/associations.js';
@@ -15,27 +16,42 @@ import { generateRefernceNumber } from '../utils/ticket/ticketNumberTools.js';
 /*
     TODO: implementing caching, see others below
             when a user requests their cart, it returns the index of the CartItems in the db. This value doesn't start form one
+		[ ] - implement caching
         [x] - set ticket refernce Number during checkout
-        [ ] - implement caching
         [x] - updateItemQuantity doesn't check for incorrect index, will be updated after first todo is implemented
  */
 
-// -[ ] replace with cache
+// [ ] - replace with cache
 // create dictionary of type prices,
+// temporary until better caching is implemented
 const ticket_type_prices = {};
-TicketType.findAll({ attributes: ['type_id', 'price'] })
-	.then((ticket_types) => ticket_types.forEach((ticket_type) => {
-		ticket_type_prices[ticket_type.type_id] = parseFloat(ticket_type.price);
-	}));
+let cache_time_end = DateTime.now();
+const cache_TTL = { seconds: 20 }; //
 
-export class CartController {
-	// [ ] - update CartItems Model to return a local index rather then global(cart_item_id),
+async function cacheTicketPrices() {
+	if (!Object.keys(ticket_type_prices).length || DateTime.now() > cache_time_end) {
+		const ticketTypes = await TicketType.findAll({ attributes: ['type_id', 'price'] });
+		ticketTypes.forEach((ticket_type) => {
+			ticket_type_prices[ticket_type.type_id] = parseFloat(ticket_type.price);
+		});
+
+		cache_time_end = DateTime.now().plus(cache_TTL);
+		logger.debug('Cache - Ticket Prices Cached');
+		logger.debug(`Cache - Timer reset: ${cache_time_end.toISO()}`);
+	}
+
+	logger.debug(`Cache - ${cache_time_end.diffNow().seconds}s till expire`);
+}
+
+class CartController {
+	// [x] - update CartItems Model to return a local index rather then global(cart_item_id),
 	// [x] - return subtotal
 	static async getCart(req, res) {
+		cacheTicketPrices();
 		let subtotal = 0;
 		let index = 0;
 		const cartItems = req.user.userCart.CartItems.map((current_item) => {
-			subtotal += ticket_type_prices[current_item.ticket_type_id] * current_item.quantity;
+			subtotal += [current_item.ticket_type_id] * current_item.quantity;
 			index += 1;
 
 			return {
@@ -152,6 +168,8 @@ export class CartController {
     FIXME: Cache ticket_type_prices to avoid calling the Database every time a user checksout
      */
 	static async checkout(req, res) {
+		await cacheTicketPrices(); // ensures local cache is loaded once
+
 		// ----- Get cart items -----
 		// filtered cart defined in middlware
 		const cartItems = req.user.userCart.CartItems.map((current_item) => ({
@@ -174,6 +192,7 @@ export class CartController {
 		);
 
 		let order_id = null;
+
 		// wrap in a transaction so everything either passes for fails
 		await sequelize.transaction(async (t) => {
 			// ----- Create Order -----
@@ -182,30 +201,24 @@ export class CartController {
 				subtotal,
 			}, { transaction: t });
 			order_id = order.order_id;
+			// rein
+			const mappedTickets = extracted_tickets.map((current_ticket) => {
+				const ref = generateRefernceNumber(
+					current_ticket.ticket_type_id,
+					order.order_id,
+					order.date.toISOString(),
+					req.user.user_id,
+				);
 
-			/*  - combine the creation of Tickets and OrderItems in the same bulkCreate
-			    - if I'm understanding this correctly,
-                    this works because OrderItems references tickets (fk ticket_id)
-                    there for assigning foreign keys accordingly
-            */
-			await Ticket.bulkCreate(
-				extracted_tickets.map((current_ticket) => {
-					const ref = generateRefernceNumber(
-						current_ticket.ticket_type_id,
-						order.order_id,
-						order.date.toISOString(),
-						req.user.user_id,
-					);
+				return {
+					...current_ticket,
+					ticket_reference_number: ref,
+					// specify the information needed for OrderItems
+					OrderItems: [{ order_id: order.order_id }],
+				};
+			});
 
-					return {
-						...current_ticket,
-						ticket_reference_number: ref,
-						// specify the information needed for OrderItems
-						OrderItems: [{ order_id: order.order_id }],
-					};
-				}),
-				{ include: OrderItem, transaction: t },
-			);
+			await Ticket.bulkCreate(mappedTickets, { include: OrderItem, transaction: t });
 
 			await CartItem.destroy({ where: { cart_id: req.user.cart_id } }, { transaction: t });
 		});

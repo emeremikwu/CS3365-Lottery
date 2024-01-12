@@ -1,5 +1,5 @@
-const catchAsync = (fn) => (req, res, next) => {
-	Promise.resolve(fn(req, res, next))
+const catchAsync = (asyncReqFunc) => (req, res, next) => {
+	Promise.resolve(asyncReqFunc(req, res, next))
 	// .then(() => next())
 		.catch((err) => next(err));
 };

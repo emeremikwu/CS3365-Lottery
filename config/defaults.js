@@ -12,7 +12,7 @@ export class Defaults {
 		saveUninitialized: true,
 		cookie: {
 			secure: env_config.isProduction(),
-			maxAge: env_config.SESSION_COOKIE_MAX_AGE,
+			maxAge: 999999999999,
 			httpOnly: true,
 			sameSite: 'strict',
 		},
