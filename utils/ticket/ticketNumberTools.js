@@ -138,7 +138,6 @@ function getRandomSection(stringLength) {
 			 shuffling combined data,
 			 using current time as a seed
 			 selecting random section of hash
- */
 function generateRefernceNumber(ticketTypeID, orderID, orderDate, userID = null) {
 	// Concatenate user ID, order ID, and additional data
 	// s = short or simplified depending on the context
@@ -165,7 +164,6 @@ function generateRefernceNumber(ticketTypeID, orderID, orderDate, userID = null)
 			DateTime.now().toISO().toString(),
 		],
 	).join('-');
-
 	// Create a hash of the combined data to ensure uniqueness
 	const hash = crypto.createHash('sha256').update(combinedData).digest('hex');
 	const [start, end] = getRandomSection(hash.length); // random sections to help mitigate collisions
