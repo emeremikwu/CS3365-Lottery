@@ -139,6 +139,7 @@ function getRandomSection(stringLength) {
 			 using current time as a seed
 			 selecting random section of hash
  */
+
 function generateRefernceNumber(ticketTypeID, orderID, orderDate, userID = null) {
 	// Concatenate user ID, order ID, and additional data
 	// s = short or simplified depending on the context
