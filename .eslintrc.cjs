@@ -1,40 +1,18 @@
-/* eslint-disable indent */
 module.exports = {
-  env: {
-    es2021: true,
-    node: true,
-  },
+  root: true,
+  env: { browser: true, es2020: true },
   extends: [
-    'airbnb-base',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
   ],
-  overrides: [
-    {
-      env: {
-        node: true,
-      },
-      files: [
-        '.eslintrc.{js,cjs}',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
   rules: {
-    indent: [2, 'tab'],
-    'no-tabs': 0,
-    camelcase: 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'always',
-        cjs: 'never',
-      },
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
     ],
   },
-};
+}
