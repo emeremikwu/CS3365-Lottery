@@ -14,7 +14,7 @@ import { useState } from 'react'
  */
 
 function Header() {
-
+  // not working atm
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
 
@@ -22,7 +22,7 @@ function Header() {
     <Navbar
       bg="dark"
       data-bs-theme="dark"
-      className='bg-body-tertiary'
+      className='bg-body-tertiary sticky-top'
       expand="md">
       <Container fluid className='sticky-top'>
         <Navbar.Brand href="/">

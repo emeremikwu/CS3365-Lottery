@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
+import NavigationBar from './components/NavigationBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 
@@ -15,7 +15,7 @@ import Logout from './components/Logout'
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <NavigationBar />
       <Container className='mt-1'>
         <Routes>
           <Route path="/" element={<Home />} />
