@@ -9,6 +9,7 @@ import PastNumbers from './components/PastNumbers'
 import OrderHistory from './components/OrderHistory'
 import Profile from './components/Profile'
 import Logout from './components/Logout'
+import './styles/App.css'
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavigationBar />
-      <Container className='mt-1'>
+      <Container fluid className='p-0 m-0'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="catalog" index element={<Catalog />} />

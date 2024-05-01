@@ -1,0 +1,14 @@
+.carousel-responsive{
+  width: 100vw;
+}
+
+@media (min-width: 768px) {
+  .carousel-responsive{
+    width: calc(90vw);
+    padding-top: 100px
+  }
+}
+
+/* .carousel-responsive{
+  max-width: 1000px;
+} */
